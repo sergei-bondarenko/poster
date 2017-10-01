@@ -33,15 +33,19 @@
   "layout_user.png": {
    "sha512": "93544af35f497271d0c7fff2eb8ab5a6e32ce4ae134e70064a77edc4a5227001",
    "size": 82913
+  },
+  "todo.txt": {
+   "sha512": "223416d0509a1179cab5ff0658cd6e60671b041182e75f5feb797b62920f92c5",
+   "size": 116
   }
  },
  "ignore": "(data/.*db|data/users/.*/.*|.git/.*)",
  "inner_path": "content.json",
- "modified": 1506713110,
+ "modified": 1506781092,
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HN3i5jlA6HhQV19oP1SLXDUYGXPgBOeA1iyM0KfBWw7ALvsWUPdY1oPy5sDv/A/QDEjD+nZqaqgGtfXj/Fw5y/g="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HF4bD+DGvA/V2oLFjN5FdPBGVolbFPchE/gU36ekTyCMTmDQVozA0XBUxEEHGkaAW5KPd9ImN1AOH3C5sfVcimE="
  },
  "signs_required": 1,
  "title": "my new site",
