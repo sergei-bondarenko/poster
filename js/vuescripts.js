@@ -1,5 +1,5 @@
 var app = new Vue({
-    el: '#app',
+    el: '#root',
     methods: {
         picUpload: function (event) {
             let file = document.getElementById('input_file').files[0];
