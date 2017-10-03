@@ -42,18 +42,11 @@ class Page extends ZeroFrame {
 page = new Page()
 </script>
 
-<div id="app" v-bind:title="message">
-    {{ message }}
-  </div>
+<div id="app">
+    <input type="file" id="input_file" @change="picUpload">
+</div>
 
-  <script>
-    var app = new Vue({
-      el: '#app',
-      data: {
-        message: 'Hello Vue!'
-      }
-    })
-  </script>
+<script type="text/javascript" src="js/vuescripts.js"></script>
 
 </body>
 </html>

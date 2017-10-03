@@ -2,3 +2,4 @@
 - multiple pictures and text alternately per post
 - videos autoplay with repeat and without autoplay
 - edit posts and comments
+- music

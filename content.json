@@ -11,8 +11,12 @@
    "size": 8
   },
   "index.html": {
-   "sha512": "b47188737048fb958728dd1eb429f4f786e061db1e1f6529b4db58b60150f261",
-   "size": 1112
+   "sha512": "62492eefdc15c70e9876e803511e411a88a06aebeca5e86625749f47ec494eef",
+   "size": 1434
+  },
+  "index2.html": {
+   "sha512": "341a44111b24c1d35e8c868d73b0be3c5dedd4776c59d770930ed39a5c8d3686",
+   "size": 451
   },
   "js/ZeroFrame.js": {
    "sha512": "8bc18006f7bb457cca2338239ea345bc1db54a664b4bc9b8a34f4e4133d1776b",
@@ -22,9 +26,17 @@
    "sha512": "45280ccb97b0ccc1e8039c8a21311a7abda6d766017db16ff3ee62a2b42eb00b",
    "size": 268934
   },
+  "js/vuescripts.js": {
+   "sha512": "4f50a7b08c40a04b5bcec080ff4995f363bf01251f64dca14dd4cb80c7f84fce",
+   "size": 575
+  },
   "layout_admin.png": {
    "sha512": "3189d93e429a0ea51012d21def474b864d07bd795f9af12e40877493aae5b263",
    "size": 87423
+  },
+  "layout_editor.png": {
+   "sha512": "8c84050147e6a1f2033beea3bd23020d471bcf18c1cdd2cefb283ca8f268ec20",
+   "size": 32089
   },
   "layout_mobile.png": {
    "sha512": "0e8d6512d2a83894b8d9c68aacc1e9e6631cdf986f00f2c950f8c43dca46e12d",
@@ -35,17 +47,25 @@
    "size": 82913
   },
   "todo.txt": {
-   "sha512": "223416d0509a1179cab5ff0658cd6e60671b041182e75f5feb797b62920f92c5",
-   "size": 116
+   "sha512": "3b0f9d1f63ea6baa2e55b029cc00c9a68846e8ceb980d6a6eec6ac5fd7972e31",
+   "size": 150
+  },
+  "uploads/123.png": {
+   "sha512": "f968e0ac3b91bd36e4e131fed671f29474432ebdaa28cdf13a3769fd2cb9e08a",
+   "size": 1045
+  },
+  "uploads/test.png": {
+   "sha512": "f968e0ac3b91bd36e4e131fed671f29474432ebdaa28cdf13a3769fd2cb9e08a",
+   "size": 1045
   }
  },
  "ignore": "(data/.*db|data/users/.*/.*|.git/.*)",
  "inner_path": "content.json",
- "modified": 1506781092,
+ "modified": 1507034259,
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HF4bD+DGvA/V2oLFjN5FdPBGVolbFPchE/gU36ekTyCMTmDQVozA0XBUxEEHGkaAW5KPd9ImN1AOH3C5sfVcimE="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HLsT39z5JsPYMw22jurij+v1wy4mZx7uoZbp63kV9tpxQdW1IHQsRuLVh7dl7AMM7KlYOuBAK0PFH3iDVT8AQlQ="
  },
  "signs_required": 1,
  "title": "my new site",
