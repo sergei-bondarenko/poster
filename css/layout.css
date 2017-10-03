@@ -6,3 +6,11 @@
 #body {
 	background-color: lightgray;
 }
+
+#top-posts {
+	background-color: lightgreen;
+}
+
+.post {
+	background-color: red;
+}

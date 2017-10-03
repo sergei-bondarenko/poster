@@ -5,7 +5,11 @@
     <title>New ZeroNet site!</title>
     <meta charset="utf-8">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="" target="_top" id="base">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/layout.css">
     <script>base.href = document.location.href
             .replace("/media", "")
             .replace("index.html", "")
@@ -15,9 +19,38 @@
     <script type="text/javascript" src="js/vue.js"></script>
 </head>
 <body>
-    <div id="app">
-        <input type="file" id="input_file" @change="picUpload">
-    </div>
+<!--     <div id="app">
+        <input type="file" id="input-file" @change="picUpload">
+    </div> -->
+    <div id="root">
+        <div id="header">
+            <div class="container">
+                Poster
+            </div>
+        </div>
+        <div id="body">
+            <div class="container">
+                <div id="top-posts">
+                    Most liked | Last commented
+                </div>
+                <div id="new-post">
+                    <input type="file" id="input-file" @change="picUpload">
+                </div>
+                <div class="post">
+                    <div class="columns">
+                        <div class="column">
+                            <br><br><br><br>
+                        </div>
+                        <div class="column is-7">
+                            <br><br><br><br>
+                        </div>
+                        <div class="column is-4">
+                            <br><br><br><br>
+                        </div>
+                </div>
+            </div>
+        </div>
+
 
     <script type="text/javascript" src="js/ZeroFrame.js"></script>
     <script type="text/javascript" src="js/page.js"></script>
