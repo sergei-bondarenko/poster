@@ -1,7 +1,7 @@
 .comment {
     border-color: gray;
     border-width: 1px;
-    border-bottom-style: solid;
+    border-top-style: solid;
 }
 
 .comment-textarea {
