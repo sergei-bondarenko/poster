@@ -19,15 +19,19 @@
     <script type="text/javascript" src="js/vue.js"></script>
 </head>
 <body>
-<!--     <div id="app">
-        <input type="file" id="input-file" @change="picUpload">
-    </div> -->
     <div id="root">
-        <div id="header">
-            <div class="container">
-                Poster
+         <section class="hero is-warning">
+            <div id="header" class="hero-body">
+                <div class="container">
+                    <p class="title">
+                        Poster
+                    </p>
+                    <p class="subtitle">
+                        Simple blog for zeronet
+                    </p>
+                </div>
             </div>
-        </div>
+        </section>
         <div id="body">
             <div class="container">
                 <div id="top-posts">
@@ -37,20 +41,22 @@
                     <input type="file" id="input-file" @change="picUpload">
                 </div>
                 <div class="post">
-                    <div class="columns">
-                        <div class="column">
+                    <div class="columns ordered-mobile">
+                        <div class="column post-likes fl-2">
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </div>
+                        <div class="column is-7 post-body fl-1">
                             <br><br><br><br>
                         </div>
-                        <div class="column is-7">
+                        <div class="column is-4 post-comments fl-3">
                             <br><br><br><br>
                         </div>
-                        <div class="column is-4">
-                            <br><br><br><br>
-                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
+    </div>
 
     <script type="text/javascript" src="js/ZeroFrame.js"></script>
     <script type="text/javascript" src="js/page.js"></script>

@@ -1,16 +1,46 @@
-#header {
-	height: 60px;
-	background-color: lightblue;
-}
-
 #body {
-	background-color: lightgray;
+    background-color: lightgray;
 }
 
 #top-posts {
-	background-color: lightgreen;
+    background-color: lightgreen;
 }
 
-.post {
-	background-color: red;
+#new-post {
+    padding-bottom: 20px;
+}
+
+.columns {
+    margin: 0px;
+}
+
+.post-likes {
+    background-color: red;
+}
+
+.post-body {
+    background-color: gray;
+}
+
+.post-comments {
+    background-color: green;
+}
+
+@media screen and (max-width: 769px) {
+    .ordered-mobile {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .ordered-mobile .fl-2 {
+        order: 2;
+    }
+
+    .ordered-mobile .fl-1 {
+        order: 1;
+    }
+
+    .ordered-mobile .fl-3 {
+        order: 3;
+    }
 }
