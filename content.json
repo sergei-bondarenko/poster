@@ -31,8 +31,8 @@
    "size": 391
   },
   "dbschema.json": {
-   "sha512": "8f0897ffc60b2f063169767515067bfdcf35b1e89157f6cf42665d2fa97d7f33",
-   "size": 1966
+   "sha512": "af58b8f5e2d99a014a4c4b8fbceff8bb10e237cf03df74a5ea17377bf8d70e44",
+   "size": 1949
   },
   "fonts/FontAwesome.otf": {
    "sha512": "a3acaaac3a9861ac7a4ba23e52b9115d39b674cb685b45454fb4b80329a4f737",
@@ -117,11 +117,11 @@
  },
  "ignore": "(data/.*db|data/users/.*/.*|.git/.*)",
  "inner_path": "content.json",
- "modified": 1508422568,
+ "modified": 1508435363,
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HHa2RjY4uMjIcQJKYB4l8RdJjn7grAZknmZ/nDZGaiyJU//1loNVG1WHDakRSbOmtY2H5/5C9ljOslEhQCJTaEc="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HClSVoh8HTL41fnM7NLbOfAkw7c6EXmMB9e8pa0vMamWWyEaNz5Ks0eN9I3L1OGeCvLPfUfu3fjWHOz6GxbNbk8="
  },
  "signs_required": 1,
  "title": "my new site",
