@@ -10,62 +10,118 @@
    "sha512": "6dc3ae4c8611190d8ec6a53e18b1950696112ec101dbbd159af511879a45aaf6",
    "size": 8
   },
+  "css/bulma.min.css": {
+   "sha512": "16686395df0f93851733b0b71aef08554d27e6a0dd9d0fbc1e3d42a248d4c36d",
+   "size": 170586
+  },
+  "css/font-awesome.min.css": {
+   "sha512": "49f4e24e55fa924faa8ad7debe5ffb2e26d439e25696df6b6f20e7f766b50ea5",
+   "size": 31000
+  },
+  "css/layout.css": {
+   "sha512": "d8acb3ccba0fb5c6e6c7bdf7ea66bde7cf7c540cbe19c2a8b7e4c55bed39f747",
+   "size": 164
+  },
+  "css/posts.css": {
+   "sha512": "ac5c070994c1250dbc31ef1439abc87a4be68969c8ddb1535625735172192f3c",
+   "size": 169
+  },
+  "data/data.json": {
+   "sha512": "3ebe30a34fef2df35cb8658305cb2df11696baa96b61fffbc76fd681658b1976",
+   "size": 391
+  },
+  "dbschema.json": {
+   "sha512": "8f0897ffc60b2f063169767515067bfdcf35b1e89157f6cf42665d2fa97d7f33",
+   "size": 1966
+  },
+  "fonts/FontAwesome.otf": {
+   "sha512": "a3acaaac3a9861ac7a4ba23e52b9115d39b674cb685b45454fb4b80329a4f737",
+   "size": 134808
+  },
+  "fonts/fontawesome-webfont.eot": {
+   "sha512": "c160d3d77e67eff986043461693b2a831e1175f579490d7f0b411005ea81bd4f",
+   "size": 165742
+  },
+  "fonts/fontawesome-webfont.svg": {
+   "sha512": "4f575d52331de91a2e32cc3408dd0eaf0cf25b7244d34b226314e3647e85ce28",
+   "size": 444379
+  },
+  "fonts/fontawesome-webfont.ttf": {
+   "sha512": "9ffb91e68c975172848b4bba25284678cc2c6eb4fb2d42000aa871c36656c4ce",
+   "size": 165548
+  },
+  "fonts/fontawesome-webfont.woff": {
+   "sha512": "9c776dea55a01fd854ea23b3463d9ac716077d406ecbe8ed0c9b6120ff7e6035",
+   "size": 98024
+  },
+  "fonts/fontawesome-webfont.woff2": {
+   "sha512": "838fefdbc14901f41edf995a78fdac55764cd4912ccb734b8bea490919458290",
+   "size": 77160
+  },
   "index.html": {
-   "sha512": "60661327088745bcb5db7227c14cbd7839f764097a92891c5f7c2e93ff2bf9f3",
-   "size": 835
+   "sha512": "f693daae289d6d146812d250ed9e80e9f6806c663dbf509ed999b6e9e66b2a30",
+   "size": 1366
   },
   "js/ZeroFrame.js": {
    "sha512": "8bc18006f7bb457cca2338239ea345bc1db54a664b4bc9b8a34f4e4133d1776b",
    "size": 3816
   },
+  "js/main.js": {
+   "sha512": "c42f512380c8de0ed73b1842178196541c6b43dffb8f23efdec3f31883ecf286",
+   "size": 39
+  },
+  "js/newpost.js": {
+   "sha512": "b351037fafc47e7ed6b3534f88bc35dfa963625926a8ae1ce5fa5b12b3f6308f",
+   "size": 1234
+  },
   "js/page.js": {
-   "sha512": "e673355d3dac04df268436987d4ec065bd44f01755ef06e37e03942fd754c337",
-   "size": 716
+   "sha512": "7eff0d89366100e64a68e978b28610e513bc73cf081a3d5ba373c180b65d5f54",
+   "size": 723
+  },
+  "js/posts.js": {
+   "sha512": "69c3d077d98d33820b80764b73e5160c434f5340a8d11cc7de2226533251dc68",
+   "size": 2182
+  },
+  "js/top.js": {
+   "sha512": "6ea6f14cc38f2e84cf71d88e548b1dd8c6e6fc4c6b72fa8b3461c72f93d75238",
+   "size": 676
   },
   "js/vue.js": {
    "sha512": "45280ccb97b0ccc1e8039c8a21311a7abda6d766017db16ff3ee62a2b42eb00b",
    "size": 268934
   },
-  "js/vuescripts.js": {
-   "sha512": "a2ef923be2f19ff905051da8948bcf2d217d92bb5d9accadd9bacd3a3d45461f",
-   "size": 722
+  "temp/layout_admin.png": {
+   "sha512": "e5ea631cad2f870424820dc9e71ee4d80d117013d4fc1165fb4bb431d6254923",
+   "size": 44270
   },
-  "layout_admin.png": {
-   "sha512": "3189d93e429a0ea51012d21def474b864d07bd795f9af12e40877493aae5b263",
-   "size": 87423
+  "temp/layout_editor.png": {
+   "sha512": "b25c151f28cc48b18efa4d81687503ea91e12b15f1903591ac9f1e3e0274939e",
+   "size": 14458
   },
-  "layout_editor.png": {
-   "sha512": "8c84050147e6a1f2033beea3bd23020d471bcf18c1cdd2cefb283ca8f268ec20",
-   "size": 32089
+  "temp/layout_mobile.png": {
+   "sha512": "82d37854c8d033fd741e0e2e115058b3fa356ed2776f52a27d80d8051bd64f0c",
+   "size": 31345
   },
-  "layout_mobile.png": {
-   "sha512": "0e8d6512d2a83894b8d9c68aacc1e9e6631cdf986f00f2c950f8c43dca46e12d",
-   "size": 31750
+  "temp/layout_user.png": {
+   "sha512": "e56f1856264abd866a92f16859d79b0d06287f9547a496574eda1398c920cae3",
+   "size": 41757
   },
-  "layout_user.png": {
-   "sha512": "93544af35f497271d0c7fff2eb8ab5a6e32ce4ae134e70064a77edc4a5227001",
-   "size": 82913
-  },
-  "todo.txt": {
+  "temp/todo.txt": {
    "sha512": "3b0f9d1f63ea6baa2e55b029cc00c9a68846e8ceb980d6a6eec6ac5fd7972e31",
    "size": 150
   },
   "uploads/test.jpg": {
    "sha512": "8beb9a1b314bbf2e5c0cb745a3a410fce9168cdd88b002f043c132399c72c28b",
    "size": 1800
-  },
-  "uploads/test.png": {
-   "sha512": "f968e0ac3b91bd36e4e131fed671f29474432ebdaa28cdf13a3769fd2cb9e08a",
-   "size": 1045
   }
  },
  "ignore": "(data/.*db|data/users/.*/.*|.git/.*)",
  "inner_path": "content.json",
- "modified": 1507035336,
+ "modified": 1508422568,
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "Gwq3yrku6zNhNm83fMQ+8Mz7OSdbbaEqcTlmwfmyIkp6ByBCn2ouEi4wgtv/GLwxoDtRxbCYCN3SAOG4WpTxF4o="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HHa2RjY4uMjIcQJKYB4l8RdJjn7grAZknmZ/nDZGaiyJU//1loNVG1WHDakRSbOmtY2H5/5C9ljOslEhQCJTaEc="
  },
  "signs_required": 1,
  "title": "my new site",

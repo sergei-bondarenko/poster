@@ -43,7 +43,6 @@
 		"post": {
 			"cols": [
 				["post_id", "INTEGER"],
-				["title", "TEXT"],
 				["body", "TEXT"],
 				["source", "TEXT"],
 				["date_published", "INTEGER"],
