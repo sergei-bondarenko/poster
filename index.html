@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 <head>
     <title>New ZeroNet site!</title>
@@ -22,67 +21,16 @@
 <body>
     <div id="root">
         <top></top>
-        <div id="body">
-            <div class="container">
-                <div id="top-posts">
-                    Most liked | Last commented
-                </div>
-                <div id="new-post">
-                    <input type="file" id="input-file" @change="picUpload">
-                </div>
-                <div class="post">
-                    <div class="columns">
-                        <div class="column is-8 post-body has-text-centered">
-                            <img src="uploads/test.png">
-                        </div>
-                        <div class="column is-4 post-comments">
-                            <div>
-                                <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                <p>Likes</p>
-                                <p class="is-size-7">1 day ago</p>
-                            </div>
-                            <div class=comment>
-                                <div class="comment-info">
-                                    <span class="comment-username">jwuquan</span>
-                                    ━
-                                    <span class="comment-date">on Aug 13, 2017</span>
-                                </div>
-                                <div class="comment-body">
-                                    太搞笑了，小孩子太可爱!
-                                </div>
-                            </div>
-                            <div class=comment>
-                                <div class="comment-info">
-                                    <span class="comment-username">jwuquan</span>
-                                    ━
-                                    <span class="comment-date">on Aug 13, 2017</span>
-                                </div>
-                                <div class="comment-body">
-                                    太搞笑了，小孩子太可爱!
-                                </div>
-                            </div>
-                            <div class=comment>
-                                <div class="comment-info">
-                                    <span class="comment-username">jwuquan</span>
-                                    ━
-                                    <span class="comment-date">on Aug 13, 2017</span>
-                                </div>
-                                <div class="comment-body">
-                                    太搞笑了，小孩子太可爱!
-                                </div>
-                            </div>
-                            <textarea class="comment-textarea">
-                            </textarea>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="container">
+            <newpost></newpost>
+            <posts></posts>
         </div>
     </div>
     <script type="text/javascript" src="js/ZeroFrame.js"></script>
     <script type="text/javascript" src="js/page.js"></script>
     <script type="text/javascript" src="js/top.js"></script>
-    <script type="text/javascript" src="js/vuescripts.js"></script>
+    <script type="text/javascript" src="js/posts.js"></script>
+    <script type="text/javascript" src="js/newpost.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
