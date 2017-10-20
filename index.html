@@ -22,12 +22,11 @@
     <div id="root">
         <top></top>
         <div class="container">
-            <newpost></newpost>
+            <newpost v-if="own"></newpost>
             <posts></posts>
         </div>
     </div>
     <script type="text/javascript" src="js/ZeroFrame.js"></script>
-    <script type="text/javascript" src="js/page.js"></script>
     <script type="text/javascript" src="js/top.js"></script>
     <script type="text/javascript" src="js/posts.js"></script>
     <script type="text/javascript" src="js/newpost.js"></script>
