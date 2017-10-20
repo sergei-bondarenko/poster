@@ -1,4 +1,10 @@
-let page = new ZeroFrame()
+class Page extends ZeroFrame {
+    onOpenWebsocket() {
+        bus.$emit('websocket_ready')
+    }
+}
+
+let page = new Page()
 let bus = new Vue()
 let app = new Vue({
     el: '#root',
@@ -8,8 +14,10 @@ let app = new Vue({
         }
     },
     mounted() {
-        page.cmdp('siteInfo', []).then((site_info) => {
-            this.own = site_info.settings.own
+        bus.$on('websocket_ready', () => {
+            page.cmdp('siteInfo', []).then((site_info) => {
+                this.own = site_info.settings.own
+            })
         })
     }
 })
