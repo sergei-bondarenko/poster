@@ -3,3 +3,4 @@
 - videos autoplay with repeat and without autoplay
 - edit posts and comments
 - music
+- direct links to posts

@@ -1,23 +1,13 @@
 {
     "title": "Poster",
     "description": "Simple blog for zeronet",
-    "next_post_id": 4,
+    "next_post_id": 2,
     "modified": 1432515193,
     "post": [
         {
             "post_id": 1,
             "date_published": 1433033779.604,
             "body": "Your zeronet blog has been successfully created!"
-        },
-        {
-            "post_id": 2,
-            "date_published": 1508492043851,
-            "body": "dscdsc"
-        },
-        {
-            "post_id": 3,
-            "date_published": 1508494504203,
-            "body": "1234"
         }
     ]
 }
