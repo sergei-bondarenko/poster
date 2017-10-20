@@ -27,12 +27,12 @@
    "size": 169
   },
   "data/data.json": {
-   "sha512": "3ebe30a34fef2df35cb8658305cb2df11696baa96b61fffbc76fd681658b1976",
-   "size": 391
+   "sha512": "fd2bb789e2d1ba95e8235a48f38314f9d5cb70297e8824c117fdcbb988bc3b94",
+   "size": 307
   },
   "dbschema.json": {
-   "sha512": "af58b8f5e2d99a014a4c4b8fbceff8bb10e237cf03df74a5ea17377bf8d70e44",
-   "size": 1949
+   "sha512": "6783974752aab3143e7f30e53a55ddd0fac19ccc350eb41e5560c151c84c4daa",
+   "size": 1881
   },
   "fonts/FontAwesome.otf": {
    "sha512": "a3acaaac3a9861ac7a4ba23e52b9115d39b674cb685b45454fb4b80329a4f737",
@@ -71,8 +71,8 @@
    "size": 39
   },
   "js/newpost.js": {
-   "sha512": "b351037fafc47e7ed6b3534f88bc35dfa963625926a8ae1ce5fa5b12b3f6308f",
-   "size": 1234
+   "sha512": "032f2641786ca9358da3fad7cf815c5e2ec7dd7329f3fa1c57cc1bae74774b74",
+   "size": 1359
   },
   "js/page.js": {
    "sha512": "7eff0d89366100e64a68e978b28610e513bc73cf081a3d5ba373c180b65d5f54",
@@ -117,11 +117,11 @@
  },
  "ignore": "(data/.*db|data/users/.*/.*|.git/.*)",
  "inner_path": "content.json",
- "modified": 1508435363,
+ "modified": 1508487750,
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HClSVoh8HTL41fnM7NLbOfAkw7c6EXmMB9e8pa0vMamWWyEaNz5Ks0eN9I3L1OGeCvLPfUfu3fjWHOz6GxbNbk8="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G7C8OSlpk4tlslmPyDzZW05+xdGFYy75nrJxkiGEd954HjwNvFKJQMWlZhRdhZ/u/uhH4mW281Bq5GiRZA9sRdE="
  },
  "signs_required": 1,
  "title": "my new site",

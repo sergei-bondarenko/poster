@@ -1,15 +1,38 @@
 {
     "title": "Poster",
     "description": "Simple blog for zeronet",
-    "links": "- [Source code](https://github.com/HelloZeroNet)",
-    "next_post_id": 2,
-    "demo": false,
+    "next_post_id": 7,
     "modified": 1432515193,
     "post": [
         {
             "post_id": 1,
             "date_published": 1433033779.604,
             "body": "Your zeronet blog has been successfully created!"
+        },
+        {
+            "post_id": 2,
+            "date_published": 1508488725933,
+            "body": "dcd"
+        },
+        {
+            "post_id": 3,
+            "date_published": 1508488855220,
+            "body": "rfv"
+        },
+        {
+            "post_id": 4,
+            "date_published": 1508489078331,
+            "body": "dsvdsvdsfbfdbdf"
+        },
+        {
+            "post_id": 5,
+            "date_published": 1508489440818,
+            "body": "dsds"
+        },
+        {
+            "post_id": 6,
+            "date_published": 1508489551922,
+            "body": "fdvfd"
         }
     ]
 }
