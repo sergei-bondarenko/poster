@@ -20,4 +20,4 @@ Vue.component('top', {
             </div>
         </div>
     `
-});
+})

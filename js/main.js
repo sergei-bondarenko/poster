@@ -1,6 +1,6 @@
-let page = new ZeroFrame();
-
-var app = new Vue({
+let page = new ZeroFrame()
+let bus = new Vue()
+let app = new Vue({
     el: '#root',
     data() {
         return {
@@ -9,7 +9,7 @@ var app = new Vue({
     },
     mounted() {
         page.cmdp('siteInfo', []).then((site_info) => {
-            this.own = site_info.settings.own;
-        });
+            this.own = site_info.settings.own
+        })
     }
 })

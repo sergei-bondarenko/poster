@@ -10,50 +10,50 @@ Vue.component('newpost', {
 
     methods: {
         picUpload: function (event) {
-            let file = this.$refs.inputFile.files[0];
-            let fr = new FileReader();
-            fr.readAsDataURL(file);
+            let file = this.$refs.inputFile.files[0]
+            let fr = new FileReader()
+            fr.readAsDataURL(file)
             fr.onload = () => {
-                base64 = fr.result.split(',')[1];
+                base64 = fr.result.split(',')[1]
                 page.cmdp('fileWrite', ['uploads/' + file.name, base64]).then((res) => {
                     if (res == 'ok') {
-                        console.log('File uploaded!');
-                        this.appendImage(file.name);
+                        console.log('File uploaded!')
+                        this.appendImage(file.name)
                     } else {
                         page.cmdp('wrapperNotification',
-                            ['error', 'File write error: ' + res]);
+                            ['error', 'File write error: ' + res])
                     }
-                });
-            };
+                })
+            }
         },
 
         appendImage: function (name) {
-            this.$refs.postarea.value += '![](uploads/' + name + ')';
+            this.$refs.postarea.value += '![](uploads/' + name + ')'
         },
 
         save: function () {
-            let data = null;
+            let data = null
             page.cmdp('fileGet', ['data/data.json']).then((file) => {
-                data = JSON.parse(file);
+                data = JSON.parse(file)
                 data.post.push({
                     'post_id': data.next_post_id,
                     'date_published': + new Date(),
                     'body': this.$refs.postarea.value
-                });
-                data.next_post_id += 1;
-                data = JSON.stringify(data, null, '    ');
-                return page.cmdp('fileWrite', ['data/data.json', btoa(data)]);
+                })
+                data.next_post_id += 1
+                data = JSON.stringify(data, null, '    ')
+                return page.cmdp('fileWrite', ['data/data.json', btoa(data)])
             }).then((res) => {
                 if (res == 'ok') {
                     page.cmd('wrapperNotification',
                         ['done', "The new post have been saved. "
-                            + "Don't forget to sign and publish!"]);
-                    this.$refs.postarea.value = '';
+                            + "Don't forget to sign and publish!"])
+                    this.$refs.postarea.value = ''
                 } else {
                     page.cmd('wrapperNotification',
-                        ['error', 'File write error: ' + res]);
+                        ['error', 'File write error: ' + res])
                 }
-            });
+            })
         }
     }
-});
+})

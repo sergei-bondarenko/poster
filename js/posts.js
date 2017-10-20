@@ -15,21 +15,22 @@ Vue.component('posts', {
         return {
             comments: [],
             posts: []
-        };
+        }
     },
 
     mounted() {
+        console.log('45672735')
         page.cmdp('dbQuery', ["SELECT * FROM post"]).then((res) => {
             res.forEach((post) => {
                 this.posts.push({
                     post_id: post['post_id'],
                     body: post['body'],
                     date_published: post['date_published']
-                });
-            });
-        });
+                })
+            })
+        })
     }
-});
+})
 
 /*
         <div class="post">
