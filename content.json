@@ -59,12 +59,16 @@
    "size": 77160
   },
   "index.html": {
-   "sha512": "81c6f63791d3b8079268299f066bef6519d6a609ba585411f7a048de806f96ad",
-   "size": 1315
+   "sha512": "6dc4ce418902d7f714ea9dcee583ebf33939db7f4c201e6333dfd050b86fc21d",
+   "size": 1381
   },
   "js/ZeroFrame.js": {
-   "sha512": "19074c8f5de67649b14e1a28d1dc81eb482cb37a06867ad85ef0453eb6f85582",
-   "size": 3817
+   "sha512": "9e08432de4399d65511bcfa2e1e8aa67e375ee2b2245232cee7602c686aa03a4",
+   "size": 3823
+  },
+  "js/comments.js": {
+   "sha512": "720951919478445f8bd17ac007e1d705f4f879ecd42706b1981ede30516eed12",
+   "size": 2807
   },
   "js/main.js": {
    "sha512": "bd8a7fb993c4393678faa099f6cb796a11ae6357bcc377c69b592cc21803c615",
@@ -75,8 +79,8 @@
    "size": 1995
   },
   "js/posts.js": {
-   "sha512": "4c25fce7c77a82fa9cca91c020074d16b14b0f76a66980eb579d2450ade6962e",
-   "size": 3144
+   "sha512": "1b471b759eddc66c05db98b551cb1bfc4320b0e5c799c8f2a49df56140c91dc8",
+   "size": 3260
   },
   "js/top.js": {
    "sha512": "e5fd848c70c782482c9da434b267288d1b67f64a01c0c6d62223829c04dd5754",
@@ -103,8 +107,8 @@
    "size": 41757
   },
   "temp/todo.txt": {
-   "sha512": "bcaa624d24cc598811e85b722fdabcaf6845968b79cc6f2f815766f59b42a7d5",
-   "size": 174
+   "sha512": "ea3e39aea04eb8e0e639698249f2d28db909e389ffa2028af2c8385795f60ac5",
+   "size": 360
   },
   "uploads/Screenshot.png": {
    "sha512": "de52c417433116e84a5db97547aea95da757ff900f323d8dd1f449294c32ad1b",
@@ -116,15 +120,21 @@
   }
  },
  "ignore": "(data/.*db|data/users/.*/.*|.git/.*)",
+ "includes": {
+  "data/users/content.json": {
+   "signers": [],
+   "signers_required": 1
+  }
+ },
  "inner_path": "content.json",
- "modified": 1508581734,
+ "modified": 1508597865,
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HMVGTTUtNNkvackrldXaOujwLPXeqJfTUf4DcnoU1njOUKnkTzvFpHk6HsP8VW1MvTxSR/E/vQ4aQysb9LprKew="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HES75is9mxfNIT+nMr+JsbylOvg8ohZkeZD06/NTzzcdYixPudUH+Lj6C0uXQA1AYFA5n1LZeh+Sb37rZ0/Damc="
  },
  "signs_required": 1,
  "title": "my new site",
  "translate": ["js/all.js"],
- "zeronet_version": "0.5.7"
+ "zeronet_version": "0.6.0"
 }

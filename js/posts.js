@@ -6,6 +6,9 @@ Vue.component('posts', {
                     <div class="column is-8 post-body">
                         {{ post.body }}
                     </div>
+                    <div class="column is-4 post-comments">
+                        <comments :post_id="post.post_id"></comments>
+                    </div>
                 </div>
             </div>
         </div>
@@ -13,20 +16,19 @@ Vue.component('posts', {
 
     data() {
         return {
-            comments: [],
             posts: []
         }
     },
 
     mounted() {
-        this.loadPosts()
+        this.load()
         bus.$on('update', () => {
-            this.loadPosts()
+            this.load()
         })
     },
 
     methods: {
-        loadPosts() {
+        load() {
             page.cmdp('dbQuery', ["SELECT * FROM post"]).then((res) => {
                 this.posts = []
                 res.forEach((post) => {

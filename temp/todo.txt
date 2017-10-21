@@ -4,3 +4,8 @@
 - edit posts and comments
 - music
 - direct links to posts
+- selfsigned certs
+- check max comments size
+- feed
+- https://github.com/HelloZeroNet/ZeroBlog/blob/6ea961347d58a193d33df4f4f1e2bda43e19bba6/js/utils/Time.coffee
+  (search + new Date())
