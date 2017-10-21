@@ -21,7 +21,7 @@ Vue.component('newpost', {
                         this.appendImage(file.name)
                     } else {
                         page.cmdp('wrapperNotification',
-                            ['error', 'File write error: ' + res])
+                            ['error', "File write error: " + res])
                     }
                 })
             }
@@ -44,15 +44,11 @@ Vue.component('newpost', {
                 data = JSON.stringify(data, null, '    ')
                 return page.cmdp('fileWrite', ['data/data.json', btoa(data)])
             }).then((res) => {
-                if (res == 'ok') {
-                    page.cmd('wrapperNotification',
-                        ['done', "The new post have been saved. "
-                            + "Don't forget to sign and publish!"])
-                    this.$refs.postarea.value = ''
-                } else {
-                    page.cmd('wrapperNotification',
-                        ['error', 'File write error: ' + res])
-                }
+                this.$refs.postarea.value = ''
+                bus.$emit('update')
+                return page.cmdp('siteSign', ['stored'])
+            }).then((res) => {
+                return page.cmdp('sitePublish', ['stored'])
             })
         }
     }

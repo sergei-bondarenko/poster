@@ -19,8 +19,16 @@ Vue.component('posts', {
     },
 
     mounted() {
-        bus.$on('websocket_ready', () => {
+        this.loadPosts()
+        bus.$on('update', () => {
+            this.loadPosts()
+        })
+    },
+
+    methods: {
+        loadPosts() {
             page.cmdp('dbQuery', ["SELECT * FROM post"]).then((res) => {
+                this.posts = []
                 res.forEach((post) => {
                     this.posts.push({
                         post_id: post['post_id'],
@@ -29,7 +37,7 @@ Vue.component('posts', {
                     })
                 })
             })
-        })
+        }
     }
 })
 

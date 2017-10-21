@@ -27,8 +27,8 @@
    "size": 169
   },
   "data/data.json": {
-   "sha512": "fd2bb789e2d1ba95e8235a48f38314f9d5cb70297e8824c117fdcbb988bc3b94",
-   "size": 307
+   "sha512": "a8fd9a75303af19bee774e83151cbdcb89831626592bc870ae7533de44fb3f06",
+   "size": 423
   },
   "dbschema.json": {
    "sha512": "6783974752aab3143e7f30e53a55ddd0fac19ccc350eb41e5560c151c84c4daa",
@@ -59,32 +59,28 @@
    "size": 77160
   },
   "index.html": {
-   "sha512": "f693daae289d6d146812d250ed9e80e9f6806c663dbf509ed999b6e9e66b2a30",
-   "size": 1366
+   "sha512": "81c6f63791d3b8079268299f066bef6519d6a609ba585411f7a048de806f96ad",
+   "size": 1315
   },
   "js/ZeroFrame.js": {
-   "sha512": "8bc18006f7bb457cca2338239ea345bc1db54a664b4bc9b8a34f4e4133d1776b",
-   "size": 3816
+   "sha512": "19074c8f5de67649b14e1a28d1dc81eb482cb37a06867ad85ef0453eb6f85582",
+   "size": 3817
   },
   "js/main.js": {
-   "sha512": "c42f512380c8de0ed73b1842178196541c6b43dffb8f23efdec3f31883ecf286",
-   "size": 39
+   "sha512": "bd8a7fb993c4393678faa099f6cb796a11ae6357bcc377c69b592cc21803c615",
+   "size": 643
   },
   "js/newpost.js": {
-   "sha512": "032f2641786ca9358da3fad7cf815c5e2ec7dd7329f3fa1c57cc1bae74774b74",
-   "size": 1359
-  },
-  "js/page.js": {
-   "sha512": "7eff0d89366100e64a68e978b28610e513bc73cf081a3d5ba373c180b65d5f54",
-   "size": 723
+   "sha512": "850b28f24ea9bda487c5c28adccfdd7ccaf5889ff0845e02bc926879934edf9b",
+   "size": 1995
   },
   "js/posts.js": {
-   "sha512": "69c3d077d98d33820b80764b73e5160c434f5340a8d11cc7de2226533251dc68",
-   "size": 2182
+   "sha512": "4c25fce7c77a82fa9cca91c020074d16b14b0f76a66980eb579d2450ade6962e",
+   "size": 3144
   },
   "js/top.js": {
-   "sha512": "6ea6f14cc38f2e84cf71d88e548b1dd8c6e6fc4c6b72fa8b3461c72f93d75238",
-   "size": 676
+   "sha512": "e5fd848c70c782482c9da434b267288d1b67f64a01c0c6d62223829c04dd5754",
+   "size": 675
   },
   "js/vue.js": {
    "sha512": "45280ccb97b0ccc1e8039c8a21311a7abda6d766017db16ff3ee62a2b42eb00b",
@@ -107,8 +103,12 @@
    "size": 41757
   },
   "temp/todo.txt": {
-   "sha512": "3b0f9d1f63ea6baa2e55b029cc00c9a68846e8ceb980d6a6eec6ac5fd7972e31",
-   "size": 150
+   "sha512": "bcaa624d24cc598811e85b722fdabcaf6845968b79cc6f2f815766f59b42a7d5",
+   "size": 174
+  },
+  "uploads/Screenshot.png": {
+   "sha512": "de52c417433116e84a5db97547aea95da757ff900f323d8dd1f449294c32ad1b",
+   "size": 48063
   },
   "uploads/test.jpg": {
    "sha512": "8beb9a1b314bbf2e5c0cb745a3a410fce9168cdd88b002f043c132399c72c28b",
@@ -117,11 +117,11 @@
  },
  "ignore": "(data/.*db|data/users/.*/.*|.git/.*)",
  "inner_path": "content.json",
- "modified": 1508487750,
+ "modified": 1508581734,
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G7C8OSlpk4tlslmPyDzZW05+xdGFYy75nrJxkiGEd954HjwNvFKJQMWlZhRdhZ/u/uhH4mW281Bq5GiRZA9sRdE="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HMVGTTUtNNkvackrldXaOujwLPXeqJfTUf4DcnoU1njOUKnkTzvFpHk6HsP8VW1MvTxSR/E/vQ4aQysb9LprKew="
  },
  "signs_required": 1,
  "title": "my new site",

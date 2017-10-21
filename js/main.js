@@ -1,6 +1,6 @@
 class Page extends ZeroFrame {
-    onOpenWebsocket() {
-        bus.$emit('websocket_ready')
+    onRequest(cmd, message) {
+        bus.$emit('update', cmd, message)
     }
 }
 
@@ -14,10 +14,16 @@ let app = new Vue({
         }
     },
     mounted() {
-        bus.$on('websocket_ready', () => {
-            page.cmdp('siteInfo', []).then((site_info) => {
-                this.own = site_info.settings.own
-            })
+        page.cmdp('siteInfo', []).then((site_info) => {
+            this.own = site_info.settings.own
+        })
+
+        bus.$on('update', (cmd, message) => {
+            if (cmd == 'setSiteInfo') {
+                if (message.params.event[0] == 'owned') {
+                    this.own = message.params.event[1]
+                }
+            }
         })
     }
 })

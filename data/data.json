@@ -1,8 +1,8 @@
 {
     "title": "Poster",
     "description": "Simple blog for zeronet",
-    "next_post_id": 6,
-    "modified": 1432515193,
+    "next_post_id": 3,
+    "modified": 1432515194,
     "post": [
         {
             "post_id": 1,
@@ -11,23 +11,8 @@
         },
         {
             "post_id": 2,
-            "date_published": 1508492043851,
-            "body": "dscdsc"
-        },
-        {
-            "post_id": 3,
-            "date_published": 1508494504203,
-            "body": "1234"
-        },
-        {
-            "post_id": 4,
-            "date_published": 1508523402662,
-            "body": "fdgdf"
-        },
-        {
-            "post_id": 5,
-            "date_published": 1508523404747,
-            "body": "fdbf"
+            "date_published": 1508581734509,
+            "body": "fd"
         }
     ]
 }
