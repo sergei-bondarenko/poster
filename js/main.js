@@ -21,8 +21,8 @@ class Page extends ZeroFrame {
     }
 }
 
-let page = new Page()
 let bus = new Vue()
+let page = new Page()
 let app = new Vue({
     el: '#root',
     data() {
@@ -45,3 +45,4 @@ let app = new Vue({
         })
     }
 })
+

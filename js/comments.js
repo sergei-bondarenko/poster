@@ -26,6 +26,9 @@ Vue.component('comments', {
 
     mounted() {
         this.load()
+        bus.$on('update', () => {
+            this.load()
+        })
     },
 
     methods: {
@@ -53,8 +56,8 @@ Vue.component('comments', {
 
         save() {
             page.cmdp('siteInfo', []).then((site_info) => {
+                page.site_info = site_info
                 if (site_info.cert_user_id == null) {
-                    page.site_info = site_info
                     page.cmdp('certSelect', {'accepted_domains': ['zeroid.bit']})
                     return Promise.reject("Certificate is not selected")
                 } else {
@@ -81,6 +84,8 @@ Vue.component('comments', {
 
                 data.next_comment_id += 1
                 page.writePublish('data/users/' + page.site_info.auth_address + '/data.json', data)
+                this.$refs.commentarea.value = ''
+
             }).catch((err) => {
                 console.log(err)
             })
