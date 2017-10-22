@@ -1,5 +1,5 @@
 {
-    "next_comment_id": 10,
+    "next_comment_id": 11,
     "comment": [
         {
             "comment_id": 1,
@@ -57,5 +57,7 @@
         }
     ],
     "comment_vote": {},
-    "topic_vote": {}
+    "post_vote": {
+        "1": 1
+    }
 }

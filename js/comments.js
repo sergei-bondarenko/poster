@@ -71,7 +71,7 @@ Vue.component('comments', {
                         'next_comment_id': 1,
                         'comment': [],
                         'comment_vote': {},
-                        'topic_vote': {}
+                        'post_vote': {}
                     }
                 }
 
