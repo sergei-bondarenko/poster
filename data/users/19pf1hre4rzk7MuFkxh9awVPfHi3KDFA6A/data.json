@@ -1,5 +1,5 @@
 {
-    "next_comment_id": 9,
+    "next_comment_id": 10,
     "comment": [
         {
             "comment_id": 1,
@@ -48,6 +48,12 @@
             "body": "tyu",
             "post_id": 2,
             "date_added": 1508691257214
+        },
+        {
+            "comment_id": 9,
+            "body": "rrrr",
+            "post_id": 1,
+            "date_added": 1508691318633
         }
     ],
     "comment_vote": {},
