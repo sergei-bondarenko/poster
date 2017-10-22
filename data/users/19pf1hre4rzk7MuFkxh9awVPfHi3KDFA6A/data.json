@@ -1,0 +1,25 @@
+{
+    "next_comment_id": 4,
+    "comment": [
+        {
+            "comment_id": 1,
+            "body": "caww",
+            "post_id": 1,
+            "date_added": 1508685836591
+        },
+        {
+            "comment_id": 2,
+            "body": "hhhhhhhhhhh.",
+            "post_id": 1,
+            "date_added": 1508686580878
+        },
+        {
+            "comment_id": 3,
+            "body": "vv",
+            "post_id": 2,
+            "date_added": 1508686813190
+        }
+    ],
+    "comment_vote": {},
+    "topic_vote": {}
+}

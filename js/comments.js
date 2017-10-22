@@ -1,9 +1,15 @@
 Vue.component('comments', {
     template: `
         <div>
-                {{ post_id }}
-            <div v-for="comment in comments" class="comment">
-                {{ post_id }}
+            <div v-for="comment in comments" v-if="comment.post_id == post_id" class="comment">
+                <div class="comment-info">
+                    <span class="comment-username">{{ comment.cert_user_id }}</span>
+                    ━
+                    <span class="comment-date">{{ comment.date_added }}</span>
+                </div>
+                <div class="comment-body">
+                    {{ comment.body }}
+                </div>
             </div>
             <textarea class="comment-textarea" ref="commentarea"></textarea>
             <button type="button" @click="save">Save</button>
@@ -19,20 +25,30 @@ Vue.component('comments', {
     },
 
     mounted() {
+        this.load()
     },
 
     methods: {
         load() {
-            //page.cmdp('dbQuery', ["SELECT * FROM comment"]).then((res) => {
-                //this.posts = []
-                //res.forEach((post) => {
-                    //this.posts.push({
-                        //post_id: post['post_id'],
-                        //body: post['body'],
-                        //date_published: post['date_published']
-                    //})
-                //})
-            //})
+            page.cmdp('dbQuery', [
+                "SELECT comment.*, json_content.json_id AS content_json_id, keyvalue.value AS cert_user_id, json.directory,"
+              + "(SELECT COUNT(*) FROM comment_vote WHERE comment_vote.comment_uri = comment.comment_id || '@' || json.directory)+1 AS votes "
+              + "FROM comment "
+              + "LEFT JOIN json USING (json_id) "
+              + "LEFT JOIN json AS json_content ON (json_content.directory = json.directory AND json_content.file_name='content.json') "
+              + "LEFT JOIN keyvalue ON (keyvalue.json_id = json_content.json_id AND key = 'cert_user_id') "
+              + "ORDER BY date_added DESC"]).then((res) => {
+                this.comments = []
+                res.forEach((comment) => {
+                    this.comments.push({
+                        comment_id: comment['comment_id'],
+                        post_id: comment['post_id'],
+                        body: comment['body'],
+                        date_added: comment['date_added'],
+                        cert_user_id: comment['cert_user_id']
+                    })
+                })
+            })
         },
 
         save() {
