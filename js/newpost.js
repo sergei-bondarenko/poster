@@ -41,14 +41,7 @@ Vue.component('newpost', {
                     'body': this.$refs.postarea.value
                 })
                 data.next_post_id += 1
-                data = JSON.stringify(data, null, '    ')
-                return page.cmdp('fileWrite', ['data/data.json', btoa(data)])
-            }).then((res) => {
-                this.$refs.postarea.value = ''
-                bus.$emit('update')
-                return page.cmdp('siteSign', ['stored'])
-            }).then((res) => {
-                return page.cmdp('sitePublish', ['stored'])
+                page.writePublish('data/data.json', data)
             })
         }
     }
