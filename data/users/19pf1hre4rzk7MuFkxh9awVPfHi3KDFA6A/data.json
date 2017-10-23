@@ -1,5 +1,5 @@
 {
-    "next_comment_id": 12,
+    "next_comment_id": 13,
     "comment": [
         {
             "comment_id": 1,
@@ -60,13 +60,18 @@
             "body": "vvvx",
             "post_id": 3,
             "date_added": 1508753999243
+        },
+        {
+            "comment_id": 12,
+            "body": "h",
+            "post_id": 1,
+            "date_added": 1508770132904
         }
     ],
     "comment_vote": {},
     "post_vote": {
         "1": 1,
-        "2": 1,
-        "4": 1,
+        "3": 1,
         "6": 1
     }
 }

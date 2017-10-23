@@ -9,7 +9,7 @@ Vue.component('newpost', {
     `,
 
     methods: {
-        picUpload: function (event) {
+        picUpload(event) {
             let file = this.$refs.inputFile.files[0]
             let fr = new FileReader()
             fr.readAsDataURL(file)
@@ -27,11 +27,11 @@ Vue.component('newpost', {
             }
         },
 
-        appendImage: function (name) {
+        appendImage(name) {
             this.$refs.postarea.value += '![](uploads/' + name + ')'
         },
 
-        save: function () {
+        save() {
             let data = null
             page.cmdp('fileGet', ['data/data.json']).then((file) => {
                 data = JSON.parse(file)
@@ -42,6 +42,7 @@ Vue.component('newpost', {
                 })
                 data.next_post_id += 1
                 page.writePublish('data/data.json', data)
+                this.$refs.postarea.value = ''
             })
         }
     }

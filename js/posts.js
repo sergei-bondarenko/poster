@@ -2,15 +2,8 @@ Vue.component('posts', {
     template: `
         <div>
             <div v-for="post in posts" class="post">
-                <div class="columns">
-                    <div class="column is-8 post-body">
-                        {{ post.body }}
-                    </div>
-                    <div class="column is-4 post-comments">
-                        <likes :post_id="post.post_id" :date_published="post.date_published"></likes>
-                        <comments :post_id="post.post_id"></comments>
-                    </div>
-                </div>
+                <post :post_id="post['post_id']"></post>
+                <hr>
             </div>
         </div>
     `,
@@ -30,66 +23,50 @@ Vue.component('posts', {
 
     methods: {
         load() {
-            page.cmdp('dbQuery', ["SELECT * FROM post"]).then((res) => {
-                this.posts = []
-                res.forEach((post) => {
-                    this.posts.push({
-                        post_id: post['post_id'],
-                        body: post['body'],
-                        date_published: post['date_published']
-                    })
-                })
+            page.cmdp('dbQuery', ["SELECT post_id FROM post"]).then((res) => {
+                this.posts = res
             })
         }
     }
 })
 
-/*
-        <div class="post">
-            <div class="columns">
-                <div class="column is-8 post-body has-text-centered">
-                    <img src="uploads/test.png">
-                </div>
-                <div class="column is-4 post-comments">
-                    <div>
-                        <i class="fa fa-heart-o" aria-hidden="true"></i>
-                        <i class="fa fa-heart" aria-hidden="true"></i>
-                        <p>Likes</p>
-                        <p class="is-size-7">1 day ago</p>
-                    </div>
-                    <div class=comment>
-                        <div class="comment-info">
-                            <span class="comment-username">jwuquan</span>
-                            ━
-                            <span class="comment-date">on Aug 13, 2017</span>
-                        </div>
-                        <div class="comment-body">
-                            太搞笑了，小孩子太可爱!
-                        </div>
-                    </div>
-                    <div class=comment>
-                        <div class="comment-info">
-                            <span class="comment-username">jwuquan</span>
-                            ━
-                            <span class="comment-date">on Aug 13, 2017</span>
-                        </div>
-                        <div class="comment-body">
-                            太搞笑了，小孩子太可爱!
-                        </div>
-                    </div>
-                    <div class=comment>
-                        <div class="comment-info">
-                            <span class="comment-username">jwuquan</span>
-                            ━
-                            <span class="comment-date">on Aug 13, 2017</span>
-                        </div>
-                        <div class="comment-body">
-                            太搞笑了，小孩子太可爱!
-                        </div>
-                    </div>
-                    <textarea class="comment-textarea">
-                    </textarea>
-                </div>
+Vue.component('post', {
+    template: `
+        <div class="columns">
+            <div class="column is-8 post-body">
+                {{ post.body }}
+            </div>
+            <div class="column is-4 post-comments">
+                <likes :post_id="post.post_id" :date_published="post.date_published"></likes>
+                <comments :post_id="post.post_id"></comments>
             </div>
         </div>
-*/
+    `,
+
+    props: ['post_id'],
+
+    data() {
+        return {
+            post: {
+                post_id: this.post_id,
+                body: null,
+                date_published: null
+            }
+        }
+    },
+
+    mounted() {
+        this.load()
+        bus.$on('update', () => {
+            this.load()
+        })
+    },
+
+    methods: {
+        load() {
+            page.cmdp('dbQuery', ["SELECT * FROM post WHERE post_id=" + this.post_id]).then((res) => {
+                this.post = res[0]
+            })
+        }
+    }
+})

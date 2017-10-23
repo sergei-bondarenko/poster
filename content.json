@@ -7,8 +7,8 @@
  "description": "",
  "files": {
   "README.md": {
-   "sha512": "6dc3ae4c8611190d8ec6a53e18b1950696112ec101dbbd159af511879a45aaf6",
-   "size": 8
+   "sha512": "ac1ee4ddf51dbbd1026fd0274e5a0b7b22923f3641c43f5d0e05fd382b90cb84",
+   "size": 27
   },
   "css/bulma.min.css": {
    "sha512": "16686395df0f93851733b0b71aef08554d27e6a0dd9d0fbc1e3d42a248d4c36d",
@@ -27,8 +27,8 @@
    "size": 169
   },
   "data/data.json": {
-   "sha512": "c09a3286d487cef83b8c63d41c1e17dd0d6511bb4a66f1c496e85286b7074697",
-   "size": 3166
+   "sha512": "e3ed95319cb42c3a0e5d9437e548c070c01710c54e20c1a755c82d255e2f9969",
+   "size": 3640
   },
   "dbschema.json": {
    "sha512": "6783974752aab3143e7f30e53a55ddd0fac19ccc350eb41e5560c151c84c4daa",
@@ -59,40 +59,52 @@
    "size": 77160
   },
   "index.html": {
-   "sha512": "6dc4ce418902d7f714ea9dcee583ebf33939db7f4c201e6333dfd050b86fc21d",
-   "size": 1381
+   "sha512": "177665b9773b55f5476409aa8b15e6a480a063ee245ba5b6bf186d57a1b0faae",
+   "size": 1583
   },
   "js/ZeroFrame.js": {
    "sha512": "9e08432de4399d65511bcfa2e1e8aa67e375ee2b2245232cee7602c686aa03a4",
    "size": 3823
   },
   "js/comments.js": {
-   "sha512": "b85e1200ef7fa162abe46b72804dafc0592c40354f34a42a3d66737f8aa319cd",
-   "size": 3086
+   "sha512": "74e26241d6b37068656906c786a697990fd79eb15ab404482ebc7f2846166369",
+   "size": 3504
+  },
+  "js/likes.js": {
+   "sha512": "dd401885d96ed64ac6e4daa5f960360166110a12da676fbae9ae62fecb6920c1",
+   "size": 2665
   },
   "js/main.js": {
-   "sha512": "a4da3c201a0fe4022709625b1a99734917f8af69298cb8e4513847aa87c93d49",
-   "size": 1292
+   "sha512": "e1a560495b983d60f23dffb31f95d16a70dd4af5bbe2e3dee9a7269f8cea8c92",
+   "size": 1238
   },
   "js/newpost.js": {
-   "sha512": "7566c69b5b59ee0d0632f7223baab1c927036cdb4d65c8f79a0007bc912ee252",
-   "size": 1655
+   "sha512": "eb18c2893793bf2bcdfb15933eb658a6409b1ee7d1c9605a77685ff113134349",
+   "size": 1669
   },
   "js/posts.js": {
-   "sha512": "1b471b759eddc66c05db98b551cb1bfc4320b0e5c799c8f2a49df56140c91dc8",
-   "size": 3260
+   "sha512": "1cee422ec2ada1a019a47c841e93b09b177e4166ffadd95e72855ac6bb3a374e",
+   "size": 1537
+  },
+  "js/routes.js": {
+   "sha512": "8a28652a0c06c2ab10dd9664929fbda7509175eb52878d6c9371bebfd541c027",
+   "size": 183
   },
   "js/top.js": {
    "sha512": "e5fd848c70c782482c9da434b267288d1b67f64a01c0c6d62223829c04dd5754",
    "size": 675
+  },
+  "js/vue-router.js": {
+   "sha512": "0d0a5a2afc3ce0fc752d2a31034703cd218cc12c8b3a5a187ba4a07d14547e17",
+   "size": 65289
   },
   "js/vue.js": {
    "sha512": "45280ccb97b0ccc1e8039c8a21311a7abda6d766017db16ff3ee62a2b42eb00b",
    "size": 268934
   },
   "temp/layout_admin.png": {
-   "sha512": "e5ea631cad2f870424820dc9e71ee4d80d117013d4fc1165fb4bb431d6254923",
-   "size": 44270
+   "sha512": "ed4c90ea2f557f5797d486b205cfc67d9eb04a551454656b7ce308bb9d8ec134",
+   "size": 44436
   },
   "temp/layout_editor.png": {
    "sha512": "b25c151f28cc48b18efa4d81687503ea91e12b15f1903591ac9f1e3e0274939e",
@@ -103,12 +115,12 @@
    "size": 31345
   },
   "temp/layout_user.png": {
-   "sha512": "e56f1856264abd866a92f16859d79b0d06287f9547a496574eda1398c920cae3",
-   "size": 41757
+   "sha512": "dfbe866792a32dd4e0e4000262e06b1f4ec0fa75113c37af94882e5a1af42ef4",
+   "size": 41755
   },
   "temp/todo.txt": {
-   "sha512": "ea3e39aea04eb8e0e639698249f2d28db909e389ffa2028af2c8385795f60ac5",
-   "size": 360
+   "sha512": "4b3374c0fba13c36878caffd8183ac06646de9d0b28f087ed7202cf7c602f999",
+   "size": 490
   },
   "uploads/Screenshot.png": {
    "sha512": "de52c417433116e84a5db97547aea95da757ff900f323d8dd1f449294c32ad1b",
@@ -127,11 +139,11 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1508663705,
+ "modified": 1508770127,
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G6/onwwfDeE1d4itQbV5A4p7qFOZscV489oHNP1LNCoOSMsljKWqxtPPXg2eVm5AlpnbaKEsm/7N5htLVJdWjfo="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G/XndDnGiCeWUC0QC4/CqkgH4nK7kYfzpByduuGKA819cA4UWJJnwG3k28M4vbjiRaOXTXPQ/vyoli4AgKUACX4="
  },
  "signs_required": 1,
  "title": "my new site",

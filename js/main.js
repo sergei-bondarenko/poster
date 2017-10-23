@@ -5,7 +5,6 @@ class Page extends ZeroFrame {
     }
 
     onRequest(cmd, message) {
-        //console.log(cmd, message)
         bus.$emit('update', cmd, message)
     }
 
@@ -46,4 +45,3 @@ let app = new Vue({
         })
     }
 })
-
