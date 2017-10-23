@@ -7,7 +7,7 @@ Vue.component('posts', {
                         {{ post.body }}
                     </div>
                     <div class="column is-4 post-comments">
-                        <likes :post_id="post.post_id"></likes>
+                        <likes :post_id="post.post_id" :date_published="post.date_published"></likes>
                         <comments :post_id="post.post_id"></comments>
                     </div>
                 </div>

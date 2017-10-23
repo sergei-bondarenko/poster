@@ -11,3 +11,4 @@
   (search + new Date())
 - admin post (without cert)
 - username mentions (see zeroblog)
+- clean pictures that are no longer in content.json (see zeroblog)
