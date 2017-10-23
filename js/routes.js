@@ -1,12 +1,14 @@
-const routes = [
-  { path: '/', component: Foo },
-  { path: '/post', component: Bar }
-]
-
-const router = new VueRouter({
-  routes
+let router = new VueRouter({
+    //mode: 'history',
+    routes: [
+        {
+            path: '/',
+            component: Posts
+        },
+        {
+            path: '/post=:post_id',
+            component: Post,
+            props: true
+        }
+    ]
 })
-
-const app = new Vue({
-  router
-}).$mount('#root')

@@ -1,12 +1,33 @@
 Vue.component('newpost', {
     template: `
-        <div id="new-post">
+        <div id="new-post" v-if="own">
             <input type="file" id="input-file" @change="picUpload" ref="inputFile">
             <button type="button" @click="save">Save</button>
             <textarea ref="postarea" id="postarea">
             </textarea>
         </div>
     `,
+
+    data() {
+        return {
+            own: false,
+        }
+    },
+
+    mounted() {
+        page.cmdp('siteInfo', []).then((site_info) => {
+            page.site_info = site_info
+            this.own = page.site_info.settings.own
+        })
+
+        bus.$on('update', (cmd, message) => {
+            if (cmd == 'setSiteInfo') {
+                if (message.params.event[0] == 'owned') {
+                    this.own = message.params.event[1]
+                }
+            }
+        })
+    },
 
     methods: {
         picUpload(event) {

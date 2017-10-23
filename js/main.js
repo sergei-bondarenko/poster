@@ -21,27 +21,8 @@ class Page extends ZeroFrame {
     }
 }
 
-let bus = new Vue()
 let page = new Page()
+let bus = new Vue()
 let app = new Vue({
-    el: '#root',
-    data() {
-        return {
-            own: false,
-        }
-    },
-    mounted() {
-        page.cmdp('siteInfo', []).then((site_info) => {
-            page.site_info = site_info
-            this.own = page.site_info.settings.own
-        })
-
-        bus.$on('update', (cmd, message) => {
-            if (cmd == 'setSiteInfo') {
-                if (message.params.event[0] == 'owned') {
-                    this.own = message.params.event[1]
-                }
-            }
-        })
-    }
-})
+    router
+}).$mount('#root')

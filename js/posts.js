@@ -1,6 +1,7 @@
-Vue.component('posts', {
+let Posts = Vue.component('posts', {
     template: `
         <div>
+            <newpost></newpost>
             <div v-for="post in posts" class="post">
                 <post :post_id="post['post_id']"></post>
                 <hr>
@@ -30,7 +31,7 @@ Vue.component('posts', {
     }
 })
 
-Vue.component('post', {
+let Post = Vue.component('post', {
     template: `
         <div class="columns">
             <div class="column is-8 post-body">
