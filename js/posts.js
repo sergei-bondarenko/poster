@@ -1,4 +1,4 @@
-let Posts = Vue.component('posts', {
+Vue.component('posts', {
     template: `
         <div>
             <newpost></newpost>
@@ -31,7 +31,7 @@ let Posts = Vue.component('posts', {
     }
 })
 
-let Post = Vue.component('post', {
+Vue.component('post', {
     template: `
         <div class="columns">
             <div class="column is-8 post-body">

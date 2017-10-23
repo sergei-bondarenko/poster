@@ -17,13 +17,13 @@
             .replace(/[&?]wrapper_nonce=[A-Za-z0-9]+/, "")
     </script>
     <script type="text/javascript" src="js/vue.js"></script>
-    <script type="text/javascript" src="js/vue-router.js"></script>
 </head>
 <body>
     <div id="root">
         <top></top>
         <div class="container">
-            <router-view></router-view>
+            <posts v-if="post_id == ''"></posts>
+            <post v-if="post_id != ''" :post_id="post_id"></post>
         </div>
     </div>
     <script type="text/javascript" src="js/ZeroFrame.js"></script>
@@ -32,7 +32,6 @@
     <script type="text/javascript" src="js/comments.js"></script>
     <script type="text/javascript" src="js/posts.js"></script>
     <script type="text/javascript" src="js/newpost.js"></script>
-    <script type="text/javascript" src="js/routes.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

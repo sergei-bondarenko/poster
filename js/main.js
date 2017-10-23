@@ -24,5 +24,18 @@ class Page extends ZeroFrame {
 let page = new Page()
 let bus = new Vue()
 let app = new Vue({
-    router
-}).$mount('#root')
+    el: '#root',
+
+    data() {
+        return {
+            post_id: ''
+        }
+    },
+
+    mounted() {
+        this.post_id = window.location.search.substring(1)
+            .replace(/[&?]*wrapper_nonce=[A-Za-z0-9]+/, '')
+        this.post_id = this.post_id.replace(/post=/, '')
+        console.log(this.post_id)
+    }
+})
