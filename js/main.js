@@ -36,6 +36,5 @@ let app = new Vue({
         this.post_id = window.location.search.substring(1)
             .replace(/[&?]*wrapper_nonce=[A-Za-z0-9]+/, '')
         this.post_id = this.post_id.replace(/post=/, '')
-        console.log(this.post_id)
     }
 })
