@@ -16,15 +16,18 @@ Vue.component('posts', {
     },
 
     mounted() {
-        this.load()
         bus.$on('update', () => {
             this.load()
         })
     },
 
+    updated() {
+        bus.$emit('update_posts')
+    },
+
     methods: {
         load() {
-            page.cmdp('dbQuery', ["SELECT post_id FROM post ORDER BY date_published ASC"]).then((res) => {
+            page.cmdp('dbQuery', ["SELECT post_id FROM post ORDER BY date_published DESC"]).then((res) => {
                 this.posts = res
             })
         }
@@ -49,7 +52,7 @@ Vue.component('post', {
     data() {
         return {
             post: {
-                post_id: this.post_id,
+                post_id: null,
                 body: null,
                 date_published: null
             }
@@ -58,7 +61,7 @@ Vue.component('post', {
 
     mounted() {
         this.load()
-        bus.$on('update', () => {
+        bus.$on('update_posts', () => {
             this.load()
         })
     },
@@ -66,7 +69,9 @@ Vue.component('post', {
     methods: {
         load() {
             page.cmdp('dbQuery', ["SELECT * FROM post WHERE post_id=" + this.post_id]).then((res) => {
-                this.post = res[0]
+                this.post.post_id = res[0].post_id
+                this.post.body = res[0].body
+                this.post.date_published = res[0].date_published
             })
         }
     }

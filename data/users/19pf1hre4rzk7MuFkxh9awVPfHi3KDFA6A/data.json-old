@@ -1,5 +1,5 @@
 {
-    "next_comment_id": 20,
+    "next_comment_id": 18,
     "comment": [
         {
             "comment_id": 1,
@@ -96,18 +96,6 @@
             "body": "cw",
             "post_id": 32,
             "date_added": 1508846201184
-        },
-        {
-            "comment_id": 18,
-            "body": "efsef",
-            "post_id": 141,
-            "date_added": 1508925762804
-        },
-        {
-            "comment_id": 19,
-            "body": "r",
-            "post_id": 141,
-            "date_added": 1508925764478
         }
     ],
     "comment_vote": {},

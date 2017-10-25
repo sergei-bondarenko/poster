@@ -25,6 +25,15 @@ let page = new Page()
 let bus = new Vue()
 let app = new Vue({
     el: '#root',
+    template: `
+        <div>
+            <top></top>
+            <div class="container">
+                <posts v-if="post_id == ''"></posts>
+                <post v-if="post_id != ''" :post_id="post_id"></post>
+            </div>
+        </div>
+    `,
 
     data() {
         return {
@@ -36,5 +45,6 @@ let app = new Vue({
         this.post_id = window.location.search.substring(1)
             .replace(/[&?]*wrapper_nonce=[A-Za-z0-9]+/, '')
         this.post_id = this.post_id.replace(/post=/, '')
+        bus.$emit('update')
     }
 })

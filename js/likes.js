@@ -1,7 +1,7 @@
 Vue.component('likes', {
     template: `
         <div>
-            <p class="is-size-7"><a :href="url">{{ date_published }}</a></p>
+            <p class="is-size-7"><a :href="getURL()">{{ date_published }}</a></p>
             <i class="fa" :class="{'fa-heart': liked, 'fa-heart-o': !liked}" aria-hidden="true" @click="like"></i>
             <p>{{ likes }}</p>
         </div>
@@ -12,8 +12,7 @@ Vue.component('likes', {
     data() {
         return {
             likes: 0,
-            liked: false,
-            url: '?post=' + this.post_id
+            liked: false
         }
     },
 
@@ -25,6 +24,10 @@ Vue.component('likes', {
     },
 
     methods: {
+        getURL() {
+            return '?post=' + this.post_id
+        },
+
         load() {
             page.cmdp('siteInfo', []).then((site_info) => {
                 page.site_info = site_info
