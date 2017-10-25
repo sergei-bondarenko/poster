@@ -17,8 +17,8 @@ Vue.component('likes', {
     },
 
     mounted() {
-        this.load()
-        bus.$on('update', () => {
+        //this.load()
+        bus.$on('update_likes', () => {
             this.load()
         })
     },

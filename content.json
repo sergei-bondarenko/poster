@@ -27,8 +27,8 @@
    "size": 169
   },
   "data/data.json": {
-   "sha512": "c3e93ef9442ca42434e433905b47e98c88e5e57f2f110af7af576cef16fa1a79",
-   "size": 17120
+   "sha512": "8c437f6613884af0be480ccbf5944369115f75c5420342cf270ddb5e9f978289",
+   "size": 17359
   },
   "dbschema.json": {
    "sha512": "6783974752aab3143e7f30e53a55ddd0fac19ccc350eb41e5560c151c84c4daa",
@@ -59,8 +59,8 @@
    "size": 77160
   },
   "index.html": {
-   "sha512": "1dace606277015d48032d14bffb31ee75eeb603288eb6eb3d1e30379271eb83a",
-   "size": 1306
+   "sha512": "481e81be6425cb149d6970627ffdbca86b1868b3460210f42b52882a53ad80af",
+   "size": 1425
   },
   "js/ZeroFrame.js": {
    "sha512": "9e08432de4399d65511bcfa2e1e8aa67e375ee2b2245232cee7602c686aa03a4",
@@ -71,16 +71,20 @@
    "size": 3504
   },
   "js/likes.js": {
-   "sha512": "813ef3ca7e74df8423dfd72d3a8bbdb7020556a0b8bc645384c7b839600f224c",
-   "size": 2763
+   "sha512": "33b7e10dc9c1fe318dbe31af4e5455dd879c9cd8829678bac3291794228604d8",
+   "size": 2771
   },
   "js/main.js": {
-   "sha512": "4f658be9e7527b6413ca5c7c5349f9fa9f4db3dcf873bf332bfe0d13c6059eae",
-   "size": 1298
+   "sha512": "906751a22d8497b380624b507c34fb12a95de15490db73f9bf39aeef67314dfc",
+   "size": 625
   },
   "js/newpost.js": {
    "sha512": "d82a0cb339a20e23e9e11b7ef979bcee48d0718a3125cca21cf19ae313f54d48",
    "size": 2176
+  },
+  "js/page.js": {
+   "sha512": "12d5d2ce678edc7ffa5680a7c47ea1bdb1a60b6eabd7a4a8ced785536ec19ef9",
+   "size": 1136
   },
   "js/posts.js": {
    "sha512": "9b05703456c9ea6c0bc5ea7c10ad9dd0e992af765a007549a71c48697bc0ebee",
@@ -93,6 +97,10 @@
   "js/vue.js": {
    "sha512": "45280ccb97b0ccc1e8039c8a21311a7abda6d766017db16ff3ee62a2b42eb00b",
    "size": 268934
+  },
+  "js/vuex.js": {
+   "sha512": "83d495ced4a0000f4ed5631b1668260802649229bb6e4dc38729b3f3a62fca58",
+   "size": 25628
   },
   "temp/layout_admin.png": {
    "sha512": "ed4c90ea2f557f5797d486b205cfc67d9eb04a551454656b7ce308bb9d8ec134",
@@ -111,8 +119,8 @@
    "size": 41755
   },
   "temp/todo.txt": {
-   "sha512": "4b3374c0fba13c36878caffd8183ac06646de9d0b28f087ed7202cf7c602f999",
-   "size": 490
+   "sha512": "cc2ebb848b1256983c03bc4a5e2adbb1574ada5829afceca1307a6f557292c7e",
+   "size": 466
   },
   "uploads/Screenshot.png": {
    "sha512": "de52c417433116e84a5db97547aea95da757ff900f323d8dd1f449294c32ad1b",
@@ -131,11 +139,11 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1508925750,
+ "modified": 1508932224,
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HNSJLO+vSmXhNaXV/GruiNs0OKo6ADtmP8gi24SX1CgTRZ+6V4RUMJJiU/maQsMqVH5eG/GKc+nAsOOomUzwzm0="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "GwyRBtzFiupnhNJQyMMbkP9OxQ48+Yay4anjuqqTxt4nQRxR6H4fg7lSypB7Wm2HUOVDU2YQqofs12p+OIgWvTk="
  },
  "signs_required": 1,
  "title": "my new site",
