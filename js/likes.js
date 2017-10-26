@@ -1,18 +1,21 @@
 Vue.component('likes', {
     template: `
         <div>
-            <p class="is-size-7"><a :href="getURL()">{{ date_published }}</a></p>
+            <p class="is-size-7"><a :href="getURL()"><!--{{ date_published }}--></a></p>
             <i class="fa" :class="{'fa-heart': liked, 'fa-heart-o': !liked}" aria-hidden="true" @click="like"></i>
             <p>{{ likes }}</p>
         </div>
     `,
     
-    props: ['post_id', 'date_published'],
+    props: ['post'],
 
-    data() {
-        return {
-            likes: 0,
-            liked: false
+    computed: {
+        likes() {
+            return this.post.likes.length
+        },
+
+        liked() {
+            return 
         }
     },
 

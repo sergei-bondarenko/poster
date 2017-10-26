@@ -27,8 +27,8 @@
    "size": 169
   },
   "data/data.json": {
-   "sha512": "8c437f6613884af0be480ccbf5944369115f75c5420342cf270ddb5e9f978289",
-   "size": 17359
+   "sha512": "9b271711538afc0fcd1bd09fa82453b39e06cab36a7ba7e1bac0d01ac315af1f",
+   "size": 17481
   },
   "dbschema.json": {
    "sha512": "6783974752aab3143e7f30e53a55ddd0fac19ccc350eb41e5560c151c84c4daa",
@@ -59,8 +59,8 @@
    "size": 77160
   },
   "index.html": {
-   "sha512": "481e81be6425cb149d6970627ffdbca86b1868b3460210f42b52882a53ad80af",
-   "size": 1425
+   "sha512": "5aa4ac2ed58375b2f73b3eff6a281fb2f9d38d69ba065b21a153597bfbdd4200",
+   "size": 1506
   },
   "js/ZeroFrame.js": {
    "sha512": "9e08432de4399d65511bcfa2e1e8aa67e375ee2b2245232cee7602c686aa03a4",
@@ -75,8 +75,8 @@
    "size": 2771
   },
   "js/main.js": {
-   "sha512": "906751a22d8497b380624b507c34fb12a95de15490db73f9bf39aeef67314dfc",
-   "size": 625
+   "sha512": "929b9e883a11f75deb2fa0a7ce80f4c58a95e5baf1a7428c1a0b5875c414ca8e",
+   "size": 336
   },
   "js/newpost.js": {
    "sha512": "d82a0cb339a20e23e9e11b7ef979bcee48d0718a3125cca21cf19ae313f54d48",
@@ -87,8 +87,12 @@
    "size": 1136
   },
   "js/posts.js": {
-   "sha512": "9b05703456c9ea6c0bc5ea7c10ad9dd0e992af765a007549a71c48697bc0ebee",
-   "size": 1757
+   "sha512": "c1b48cd0d1726e6c804033f76c0d944e819e2bbbe5b3282fce6ac24d7edc4822",
+   "size": 738
+  },
+  "js/storage.js": {
+   "sha512": "c524412487767f2d8a49d9cf58893f433b375020a42b3942861d6ec3d384a511",
+   "size": 850
   },
   "js/top.js": {
    "sha512": "e5fd848c70c782482c9da434b267288d1b67f64a01c0c6d62223829c04dd5754",
@@ -139,11 +143,11 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1508932224,
+ "modified": 1509008236,
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "GwyRBtzFiupnhNJQyMMbkP9OxQ48+Yay4anjuqqTxt4nQRxR6H4fg7lSypB7Wm2HUOVDU2YQqofs12p+OIgWvTk="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HMCqE2wNA4YdizacXppWaxKE0lH7m4GTFGhfTxdu8oD/R5Zt/0BbglHraIFw5DCIOmt6AtY5ZB9PPRVskEQm9X8="
  },
  "signs_required": 1,
  "title": "my new site",

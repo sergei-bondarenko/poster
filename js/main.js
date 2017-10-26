@@ -6,14 +6,12 @@ new Vue({
         <div>
             <top></top>
             <div class="container">
-                <posts v-if="post_id == ''"></posts>
-                <post v-if="post_id != ''" :post_id="post_id"></post>
+                <posts></posts>
             </div>
         </div>
     `,
 
     mounted() {
-        storage.commit('updateUrl')
-        storage.dispatch('loadPosts')
+        storage.commit('loadData')
     }
 })

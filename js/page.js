@@ -31,4 +31,12 @@ class Page extends ZeroFrame {
             }
         })
     }
+
+    async sqlQuery(query) {
+        return await this.cmdp('dbQuery', [query])
+    }
+
+    async getAuthAddress() {
+        return await this.cmdp('siteInfo', []).auth_address
+    }
 }
