@@ -1,5 +1,6 @@
-#body {
-    background-color: lightgray;
+body {
+    /* This fixes bug in Chrome: scrolling not working after slider opening/closing */
+    backface-visibility: hidden; 
 }
 
 #top-posts {
