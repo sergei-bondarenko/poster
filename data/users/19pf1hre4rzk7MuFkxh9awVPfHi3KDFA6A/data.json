@@ -1,5 +1,5 @@
 {
-    "next_comment_id": 25,
+    "next_comment_id": 28,
     "comment": [
         {
             "comment_id": 1,
@@ -134,10 +134,28 @@
             "date_added": 1508931697712
         },
         {
-            "comment_id": 24,
-            "body": "768",
-            "post_id": 142,
-            "date_added": 1508932220342
+            "comment_id": 25,
+            "body": "iuyi",
+            "post_id": 144,
+            "date_added": 1509108799640
+        },
+        {
+            "comment_id": 26,
+            "body": "jhkjhli",
+            "post_id": 144,
+            "date_added": 1509108812605
+        },
+        {
+            "comment_id": 27,
+            "body": "bf",
+            "post_id": 143,
+            "date_added": 1509109014961
+        },
+        {
+            "comment_id": 28,
+            "body": "5",
+            "post_id": 143,
+            "date_added": 1509109017176
         }
     ],
     "comment_vote": {},

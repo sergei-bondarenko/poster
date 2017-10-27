@@ -34,6 +34,14 @@ class Page extends ZeroFrame {
         return await this.cmdp('fileGet', ['data/users/' + storage.state.site_info.auth_address + '/data.json'])
     }
 
+    async sqlQuery(query) {
+        return await this.cmdp('dbQuery', [query])
+    }
+
+    async getSiteInfo() {
+        return await this.cmdp('siteInfo', [])
+    }
+
     async like(post_id) {
         if (this.isCertSelected) {
             let data = await this.getDataJson()
@@ -58,11 +66,31 @@ class Page extends ZeroFrame {
         }
     }
 
-    async sqlQuery(query) {
-        return await this.cmdp('dbQuery', [query])
-    }
+    async comment(post_id, text) {
+        if (this.isCertSelected) {
+            let data = await this.getDataJson()
+            if (data) {
+                data = JSON.parse(data)
+            } else {
+                data = {
+                    'next_comment_id': 1,
+                    'comment': [],
+                    'comment_vote': {},
+                    'post_vote': {}
+                }
+            }
 
-    async getSiteInfo() {
-        return await this.cmdp('siteInfo', [])
+            data.next_comment_id += 1
+
+            data.comment.push({
+                'comment_id': data.next_comment_id,
+                'body': text,
+                'post_id': post_id,
+                'date_added': + new Date()
+            })
+
+            await this.writePublish('data/users/' + storage.state.site_info.auth_address + '/data.json', data)
+            storage.commit('loadComments')
+        }
     }
 }

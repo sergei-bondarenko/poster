@@ -15,6 +15,7 @@ new Vue({
         storage.commit('loadURL')
         storage.commit('loadSiteInfo')
         storage.commit('loadLikes')
+        storage.commit('loadComments')
         storage.commit('loadPosts')
     }
 })
