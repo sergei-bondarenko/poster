@@ -5,7 +5,7 @@ class Poster extends ZeroFrame {
     }
 
     get isCertSelected() {
-        if (this.site_info.cert_user_id == null) {
+        if (storage.state.site_info.cert_user_id == null) {
             this.cmdp('certSelect', {'accepted_domains': ['zeroid.bit']})
             return false
         } else {
