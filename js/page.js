@@ -5,8 +5,9 @@ class Page extends ZeroFrame {
     }
 
     onRequest(cmd, message) {
-        //bus.$emit('update', cmd, message)
-        //storage.commit('loadSiteInfo')
+        if (cmd == "setSiteInfo") {
+            storage.commit('loadSiteInfo')
+        }
     }
 
     writePublish(inner_path, data) {

@@ -12,7 +12,9 @@ new Vue({
     `,
 
     mounted() {
+        storage.commit('loadURL')
         storage.commit('loadSiteInfo')
-        storage.commit('loadData')
+        storage.commit('loadLikes')
+        storage.commit('loadPosts')
     }
 })

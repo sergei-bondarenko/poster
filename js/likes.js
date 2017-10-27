@@ -11,11 +11,15 @@ Vue.component('likes', {
 
     computed: {
         likes() {
-            return this.post.likes.length
+            if (this.post.post_id in storage.state.likes) {
+                return storage.state.likes[this.post.post_id].length
+            }
         },
 
         liked() {
-            return this.post.likes.indexOf(storage.state.site_info.auth_address) != -1
+            if (this.post.post_id in storage.state.likes) {
+                return storage.state.likes[this.post.post_id].indexOf(storage.state.site_info.auth_address) != -1
+            }
         }
     },
 
