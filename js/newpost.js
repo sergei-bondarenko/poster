@@ -1,6 +1,6 @@
 Vue.component('newpost', {
     template: `
-        <div id="new-post" v-if="own">
+        <div id="new-post" v-if="show">
             <input type="file" id="input-file" @change="picUpload" ref="inputFile">
             <button type="button" @click="save">Save</button>
             <textarea ref="postarea" id="postarea">
@@ -8,25 +8,14 @@ Vue.component('newpost', {
         </div>
     `,
 
-    data() {
-        return {
-            own: false,
-        }
-    },
-
-    mounted() {
-        poster.cmdp('siteInfo', []).then((site_info) => {
-            poster.site_info = site_info
-            this.own = poster.site_info.settings.own
-        })
-
-        bus.$on('update', (cmd, message) => {
-            if (cmd == 'setSiteInfo') {
-                if (message.params.event[0] == 'owned') {
-                    this.own = message.params.event[1]
-                }
+    computed: {
+        show() {
+            if ("settings" in storage.state.site_info) {
+                return storage.state.site_info.settings.own
+            } else {
+                return false
             }
-        })
+        }
     },
 
     methods: {

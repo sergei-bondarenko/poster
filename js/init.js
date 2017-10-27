@@ -6,6 +6,7 @@ new Vue({
         <div>
             <top></top>
             <div class="container">
+                <newpost></newpost>
                 <posts></posts>
             </div>
         </div>

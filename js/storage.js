@@ -4,7 +4,7 @@ const storage = new Vuex.Store({
         likes: {},
         comments: {},
         url: '',
-        site_info: ''
+        site_info: {}
     },
 
     mutations: {

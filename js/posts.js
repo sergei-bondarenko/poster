@@ -1,7 +1,6 @@
 Vue.component('posts', {
     template: `
         <div>
-            <newpost></newpost>
             <div v-for="post in posts" class="post">
                 <div class="columns">
                     <div class="column is-8 post-body">
