@@ -1,4 +1,4 @@
-class Page extends ZeroFrame {
+class Poster extends ZeroFrame {
     constructor(url) {
         super(url)
         this.site_info = null
@@ -21,11 +21,11 @@ class Page extends ZeroFrame {
 
     writePublish(inner_path, data) {
         let json_raw = unescape(encodeURIComponent(JSON.stringify(data, undefined, '    ')))
-        page.cmdp('fileWrite', [inner_path, btoa(json_raw)]).then(() => {
+        this.cmdp('fileWrite', [inner_path, btoa(json_raw)]).then(() => {
             if (inner_path == 'data/data.json') {
-                return page.cmdp('sitePublish', ['stored'])
+                return this.cmdp('sitePublish', ['stored'])
             } else {
-                return page.cmdp('sitePublish', [undefined, inner_path])
+                return this.cmdp('sitePublish', [undefined, inner_path])
             }
         })
     }

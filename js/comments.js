@@ -28,7 +28,7 @@ Vue.component('comments', {
 
     methods: {
         comment() {
-            page.comment(this.post.post_id, this.$refs.text.value)
+            poster.comment(this.post.post_id, this.$refs.text.value)
             this.$refs.text.value = ''
         }
     }

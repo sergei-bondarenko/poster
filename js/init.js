@@ -1,4 +1,4 @@
-const page = new Page()
+const poster = new Poster()
 const bus = new Vue()
 new Vue({
     el: '#root',

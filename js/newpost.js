@@ -15,9 +15,9 @@ Vue.component('newpost', {
     },
 
     mounted() {
-        page.cmdp('siteInfo', []).then((site_info) => {
-            page.site_info = site_info
-            this.own = page.site_info.settings.own
+        poster.cmdp('siteInfo', []).then((site_info) => {
+            poster.site_info = site_info
+            this.own = poster.site_info.settings.own
         })
 
         bus.$on('update', (cmd, message) => {
@@ -36,12 +36,12 @@ Vue.component('newpost', {
             fr.readAsDataURL(file)
             fr.onload = () => {
                 base64 = fr.result.split(',')[1]
-                page.cmdp('fileWrite', ['uploads/' + file.name, base64]).then((res) => {
+                poster.cmdp('fileWrite', ['uploads/' + file.name, base64]).then((res) => {
                     if (res == 'ok') {
                         console.log('File uploaded!')
                         this.appendImage(file.name)
                     } else {
-                        page.cmdp('wrapperNotification',
+                        poster.cmdp('wrapperNotification',
                             ['error', "File write error: " + res])
                     }
                 })
@@ -54,7 +54,7 @@ Vue.component('newpost', {
 
         save() {
             let data = null
-            page.cmdp('fileGet', ['data/data.json']).then((file) => {
+            poster.cmdp('fileGet', ['data/data.json']).then((file) => {
                 data = JSON.parse(file)
                 data.post.push({
                     'post_id': data.next_post_id,
@@ -62,7 +62,7 @@ Vue.component('newpost', {
                     'body': this.$refs.postarea.value
                 })
                 data.next_post_id += 1
-                page.writePublish('data/data.json', data)
+                poster.writePublish('data/data.json', data)
                 this.$refs.postarea.value = ''
             })
         }

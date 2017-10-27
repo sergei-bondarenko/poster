@@ -16,7 +16,7 @@ const storage = new Vuex.Store({
         },
 
         async loadSiteInfo(state) {
-            state.site_info = await page.getSiteInfo()
+            state.site_info = await poster.getSiteInfo()
         },
 
         async loadPosts(state) {
@@ -28,7 +28,7 @@ const storage = new Vuex.Store({
                 query = "SELECT * FROM post WHERE post_id=" + state.url
             }
 
-            state.posts = await page.sqlQuery(query)
+            state.posts = await poster.sqlQuery(query)
         },
 
         async loadLikes(state) {
@@ -36,7 +36,7 @@ const storage = new Vuex.Store({
                 + "LEFT JOIN post_vote USING (json_id) "
                 + "WHERE file_name='data.json' "
                 + "AND directory != ''"
-            let likes_arr = await page.sqlQuery(query)
+            let likes_arr = await poster.sqlQuery(query)
             state.likes = {}
             likes_arr.forEach((like) => {
                 if ( !(like.post_id in state.likes) ) {
@@ -54,7 +54,7 @@ const storage = new Vuex.Store({
               + "LEFT JOIN json AS json_content ON (json_content.directory = json.directory AND json_content.file_name='content.json') "
               + "LEFT JOIN keyvalue ON (keyvalue.json_id = json_content.json_id AND key = 'cert_user_id') "
               + "ORDER BY date_added DESC"
-            let comments_arr = await page.sqlQuery(query)
+            let comments_arr = await poster.sqlQuery(query)
             state.comments = {}
             comments_arr.forEach((comment) => {
                 if ( !(comment.post_id in state.comments) ) {

@@ -34,7 +34,7 @@ Vue.component('likes', {
 
     methods: {
         like() {
-            page.like(this.post.post_id)
+            poster.like(this.post.post_id)
         }
     }
 })
