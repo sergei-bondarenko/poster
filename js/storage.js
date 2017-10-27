@@ -2,10 +2,15 @@ const storage = new Vuex.Store({
     state: {
         posts: [],
         url: '',
-        auth_address: ''
+        site_info: ''
     },
 
     mutations: {
+        async loadSiteInfo(state) {
+            // Load site_info
+            state.site_info = await page.getSiteInfo()
+        },
+
         async loadData(state) {
             let query = null
 

@@ -15,7 +15,7 @@ Vue.component('likes', {
         },
 
         liked() {
-            return 
+            return this.post.likes.indexOf(storage.state.site_info.auth_address) != -1
         }
     },
 

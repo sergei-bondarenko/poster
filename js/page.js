@@ -5,7 +5,8 @@ class Page extends ZeroFrame {
     }
 
     onRequest(cmd, message) {
-        bus.$emit('update', cmd, message)
+        //bus.$emit('update', cmd, message)
+        //storage.commit('loadSiteInfo')
     }
 
     writePublish(inner_path, data) {
@@ -36,7 +37,7 @@ class Page extends ZeroFrame {
         return await this.cmdp('dbQuery', [query])
     }
 
-    async getAuthAddress() {
-        return await this.cmdp('siteInfo', []).auth_address
+    async getSiteInfo() {
+        return await this.cmdp('siteInfo', [])
     }
 }

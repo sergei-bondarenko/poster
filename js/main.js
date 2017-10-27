@@ -12,6 +12,7 @@ new Vue({
     `,
 
     mounted() {
+        storage.commit('loadSiteInfo')
         storage.commit('loadData')
     }
 })
