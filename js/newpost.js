@@ -1,7 +1,7 @@
 Vue.component('newpost', {
     template: `
         <div id="new-post" v-if="show">
-            <input type="file" id="input-file" @change="picUpload" ref="inputFile">
+            <input type="file" id="input-file" @change="addPicture" ref="inputFile">
             <button type="button" @click="addPost()">Save</button>
             <textarea ref="text">
             </textarea>
@@ -17,26 +17,10 @@ Vue.component('newpost', {
     },
 
     methods: {
-        picUpload(event) {
+        addPicture(event) {
             let file = this.$refs.inputFile.files[0]
-            let fr = new FileReader()
-            fr.readAsDataURL(file)
-            fr.onload = () => {
-                base64 = fr.result.split(',')[1]
-                poster.cmdp('fileWrite', ['uploads/' + file.name, base64]).then((res) => {
-                    if (res == 'ok') {
-                        console.log('File uploaded!')
-                        this.appendImage(file.name)
-                    } else {
-                        poster.cmdp('wrapperNotification',
-                            ['error', "File write error: " + res])
-                    }
-                })
-            }
-        },
-
-        appendImage(name) {
-            this.$refs.text.value += '![](uploads/' + name + ')'
+            poster.uploadFile(file)
+            this.$refs.text.value += '![](uploads/' + file.name + ')'
         },
 
         addPost() {

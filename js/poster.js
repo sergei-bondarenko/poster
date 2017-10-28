@@ -110,4 +110,13 @@ class Poster extends ZeroFrame {
         await this.writePublish('data/data.json', data)
         storage.commit('loadPosts')
     }
+
+    async uploadFile(file) {
+        let fr = new FileReader()
+        fr.readAsDataURL(file)
+        fr.onload = () => {
+            let base64 = fr.result.split(',')[1]
+            poster.cmdp('fileWrite', ['uploads/' + file.name, base64])
+        }
+    }
 }
