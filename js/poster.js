@@ -27,11 +27,15 @@ class Poster extends ZeroFrame {
             } else {
                 return this.cmdp('sitePublish', [undefined, inner_path])
             }
-        })
+        }).catch((err) => { console.log('error' + err) })
     }
 
-    async getDataJson() {
+    async getUserDataJson() {
         return await this.cmdp('fileGet', ['data/users/' + storage.state.site_info.auth_address + '/data.json'])
+    }
+
+    async getRootDataJson() {
+        return await this.cmdp('fileGet', ['data/data.json'])
     }
 
     async sqlQuery(query) {
@@ -44,7 +48,7 @@ class Poster extends ZeroFrame {
 
     async like(post_id) {
         if (this.isCertSelected) {
-            let data = await this.getDataJson()
+            let data = await this.getUserDataJson()
             if (data) {
                 data = JSON.parse(data)
             } else {
@@ -66,9 +70,9 @@ class Poster extends ZeroFrame {
         }
     }
 
-    async comment(post_id, text) {
+    async addComment(post_id, text) {
         if (this.isCertSelected) {
-            let data = await this.getDataJson()
+            let data = await this.getUserDataJson()
             if (data) {
                 data = JSON.parse(data)
             } else {
@@ -92,5 +96,18 @@ class Poster extends ZeroFrame {
             await this.writePublish('data/users/' + storage.state.site_info.auth_address + '/data.json', data)
             storage.commit('loadComments')
         }
+    }
+
+    async addPost(text) {
+        let data = await this.getRootDataJson()
+        data = JSON.parse(data)
+        data.post.push({
+            'post_id': data.next_post_id,
+            'date_published': + new Date(),
+            'body': text
+        })
+        data.next_post_id += 1
+        await this.writePublish('data/data.json', data)
+        storage.commit('loadPosts')
     }
 }

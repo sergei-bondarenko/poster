@@ -12,7 +12,7 @@ Vue.component('comments', {
                 </div>
             </div>
             <textarea class="comment-textarea" ref="text"></textarea>
-            <button type="button" @click="comment()">Save</button>
+            <button type="button" @click="addComment()">Save</button>
         </div>
     `,
 
@@ -27,8 +27,8 @@ Vue.component('comments', {
     },
 
     methods: {
-        comment() {
-            poster.comment(this.post.post_id, this.$refs.text.value)
+        addComment() {
+            poster.addComment(this.post.post_id, this.$refs.text.value)
             this.$refs.text.value = ''
         }
     }

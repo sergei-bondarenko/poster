@@ -2,8 +2,8 @@ Vue.component('newpost', {
     template: `
         <div id="new-post" v-if="show">
             <input type="file" id="input-file" @change="picUpload" ref="inputFile">
-            <button type="button" @click="save">Save</button>
-            <textarea ref="postarea" id="postarea">
+            <button type="button" @click="addPost()">Save</button>
+            <textarea ref="text">
             </textarea>
         </div>
     `,
@@ -12,8 +12,6 @@ Vue.component('newpost', {
         show() {
             if ("settings" in storage.state.site_info) {
                 return storage.state.site_info.settings.own
-            } else {
-                return false
             }
         }
     },
@@ -38,22 +36,12 @@ Vue.component('newpost', {
         },
 
         appendImage(name) {
-            this.$refs.postarea.value += '![](uploads/' + name + ')'
+            this.$refs.text.value += '![](uploads/' + name + ')'
         },
 
-        save() {
-            let data = null
-            poster.cmdp('fileGet', ['data/data.json']).then((file) => {
-                data = JSON.parse(file)
-                data.post.push({
-                    'post_id': data.next_post_id,
-                    'date_published': + new Date(),
-                    'body': this.$refs.postarea.value
-                })
-                data.next_post_id += 1
-                poster.writePublish('data/data.json', data)
-                this.$refs.postarea.value = ''
-            })
+        addPost() {
+            poster.addPost(this.$refs.text.value)
+            this.$refs.text.value = ''
         }
     }
 })
