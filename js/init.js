@@ -6,11 +6,23 @@ new Vue({
         <div>
             <top></top>
             <div class="container">
-                <newpost></newpost>
+                <newpost v-if="mainPageView && own"></newpost>
                 <posts></posts>
             </div>
         </div>
     `,
+
+    computed: {
+        mainPageView() {
+            return storage.state.url == ''
+        },
+
+        own() {
+            if ("settings" in storage.state.site_info) {
+                return storage.state.site_info.settings.own
+            }
+        }
+    },
 
     mounted() {
         storage.commit('loadURL')

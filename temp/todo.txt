@@ -13,3 +13,4 @@
 - remove cloned from
 - add 'use strict'
 - configurable via data/data.json
+- jump to the top button

@@ -5,7 +5,7 @@ Vue.component('top', {
                 <div class="hero-body">
                     <div class="container">
                         <p class="title">
-                            Poster
+                            <a :href="mainPageLink">Poster</a>
                         </p>
                         <p class="subtitle">
                             Simple blog for zeronet
@@ -13,9 +13,8 @@ Vue.component('top', {
                     </div>
                 </div>
             </section>
-            <div class="container">
+            <div class="container" v-if="mainPageView">
                 <div id="top-posts">
-                    <!-- Most liked | Last commented -->
                     <button class="button">Last commented</button>
                     <div class="dropdown" :class="{'is-active': show_dropdown_likes}" ref="dropdown_likes">
                         <div class="dropdown-trigger">
@@ -40,6 +39,16 @@ Vue.component('top', {
             </div>
         </div>
     `,
+
+    computed: {
+        mainPageView() {
+            return storage.state.url == ''
+        },
+
+        mainPageLink() {
+            return window.location.origin + window.location.pathname
+        }
+    },
 
     data() {
         return {

@@ -1,20 +1,12 @@
 Vue.component('newpost', {
     template: `
-        <div id="new-post" v-if="show">
+        <div id="new-post">
             <input type="file" id="input-file" @change="addPicture" ref="inputFile">
             <button type="button" @click="addPost()">Save</button>
             <textarea ref="text">
             </textarea>
         </div>
     `,
-
-    computed: {
-        show() {
-            if ("settings" in storage.state.site_info) {
-                return storage.state.site_info.settings.own
-            }
-        }
-    },
 
     methods: {
         addPicture(event) {

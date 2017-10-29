@@ -34,10 +34,12 @@ Vue.component('posts', {
 
     methods: {
         scroll() {
-            let current_position = window.scrollY
-            let trigger_position = this.$refs['post' + (this.post_count-10)][0].offsetTop
-            if (current_position > trigger_position) {
-                this.post_count += 15
+            if (this.post_count > 10 && this.post_count < storage.state.posts.length) {
+                let current_position = window.scrollY
+                let trigger_position = this.$refs['post' + (this.post_count-10)][0].offsetTop
+                if (current_position > trigger_position) {
+                    this.post_count += 15
+                }
             }
         }
     }

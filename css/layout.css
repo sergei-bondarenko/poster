@@ -3,10 +3,6 @@ body {
     backface-visibility: hidden; 
 }
 
-#top-posts {
-    background-color: lightgreen;
-}
-
 #new-post {
     padding-bottom: 20px;
 }
