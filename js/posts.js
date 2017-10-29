@@ -11,7 +11,7 @@ Vue.component('posts', {
                         <comments :post="post"></comments>
                     </div>
                 </div>
-                <hr>
+                <hr v-if="index != posts.length-1">
             </div>
         </div>
     `,
