@@ -3,6 +3,15 @@ body {
     backface-visibility: hidden; 
 }
 
+button::-moz-focus-inner {
+    border: 0;
+}
+
+button {
+    box-shadow: none !important;
+    border-color: #dbdbdb !important;
+}
+
 #new-post {
     padding-bottom: 20px;
 }

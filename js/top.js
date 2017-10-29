@@ -15,10 +15,12 @@ Vue.component('top', {
             </section>
             <div class="container" v-if="mainPageView">
                 <div id="top-posts">
-                    <button class="button">Last commented</button>
-                    <div class="dropdown" :class="{'is-active': show_dropdown_likes}" ref="dropdown_likes">
+                    <button class="button" @click="toggleDropdownComments()" :class="{'is-success': commentsSelected}">Last commented</button>
+                    <div class="dropdown" :class="{'is-active': show_dropdown_likes}">
                         <div class="dropdown-trigger">
-                        <button class="button" @click="toggleDropdownLikes()" aria-haspopup="true" aria-controls="dropdown-menu">
+                        <button class="button" :class="{'is-success': likesSelected}"
+                                @click="toggleDropdownLikes()" aria-haspopup="true"
+                                aria-controls="dropdown-menu" ref="dropdown_likes">
                             <span>{{ dropdown_likes_text }}</span>
                             <span class="icon is-small">
                             <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -27,11 +29,11 @@ Vue.component('top', {
                         </div>
                         <div class="dropdown-menu" id="dropdown-menu" role="menu">
                             <div class="dropdown-content">
-                                <a class="dropdown-item" @click="select('day')" :class="{'is-active': selected == 'day'}">Past day</a>
-                                <a class="dropdown-item" @click="select('week')" :class="{'is-active': selected == 'week'}">Past week</a>
-                                <a class="dropdown-item" @click="select('month')" :class="{'is-active': selected == 'month'}">Past month</a>
-                                <a class="dropdown-item" @click="select('year')" :class="{'is-active': selected == 'year'}">Past year</a>
-                                <a class="dropdown-item" @click="select('all')" :class="{'is-active': selected == 'all'}">All time</a>
+                                <a class="dropdown-item" @click="select('day')" :class="{'is-active': likesSelected == 'day'}">Past day</a>
+                                <a class="dropdown-item" @click="select('week')" :class="{'is-active': likesSelected == 'week'}">Past week</a>
+                                <a class="dropdown-item" @click="select('month')" :class="{'is-active': likesSelected == 'month'}">Past month</a>
+                                <a class="dropdown-item" @click="select('year')" :class="{'is-active': likesSelected == 'year'}">Past year</a>
+                                <a class="dropdown-item" @click="select('all')" :class="{'is-active': likesSelected == 'all'}">All time</a>
                             </div>
                         </div>
                     </div>
@@ -53,14 +55,15 @@ Vue.component('top', {
     data() {
         return {
             show_dropdown_likes: false,
-            selected: null,
+            likesSelected: null,
+            commentsSelected: false,
             dropdown_likes_text: "Most liked"
         }
     },
 
     mounted() {
         window.addEventListener('click', (event) => {
-            if ( !event.path.includes(this.$refs.dropdown_likes) ) {
+            if (event.target != this.$refs.dropdown_likes) {
                 // User clicks outside of the dropdown menu
                 this.show_dropdown_likes = false
             }
@@ -69,13 +72,22 @@ Vue.component('top', {
 
     methods: {
         toggleDropdownLikes() {
+            this.dropdown_likes_text = "Most liked"
+            this.likesSelected = null
             this.show_dropdown_likes = !this.show_dropdown_likes
         },
 
         select(elem) {
-            this.selected = elem
+            this.likesSelected = elem
             this.dropdown_likes_text = 'Top ' + elem
             this.show_dropdown_likes = false
+            this.commentsSelected = false
+        },
+
+        toggleDropdownComments() {
+            this.commentsSelected = !this.commentsSelected
+            this.likesSelected = null
+            this.dropdown_likes_text = "Most liked"
         }
     }
 })
