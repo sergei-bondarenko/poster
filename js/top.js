@@ -15,13 +15,19 @@ Vue.component('top', {
             </section>
             <div class="container" v-if="mainPageView">
                 <div id="top-posts">
-                    <button class="button" @click="toggleDropdownComments()" :class="{'is-success': commentsSelected}">Last commented</button>
-                    <div class="dropdown" :class="{'is-active': show_dropdown_likes}">
+                    <button class="button"
+                    :class="{'is-success': commentsSelected}"
+                    @mouseenter="comments(true)"
+                    @mouseout="comments(false)">
+                        Last commented
+                    </button>
+                    <div class="dropdown" :class="{'is-active': showDropdown}">
                         <div class="dropdown-trigger">
-                        <button class="button" :class="{'is-success': likesSelected}"
-                                @click="toggleDropdownLikes()" aria-haspopup="true"
-                                aria-controls="dropdown-menu" ref="dropdown_likes">
-                            <span>{{ dropdown_likes_text }}</span>
+                        <button class="button" :class="{'is-success': likesSelected}" aria-haspopup="true"
+                        aria-controls="dropdown-menu" ref="dropdown_likes"
+                        @mouseover="likes(true)"
+                        @mouseout="likes(false)">
+                            <span>{{ likesText }}</span>
                             <span class="icon is-small">
                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                             </span>
@@ -49,45 +55,66 @@ Vue.component('top', {
 
         mainPageLink() {
             return window.location.origin + window.location.pathname
+        },
+
+        likesText() {
+           if (this.likesSelected == null) {
+               return "Most liked"
+           } else {
+               return "Top " + this.likesSelected
+           }
         }
     },
 
     data() {
         return {
-            show_dropdown_likes: false,
-            likesSelected: null,
+            showDropdown: false,
             commentsSelected: false,
-            dropdown_likes_text: "Most liked"
+            commentsHover: false,
+            likesSelected: null,
+            likesHover: false
         }
     },
 
     mounted() {
-        window.addEventListener('click', (event) => {
-            if (event.target != this.$refs.dropdown_likes) {
-                // User clicks outside of the dropdown menu
-                this.show_dropdown_likes = false
+        window.addEventListener('click', () => {
+            if (this.commentsHover == true) {
+                if (this.commentsSelected) {
+                    this.commentsSelected = false
+                    storage.commit('loadPosts')
+                } else {
+                    this.commentsSelected = true
+                    this.likesSelected = null
+                    storage.commit('loadPosts', {order: 'comments'})
+                }
             }
-        }, true)
+            if (this.likesHover == true) {
+                if (this.showDropdown) {
+                    this.showDropdown = false
+                    this.likesSelected = null
+                    storage.commit('loadPosts')
+                } else {
+                    this.showDropdown = true
+                }
+            } else {
+                this.showDropdown = false
+            }
+        })
     },
 
     methods: {
-        toggleDropdownLikes() {
-            this.dropdown_likes_text = "Most liked"
-            this.likesSelected = null
-            this.show_dropdown_likes = !this.show_dropdown_likes
+        likes(state) {
+            this.likesHover = state
+        },
+
+        comments(state) {
+            this.commentsHover = state
         },
 
         select(elem) {
             this.likesSelected = elem
-            this.dropdown_likes_text = 'Top ' + elem
-            this.show_dropdown_likes = false
             this.commentsSelected = false
-        },
-
-        toggleDropdownComments() {
-            this.commentsSelected = !this.commentsSelected
-            this.likesSelected = null
-            this.dropdown_likes_text = "Most liked"
+            storage.commit('loadPosts', {order: 'likes', timespan: elem})
         }
     }
 })

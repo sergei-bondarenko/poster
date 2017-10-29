@@ -19,15 +19,45 @@ const storage = new Vuex.Store({
             state.site_info = await poster.getSiteInfo()
         },
 
-        async loadPosts(state) {
+        async loadPosts(state, payload) {
             let query = null
 
-            if (state.url == '') {
-                query = "SELECT * FROM post ORDER BY date_published DESC"
-            } else {
+            if (state.url != '') {
                 query = "SELECT * FROM post WHERE post_id=" + state.url
+            } else {
+                if (payload === undefined) {
+                    query = "SELECT * FROM post ORDER BY date_published DESC"
+                } else {
+                    let date = 0
+                    let order = null
+                    if (payload.order == 'likes') {
+                        order = 'votes'
+                        switch (payload.timespan) {
+                            case 'day':
+                                date = + new Date() - 24 * 3600 * 1000
+                                break
+                            case 'week':
+                                date = + new Date() - 7 * 24 * 3600 * 1000
+                                break
+                            case 'month':
+                                date = + new Date() - 30 * 24 * 3600 * 1000
+                                break
+                            case 'year':
+                                date = + new Date() - 365 * 24 * 3600 * 1000
+                                break
+                        }
+                    }
+                    if (payload.order == 'comments') {
+                        order = 'last_comment'
+                    }
+                    query = "SELECT post.*, COUNT(comment_id) AS comments, "
+                        + "MAX(comment.date_added) AS last_comment, "
+                        + "(SELECT COUNT(*) FROM post_vote WHERE post_vote.post_id = post.post_id) "
+                        + "AS votes FROM post LEFT JOIN comment "
+                        + "USING (post_id) WHERE date_published > " + date + " GROUP BY post_id "
+                        + "ORDER BY " + order + " DESC"
+                }
             }
-
             state.posts = await poster.sqlQuery(query)
         },
 

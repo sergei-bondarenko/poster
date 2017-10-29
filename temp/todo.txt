@@ -14,3 +14,5 @@
 - add 'use strict'
 - configurable via data/data.json
 - jump to the top button
+- rename votes to likes
+- nothing to show label when there is no posts
