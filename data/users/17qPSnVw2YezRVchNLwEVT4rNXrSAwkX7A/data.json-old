@@ -1,0 +1,13 @@
+{
+    "next_comment_id": 2,
+    "comment": [
+        {
+            "comment_id": 1,
+            "body": "third",
+            "post_id": 1,
+            "date_added": 1508690229779
+        }
+    ],
+    "comment_vote": {},
+    "topic_vote": {}
+}
