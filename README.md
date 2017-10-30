@@ -1,3 +1,0 @@
-# poster
-
-Work in progress
