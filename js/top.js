@@ -15,7 +15,7 @@ Vue.component('top', {
             </section>
             <div class="container" v-if="mainPageView">
                 <div id="top-posts">
-                    <button class="button"
+                    <button class="button is-shadowless"
                     :class="{'is-success': commentsSelected}"
                     @mouseenter="comments(true)"
                     @mouseout="comments(false)">
@@ -23,7 +23,7 @@ Vue.component('top', {
                     </button>
                     <div class="dropdown" :class="{'is-active': showDropdown}">
                         <div class="dropdown-trigger">
-                        <button class="button" :class="{'is-success': likesSelected}" aria-haspopup="true"
+                        <button class="button is-shadowless" :class="{'is-success': likesSelected}" aria-haspopup="true"
                         aria-controls="dropdown-menu" ref="dropdown_likes"
                         @mouseover="likes(true)"
                         @mouseout="likes(false)">

@@ -8,14 +8,31 @@ button::-moz-focus-inner {
 }
 
 button {
-    box-shadow: none !important;
     border-color: #dbdbdb !important;
+}
+
+ul {
+    list-style-type: circle;
 }
 
 #new-post {
     padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#input-file {
+    display: none;
 }
 
 .columns {
     margin: 0px;
+}
+
+.fa {
+    cursor: pointer;
+    user-select: none;
+}
+
+textarea {
+    width: 100%;
 }

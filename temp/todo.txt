@@ -1,9 +1,6 @@
 - delete posts
-- videos autoplay with repeat and without autoplay
 - edit posts and comments
-- music
 - selfsigned certs
-- check max comments size
 - feed
 - https://github.com/HelloZeroNet/ZeroBlog/blob/6ea961347d58a193d33df4f4f1e2bda43e19bba6/js/utils/Time.coffee
   (search + new Date())
@@ -13,6 +10,7 @@
 - remove cloned from
 - add 'use strict'
 - configurable via data/data.json
-- jump to the top button
 - rename votes to likes
 - nothing to show label when there is no posts
+- alert when extension not recognized
+- comments https://bulma.io/documentation/layout/media-object/
