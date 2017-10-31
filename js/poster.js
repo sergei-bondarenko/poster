@@ -20,10 +20,22 @@ class Poster extends ZeroFrame {
     }
 
     findPostById(posts, id) {
-        // Find an index of post in the array by its id
+        // Find an index of the post in the array by its id
         let index = 0
         while (index < posts.length) {
             if (posts[index].post_id == id) {
+                break
+            }
+            index++
+        }
+        return index
+    }
+
+    findCommentById(comments, id) {
+        // Find an index of the comment in the array by its id
+        let index = 0
+        while (index < comments.length) {
+            if (comments[index].comment_id == id) {
                 break
             }
             index++
@@ -137,6 +149,14 @@ class Poster extends ZeroFrame {
         data.post.splice(this.findPostById(data.post, id), 1)
         await this.writePublish('data/data.json', data)
         storage.commit('loadPosts')
+    }
+
+    async delComment(id) {
+        let data = await this.getUserDataJson()
+        data = JSON.parse(data)
+        data.comment.splice(this.findCommentById(data.comment, id), 1)
+        await this.writePublish('data/users/' + storage.state.site_info.auth_address + '/data.json', data)
+        storage.commit('loadComments')
     }
 
     async uploadFile(file) {

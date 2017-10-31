@@ -59,8 +59,8 @@
    "size": 1272
   },
   "js/comments.js": {
-   "sha512": "9e8cbbb6f41a177329a7a198956500193fd6249c1747b89a36ed78bb03dd94cf",
-   "size": 1672
+   "sha512": "bbdfe2f3c6966ac4dd39bd6f28f681d5512f088a62d0048739b0907211d869ef",
+   "size": 2075
   },
   "js/init.js": {
    "sha512": "ac69823aaacf0dd81e963547e20162057707cdf51b4e1c0bc0e13510a2c8f955",
@@ -123,8 +123,8 @@
    "size": 41755
   },
   "temp/todo.txt": {
-   "sha512": "c013f255c364b176edee1d2205aa80ae1f4fecf603336b558928e85e7cc7c180",
-   "size": 543
+   "sha512": "1346b03196a125acbe2d8f9738babd595d08cfd34a4b39df801c46045d4f0072",
+   "size": 528
   }
  },
  "files_optional": {
@@ -175,12 +175,12 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1509457804,
+ "modified": 1509459775,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HCHF+8kpPRD5vvs6eF+lxuXWpETq5O0zNpfyhUS6lmheAzZ0KW2kJTpm0vW0JOMj3c9qTdE2KSetMqWlGk7Uf9w="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HFLhDiEgCadA3BWJsDEiS/IytjCSzuiJegTMte/bw3AtNH7l3zFpd7w/NDlzXysAaJNXP9XnECLflwZWDPjEa1Y="
  },
  "signs_required": 1,
  "title": "my new site",

@@ -170,6 +170,12 @@
             "date_added": 1509125327477
         },
         {
+            "comment_id": 31,
+            "body": "kj",
+            "post_id": 149,
+            "date_added": 1509196495695
+        },
+        {
             "comment_id": 32,
             "body": "n",
             "post_id": 144,
@@ -192,6 +198,12 @@
             "body": "6576",
             "post_id": 159,
             "date_added": 1509445290487
+        },
+        {
+            "comment_id": 37,
+            "body": "f",
+            "post_id": 149,
+            "date_added": 1509459828796
         }
     ],
     "comment_vote": {},

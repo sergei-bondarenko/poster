@@ -1,4 +1,3 @@
-- delete posts
 - edit posts and comments
 - selfsigned certs
 - feed

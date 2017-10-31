@@ -7,6 +7,8 @@ Vue.component('comments', {
                     ━
                     <span class="comment-date">{{ comment.date_added | fromNow }}</span>
                     <span class="pointer" @click="reply(comment.cert_user_id)"><i class="fa fa-reply" aria-hidden="true"></i>reply</span>
+                    <span class="pointer" v-if="own(comment.cert_user_id)"><i class="fa pointer fa-pencil"></i></span>
+                    <span class="pointer" v-if="own(comment.cert_user_id)" @click="del(comment.comment_id)"><i class="fa pointer fa-trash-o"></i></span>
                 </div>
                 <div class="comment-body">
                     {{ comment.body }}
@@ -49,6 +51,14 @@ Vue.component('comments', {
 
         cropIdProvider(id) {
             return id.split('@')[0]
+        },
+
+        own(cert) {
+            return cert == storage.state.site_info.cert_user_id
+        },
+
+        del(id) {
+            poster.delComment(id)
         }
     }
 })
