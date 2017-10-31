@@ -19,6 +19,18 @@ class Poster extends ZeroFrame {
         }
     }
 
+    findPostById(posts, id) {
+        // Find an index of post in the array by its id
+        let index = 0
+        while (index < posts.length) {
+            if (posts[index].post_id == id) {
+                break
+            }
+            index++
+        }
+        return index
+    }
+
     writePublish(inner_path, data) {
         let json_raw = unescape(encodeURIComponent(JSON.stringify(data, undefined, '    ')))
         this.cmdp('fileWrite', [inner_path, btoa(json_raw)]).then(() => {
@@ -98,31 +110,31 @@ class Poster extends ZeroFrame {
         }
     }
 
-    async addPost(text) {
+    async savePost(text) {
         let data = await this.getRootDataJson()
+        let id = storage.state.posteditor.post_id
         data = JSON.parse(data)
-        data.post.push({
-            'post_id': data.next_post_id,
-            'date_published': + new Date(),
-            'body': text
-        })
-        data.next_post_id += 1
+        if (id == null) {
+            // Append a new post
+            data.post.push({
+                'post_id': data.next_post_id,
+                'date_published': + new Date(),
+                'body': text
+            })
+            data.next_post_id += 1
+        } else {
+            data.post[this.findPostById(data.post, id)].body = text
+        }
+
         await this.writePublish('data/data.json', data)
+        storage.commit('setPosteditor', {'post_id': null, 'body': ''})
         storage.commit('loadPosts')
     }
 
     async delPost(id) {
         let data = await this.getRootDataJson()
         data = JSON.parse(data)
-        let i = 0
-        while (i < data.post.length) {
-            // Find post in array by its id
-            if (data.post[i].post_id == id) {
-                break
-            }
-            i++
-        }
-        data.post.splice(i, 1)
+        data.post.splice(this.findPostById(data.post, id), 1)
         await this.writePublish('data/data.json', data)
         storage.commit('loadPosts')
     }

@@ -4,10 +4,21 @@ const storage = new Vuex.Store({
         likes: {},
         comments: {},
         url: '',
-        site_info: {}
+        site_info: {},
+        posteditor: {
+            post_id: null,
+            body: ''
+        }
     },
 
     mutations: {
+        setPosteditor(state, payload) {
+            if (payload.post_id !== undefined) {
+                state.posteditor.post_id = payload.post_id
+            }
+            state.posteditor.body = payload.body
+        },
+
         loadURL(state) {
             // Get post id from address bar
             state.url = window.location.search.substring(1)

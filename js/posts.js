@@ -49,6 +49,11 @@ Vue.component('posts', {
 
         del(id) {
             poster.delPost(id)
+        },
+
+        edit(post) {
+            storage.commit('setPosteditor', {'post_id': post.post_id, 'body': post.body})
+            scroll(0, 0)
         }
     }
 })

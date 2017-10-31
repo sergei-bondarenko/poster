@@ -1,4 +1,4 @@
-Vue.component('newpost', {
+Vue.component('posteditor', {
     template: `
         <div class="columns is-centered">
             <div id="column new-post is-half">
@@ -21,13 +21,24 @@ Vue.component('newpost', {
                         <i class="level-item is-size-6 fa pointer" @click="insertTags('<br>')">↵</i>
                     </div>
                     <div class="level-right">
-                        <button class="level-item button is-shadowless" type="button" @click="addPost">Save</button>
+                        <button class="level-item button is-shadowless" type="button" @click="save">Save</button>
                     </div>
                 </nav>
-                <textarea class="post-textarea is-size-6" ref="text"></textarea>
+                <textarea class="post-textarea is-size-6" ref="text" v-model="posteditorBody"></textarea>
             </div>
         </div>
     `,
+
+    computed: {
+        posteditorBody: {
+            get() {
+                return storage.state.posteditor.body
+            },
+            set(value) {
+                return storage.commit('setPosteditor', {'body': value})
+            }
+        }
+    },
 
     data() {
         return {
@@ -87,9 +98,8 @@ Vue.component('newpost', {
             }
         },
 
-        addPost() {
-            poster.addPost(this.$refs.text.value)
-            this.$refs.text.value = ''
+        save() {
+            poster.savePost(this.$refs.text.value)
         }
     }
 })

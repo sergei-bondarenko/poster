@@ -6,7 +6,7 @@ new Vue({
         <div>
             <top></top>
             <div class="container">
-                <newpost v-if="mainPageView && own"></newpost>
+                <posteditor v-if="mainPageView && own"></posteditor>
                 <hr v-if="mainPageView && own">
                 <posts :ownAndMainPage="mainPageView && own"></posts>
             </div>
