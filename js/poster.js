@@ -111,6 +111,22 @@ class Poster extends ZeroFrame {
         storage.commit('loadPosts')
     }
 
+    async delPost(id) {
+        let data = await this.getRootDataJson()
+        data = JSON.parse(data)
+        let i = 0
+        while (i < data.post.length) {
+            // Find post in array by its id
+            if (data.post[i].post_id == id) {
+                break
+            }
+            i++
+        }
+        data.post.splice(i, 1)
+        await this.writePublish('data/data.json', data)
+        storage.commit('loadPosts')
+    }
+
     async uploadFile(file) {
         let fr = new FileReader()
         fr.readAsDataURL(file)

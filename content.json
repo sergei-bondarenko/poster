@@ -19,12 +19,12 @@
    "size": 31000
   },
   "css/main.css": {
-   "sha512": "086f84dd58a00285eca17f29fac939b877437f2c085ae47c5d845d76cb155a31",
-   "size": 735
+   "sha512": "c02ffa9791a7a6516779ad959f6240b0d03e8f21a3e6f2a73d0df1bf27b32c0b",
+   "size": 740
   },
   "data/data.json": {
-   "sha512": "383e23a33c1b2ec2117379af0c1f87817340053aabbc435586e433863700f9e0",
-   "size": 19739
+   "sha512": "09ed52bd6bd05ad19e6020520ef40b3c02b12d321359d28ab004b3776ff9213a",
+   "size": 18623
   },
   "dbschema.json": {
    "sha512": "6783974752aab3143e7f30e53a55ddd0fac19ccc350eb41e5560c151c84c4daa",
@@ -63,12 +63,12 @@
    "size": 3823
   },
   "js/comments.js": {
-   "sha512": "6ed2f929ecfcc6f872085949a0868078bfe75083ea9a29bdb08d6eea469dcda4",
-   "size": 1052
+   "sha512": "9e8cbbb6f41a177329a7a198956500193fd6249c1747b89a36ed78bb03dd94cf",
+   "size": 1672
   },
   "js/init.js": {
-   "sha512": "8eed8af56576437585838bd4ee7f69485f42f41c421157be9250b94eca0c2176",
-   "size": 822
+   "sha512": "e370ec92cc11437de55b6c604e359837b7e8bda5a8b038cea42166e5b662bce7",
+   "size": 860
   },
   "js/likes.js": {
    "sha512": "2d824f35ba1ad7ba086a338b58ca74cb96294f51ae87e723604e8bc501e67744",
@@ -79,16 +79,16 @@
    "size": 51265
   },
   "js/newpost.js": {
-   "sha512": "3a9363f86e8728f2dcefcfd98ee6d7d3175ba5f9d0661bfaa8045c3ca1e710a2",
-   "size": 4736
+   "sha512": "162af6b301993638d252c08bfb4bdb5ce6b33ee0aac471395e86b3ec3c327b4f",
+   "size": 4848
   },
   "js/poster.js": {
-   "sha512": "eb70efbd221a88abe7ee0e093b37c0165ac0d5f749368c35c2a3af67547ad12f",
-   "size": 3615
+   "sha512": "c94093b3487c5d61be9418014df582dd189b6b0adb760c75efa11c8b493ab560",
+   "size": 4058
   },
   "js/posts.js": {
-   "sha512": "04e2f1c271cb17dea31a3e25808ef69b4fad35f5939954cb82f970564f68cec6",
-   "size": 1271
+   "sha512": "62817d227f86c814d98c503712eac4bcbbff2423576b08d00742524a3aa8cbc6",
+   "size": 1631
   },
   "js/storage.js": {
    "sha512": "84ffc09155b0ab1a7e037ad9c9e56524d148e3cd6006f3da0db4ac765dfddf04",
@@ -123,8 +123,8 @@
    "size": 41755
   },
   "temp/todo.txt": {
-   "sha512": "7394ad3dc1cb569fd9163e7173c1dfbaad831c1b0370ed0de28fe33afd08bf54",
-   "size": 648
+   "sha512": "c013f255c364b176edee1d2205aa80ae1f4fecf603336b558928e85e7cc7c180",
+   "size": 543
   }
  },
  "files_optional": {
@@ -175,12 +175,12 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1509435882,
+ "modified": 1509449968,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G2bcfp/w1vm1nlT20mSOxBryqtlQc0OneItJtErICEMKQYdLQselXNmDcUmC+2VBn9MeqSQ3EdBEF9OGr2ABuAs="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G5Es3l4kqd+ABURFvrzFs982/QE9orhjmDy+wmmVIm8tXS9j1KkmEkt1fW8fabxFFrnadnYmEPwbYhz57rZb96w="
  },
  "signs_required": 1,
  "title": "my new site",

@@ -8,7 +8,7 @@ new Vue({
             <div class="container">
                 <newpost v-if="mainPageView && own"></newpost>
                 <hr v-if="mainPageView && own">
-                <posts></posts>
+                <posts :ownAndMainPage="mainPageView && own"></posts>
             </div>
         </div>
     `,
