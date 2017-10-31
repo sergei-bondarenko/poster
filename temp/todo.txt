@@ -1,7 +1,4 @@
-- edit posts and comments
-- selfsigned certs
 - feed
-- admin post (without cert)
 - username mentions (see zeroblog)
 - clean pictures that are no longer in content.json (see zeroblog)
 - remove cloned from
@@ -12,5 +9,4 @@
 - alert when extension not recognized
 - alert when post/comment is empty
 - alert before post deletion
-- comments https://bulma.io/documentation/layout/media-object/
 - ol and ul goes beyond post border
