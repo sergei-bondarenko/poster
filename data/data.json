@@ -1,7 +1,7 @@
 {
     "title": "Poster",
     "description": "Simple blog for zeronet",
-    "next_post_id": 171,
+    "next_post_id": 172,
     "modified": 1432515194,
     "post": [
         {
@@ -807,7 +807,12 @@
         {
             "post_id": 170,
             "date_published": 1509457698309,
-            "body": "esex"
+            "body": "esem56"
+        },
+        {
+            "post_id": 171,
+            "date_published": 1509461197812,
+            "body": "bfgrgr"
         }
     ]
 }

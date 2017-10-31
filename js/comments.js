@@ -7,20 +7,27 @@ Vue.component('comments', {
                     ━
                     <span class="comment-date">{{ comment.date_added | fromNow }}</span>
                     <span class="pointer" @click="reply(comment.cert_user_id)"><i class="fa fa-reply" aria-hidden="true"></i>reply</span>
-                    <span class="pointer" v-if="own(comment.cert_user_id)"><i class="fa pointer fa-pencil"></i></span>
+                    <span class="pointer" v-if="own(comment.cert_user_id)" @click="edit(comment)"><i class="fa pointer fa-pencil"></i></span>
                     <span class="pointer" v-if="own(comment.cert_user_id)" @click="del(comment.comment_id)"><i class="fa pointer fa-trash-o"></i></span>
                 </div>
                 <div class="comment-body">
                     {{ comment.body }}
                 </div>
             </div>
-            <textarea class="comment-textarea" ref="text"></textarea>
-            <button type="button" @click="addComment">Save</button>
+            <textarea class="comment-textarea" v-model="commentText"></textarea>
+            <button type="button" @click="save">Save</button>
         </div>
     `,
 
     props: ['post'],
-    
+
+    data() {
+        return {
+            commentText: '',
+            comment_id: null
+        }
+    },
+
     computed: {
         comments() {
             if (this.post.post_id in storage.state.comments) {
@@ -36,13 +43,14 @@ Vue.component('comments', {
     },
 
     methods: {
-        addComment() {
-            poster.addComment(this.post.post_id, this.$refs.text.value)
-            this.$refs.text.value = ''
+        save() {
+            poster.saveComment(this.post.post_id, this.commentText, this.comment_id)
+            this.commentText = ''
+            this.comment_id = null
         },
 
         reply(id) {
-            this.$refs.text.value += this.cropIdProvider(id) + ", "
+            this.commentText += this.cropIdProvider(id) + ", "
         },
         
         userTitle(comment) {
@@ -59,6 +67,11 @@ Vue.component('comments', {
 
         del(id) {
             poster.delComment(id)
+        },
+
+        edit(comment) {
+            this.commentText = comment.body
+            this.comment_id = comment.comment_id
         }
     }
 })

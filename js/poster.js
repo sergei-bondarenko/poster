@@ -94,7 +94,7 @@ class Poster extends ZeroFrame {
         }
     }
 
-    async addComment(post_id, text) {
+    async saveComment(post_id, text, comment_id) {
         if (this.isCertSelected) {
             let data = await this.getUserDataJson()
             if (data) {
@@ -108,14 +108,18 @@ class Poster extends ZeroFrame {
                 }
             }
 
-            data.next_comment_id += 1
-
-            data.comment.push({
-                'comment_id': data.next_comment_id,
-                'body': text,
-                'post_id': post_id,
-                'date_added': + new Date()
-            })
+            if (comment_id == null) {
+                // Append a new comment
+                data.comment.push({
+                    'comment_id': data.next_comment_id,
+                    'body': text,
+                    'post_id': post_id,
+                    'date_added': + new Date()
+                })
+                data.next_comment_id += 1
+            } else {
+                data.comment[this.findCommentById(data.comment, comment_id)].body = text
+            } 
 
             await this.writePublish('data/users/' + storage.state.site_info.auth_address + '/data.json', data)
             storage.commit('loadComments')
