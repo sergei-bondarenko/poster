@@ -1,7 +1,7 @@
 {
     "title": "Poster",
     "description": "Simple blog for zeronet",
-    "next_post_id": 159,
+    "next_post_id": 160,
     "modified": 1432515194,
     "post": [
         {
@@ -788,6 +788,11 @@
             "post_id": 158,
             "date_published": 1509381959631,
             "body": "<a href=\"uploads/Rina4.jpg\" target=\"_blanc\">Rina4.jpg</a>\n<h1>ert</h1>\n<p>tui</p>\n<i>y868</i>\n<b>hjk</b>\n<strike>hhyyy</strike>\n<ol>\n<li>hfth\n<li>ty\n<li>hjk\n</ol>\n<ul>\n<li>fgjj\n<li>fgju\n<li>iy</ul>\n<a href=\"dfdg\">fhjj</a>\n<code>gfhfg\nghj\ngh</code>"
+        },
+        {
+            "post_id": 159,
+            "date_published": 1509432328077,
+            "body": "<br>"
         }
     ]
 }
