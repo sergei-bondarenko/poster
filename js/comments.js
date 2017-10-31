@@ -3,9 +3,10 @@ Vue.component('comments', {
         <div>
             <div v-for="comment in comments" class="comment">
                 <div class="comment-info">
-                    <span class="comment-username">{{ comment.cert_user_id }}</span>
+                    <span class="comment-username" :title="userTitle(comment)" v-text="cropIdProvider(comment.cert_user_id)"></span>
                     ━
                     <span class="comment-date">{{ comment.date_added | fromNow }}</span>
+                    <span class="pointer" @click="reply(comment.cert_user_id)"><i class="fa fa-reply" aria-hidden="true"></i>reply</span>
                 </div>
                 <div class="comment-body">
                     {{ comment.body }}
@@ -36,6 +37,18 @@ Vue.component('comments', {
         addComment() {
             poster.addComment(this.post.post_id, this.$refs.text.value)
             this.$refs.text.value = ''
+        },
+
+        reply(id) {
+            this.$refs.text.value += this.cropIdProvider(id) + ", "
+        },
+        
+        userTitle(comment) {
+            return comment.cert_user_id + ': ' + comment.directory.replace('users/', '')
+        },
+
+        cropIdProvider(id) {
+            return id.split('@')[0]
         }
     }
 })

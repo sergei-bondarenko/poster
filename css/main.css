@@ -28,7 +28,7 @@ ul {
     margin: 0px;
 }
 
-.fa {
+.pointer {
     cursor: pointer;
     user-select: none;
 }

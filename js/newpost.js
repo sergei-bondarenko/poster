@@ -5,20 +5,20 @@ Vue.component('newpost', {
                 <input type="file" id="input-file" @change="upload" ref="inputFile">
                 <nav class="level is-marginless">
                     <div class="level-left">
-                        <i class="level-item is-size-6 fa fa-file-image-o" @click="initiateUpload('img')"></i>
-                        <i class="level-item is-size-6 fa fa-file-video-o" @click="initiateUpload('video')"></i>
-                        <i class="level-item is-size-6 fa fa-file-audio-o" @click="initiateUpload('audio')"></i>
-                        <i class="level-item is-size-6 fa fa-file-o" @click="initiateUpload('file')"></i>
-                        <i class="level-item is-size-6 fa fa-header" @click="insertTags('<h1></h1>')"></i>
-                        <i class="level-item is-size-6 fa fa-paragraph" @click="insertTags('<p></p>')"></i>
-                        <i class="level-item is-size-6 fa fa-italic" @click="insertTags('<i></i>')"></i>
-                        <i class="level-item is-size-6 fa fa-bold" @click="insertTags('<b></b>')"></i>
-                        <i class="level-item is-size-6 fa fa-strikethrough" @click="insertTags('<strike></strike>')"></i>
-                        <i class="level-item is-size-6 fa fa-list-ol" @click="insertTags('ol')"></i>
-                        <i class="level-item is-size-6 fa fa-list-ul" @click="insertTags('ul')"></i>
-                        <i class="level-item is-size-6 fa fa-external-link" @click="insertTags('a')"></i>
-                        <i class="level-item is-size-6 fa fa-code" @click="insertTags('<code></code>')"></i>
-                        <i class="level-item is-size-6 fa" @click="insertTags('<br>')">↵</i>
+                        <i class="level-item is-size-6 fa pointer fa-file-image-o" @click="initiateUpload('img')"></i>
+                        <i class="level-item is-size-6 fa pointer fa-file-video-o" @click="initiateUpload('video')"></i>
+                        <i class="level-item is-size-6 fa pointer fa-file-audio-o" @click="initiateUpload('audio')"></i>
+                        <i class="level-item is-size-6 fa pointer fa-file-o" @click="initiateUpload('file')"></i>
+                        <i class="level-item is-size-6 fa pointer fa-header" @click="insertTags('<h1></h1>')"></i>
+                        <i class="level-item is-size-6 fa pointer fa-paragraph" @click="insertTags('<p></p>')"></i>
+                        <i class="level-item is-size-6 fa pointer fa-italic" @click="insertTags('<i></i>')"></i>
+                        <i class="level-item is-size-6 fa pointer fa-bold" @click="insertTags('<b></b>')"></i>
+                        <i class="level-item is-size-6 fa pointer fa-strikethrough" @click="insertTags('<strike></strike>')"></i>
+                        <i class="level-item is-size-6 fa pointer fa-list-ol" @click="insertTags('ol')"></i>
+                        <i class="level-item is-size-6 fa pointer fa-list-ul" @click="insertTags('ul')"></i>
+                        <i class="level-item is-size-6 fa pointer fa-external-link" @click="insertTags('a')"></i>
+                        <i class="level-item is-size-6 fa pointer fa-code" @click="insertTags('<code></code>')"></i>
+                        <i class="level-item is-size-6 fa pointer" @click="insertTags('<br>')">↵</i>
                     </div>
                     <div class="level-right">
                         <button class="level-item button is-shadowless" type="button" @click="addPost">Save</button>

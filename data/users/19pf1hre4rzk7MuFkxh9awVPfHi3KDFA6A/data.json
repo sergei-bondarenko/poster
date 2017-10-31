@@ -1,5 +1,5 @@
 {
-    "next_comment_id": 34,
+    "next_comment_id": 35,
     "comment": [
         {
             "comment_id": 1,
@@ -192,6 +192,12 @@
             "body": "efwf",
             "post_id": 159,
             "date_added": 1509436305213
+        },
+        {
+            "comment_id": 35,
+            "body": "6576",
+            "post_id": 159,
+            "date_added": 1509445290487
         }
     ],
     "comment_vote": {},
@@ -208,6 +214,7 @@
         "142": 1,
         "144": 1,
         "149": 1,
-        "154": 1
+        "154": 1,
+        "159": 1
     }
 }
