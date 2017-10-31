@@ -19,15 +19,11 @@
    "size": 31000
   },
   "css/main.css": {
-   "sha512": "8f9243f762bebafd5d272137f57d76968397e5e8bb61959b53edc2765573f73b",
-   "size": 477
-  },
-  "css/posts.css": {
-   "sha512": "ac5c070994c1250dbc31ef1439abc87a4be68969c8ddb1535625735172192f3c",
-   "size": 169
+   "sha512": "086f84dd58a00285eca17f29fac939b877437f2c085ae47c5d845d76cb155a31",
+   "size": 735
   },
   "data/data.json": {
-   "sha512": "b25086f9cadd9ac8abef0600989c9af2e77a58ecb7bf779a5c215a9101af8318",
+   "sha512": "383e23a33c1b2ec2117379af0c1f87817340053aabbc435586e433863700f9e0",
    "size": 19739
   },
   "dbschema.json": {
@@ -59,8 +55,8 @@
    "size": 77160
   },
   "index.html": {
-   "sha512": "3203a9cf9d327f14d7ae7acb6e6af13d3f61a4530eda8f2bdf0bfd86527dc91b",
-   "size": 1250
+   "sha512": "22dd6b35c162d13e3ebd8ec838983bc2473ee2c278a7d1a5546bd9a2df4e2ef9",
+   "size": 1269
   },
   "js/ZeroFrame.js": {
    "sha512": "9e08432de4399d65511bcfa2e1e8aa67e375ee2b2245232cee7602c686aa03a4",
@@ -71,16 +67,20 @@
    "size": 1052
   },
   "js/init.js": {
-   "sha512": "cd975587720705b4e80149531984a680acffc5fab18ae0614e252ff090cf4926",
-   "size": 774
+   "sha512": "8eed8af56576437585838bd4ee7f69485f42f41c421157be9250b94eca0c2176",
+   "size": 822
   },
   "js/likes.js": {
-   "sha512": "bfeebdc0e8949734296e1f691e125ef3ff516088ef5ead8932ca3011f48caa50",
-   "size": 1017
+   "sha512": "2d824f35ba1ad7ba086a338b58ca74cb96294f51ae87e723604e8bc501e67744",
+   "size": 1040
+  },
+  "js/moment.min.js": {
+   "sha512": "0f3e333bba7a32b17e55c383e8f51b034f212b5aefd210efff01aec525232266",
+   "size": 51265
   },
   "js/newpost.js": {
-   "sha512": "c8862e9c1e7f8403a87bdbc82737d5d9d5ea0276600be96aeacf0f119ee8ef3b",
-   "size": 4708
+   "sha512": "3a9363f86e8728f2dcefcfd98ee6d7d3175ba5f9d0661bfaa8045c3ca1e710a2",
+   "size": 4736
   },
   "js/poster.js": {
    "sha512": "eb70efbd221a88abe7ee0e093b37c0165ac0d5f749368c35c2a3af67547ad12f",
@@ -123,8 +123,8 @@
    "size": 41755
   },
   "temp/todo.txt": {
-   "sha512": "29b44bb6802c9f08dba74ea9d440589d5ec0422ff908d2ab62b2749ca490b5ad",
-   "size": 577
+   "sha512": "7394ad3dc1cb569fd9163e7173c1dfbaad831c1b0370ed0de28fe33afd08bf54",
+   "size": 648
   }
  },
  "files_optional": {
@@ -175,12 +175,12 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1509432328,
+ "modified": 1509435882,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HHjnjLjLwbmpjgcGJu4B10V7mRsUPd5gpM0Ega3dXhS+SetxtrlrMQwCXvVvKTu/jBGUt/6IhiAW2ww8yn25/K0="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G2bcfp/w1vm1nlT20mSOxBryqtlQc0OneItJtErICEMKQYdLQselXNmDcUmC+2VBn9MeqSQ3EdBEF9OGr2ABuAs="
  },
  "signs_required": 1,
  "title": "my new site",

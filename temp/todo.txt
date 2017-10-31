@@ -2,8 +2,6 @@
 - edit posts and comments
 - selfsigned certs
 - feed
-- https://github.com/HelloZeroNet/ZeroBlog/blob/6ea961347d58a193d33df4f4f1e2bda43e19bba6/js/utils/Time.coffee
-  (search + new Date())
 - admin post (without cert)
 - username mentions (see zeroblog)
 - clean pictures that are no longer in content.json (see zeroblog)
@@ -13,4 +11,6 @@
 - rename votes to likes
 - nothing to show label when there is no posts
 - alert when extension not recognized
+- alert when post/comment is empty
 - comments https://bulma.io/documentation/layout/media-object/
+- ol and ul goes beyond post border

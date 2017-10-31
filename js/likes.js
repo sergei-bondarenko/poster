@@ -24,7 +24,7 @@ Vue.component('likes', {
         },
 
         date_published() {
-            return this.post.date_published
+            return moment(this.post.date_published, 'x').fromNow()
         },
 
         url() {
