@@ -59,8 +59,8 @@
    "size": 1335
   },
   "js/comments.js": {
-   "sha512": "911f5599af0f308186fad7c35d257699deb054894fd5e54a5829b2b0ca326469",
-   "size": 5139
+   "sha512": "44939c311966a80c8d5bff667954bfbbfac1f907211d24fd91337d21a5de198e",
+   "size": 6299
   },
   "js/init.js": {
    "sha512": "bf5e07d91a3e2cefe47639f49cb8e4088fcfe07ab7b4539f506658722e22cc79",
@@ -127,8 +127,8 @@
    "size": 41755
   },
   "temp/todo.txt": {
-   "sha512": "c1e933e28c20013d9103450d2e8133a2fca49b1af8fc56aacbab5b3e1960b2cb",
-   "size": 502
+   "sha512": "386dd9af4ceb671ea80c3d2353a84055cb81c753674a209140978a8a446c7856",
+   "size": 473
   }
  },
  "files_optional": {
@@ -179,12 +179,12 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1509542788,
+ "modified": 1509545466,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G4YvHohtXiagQN7nSdmwQDkc8KHgMuOVgAzlyOuGLWWoAcS3ReV32UseqkiqZpt/7lXYTmwwwPPz8tXikX0YUBw="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HIxki4FaMGyHl5oTXax4dkBp6VXrQqpQdtGl4UXe9ySveK+n2O/SyU7y2B6EY32wzITu7JVVkVorE2KHDAYuS5c="
  },
  "signs_required": 1,
  "title": "my new site",

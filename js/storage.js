@@ -14,6 +14,7 @@ const storage = new Vuex.Store({
             message: '',
             buttonText: '',
             buttonClass: '',
+            action: '',    // One of: 'delPost', 'delComment', 'info'
             modalAffirmed: false
         }
     },
@@ -28,6 +29,7 @@ const storage = new Vuex.Store({
             state.modal.message = payload.message
             state.modal.buttonText = payload.buttonText
             state.modal.buttonClass = payload.buttonClass
+            state.modal.action = payload.action
             state.modal.modalAffirmed = false
         },
 

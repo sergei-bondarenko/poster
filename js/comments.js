@@ -34,7 +34,7 @@ Vue.component('comments', {
                 <div class="media-content">
                     <div class="field">
                         <p class="control">
-                            <textarea class="textarea" placeholder="Add a comment..." v-model="newComment"></textarea>
+                            <textarea class="textarea" ref="textarea" placeholder="Add a comment..." v-model="newComment"></textarea>
                         </p>
                     </div>
                     <div class="field">
@@ -85,16 +85,37 @@ Vue.component('comments', {
 
     methods: {
         save(id) {
-            if (id != undefined) {
-                poster.saveComment(this.post.post_id, this.$refs['comment' + id][0].innerHTML, id)
+            if (id == undefined) {
+                // A new comment
+                if (this.newComment == '') {
+                    storage.commit('createModal', {
+                        'message': "Comment is empty.",
+                        'buttonText': 'OK',
+                        'buttonClass': 'is-primary'
+                    })
+                } else {
+                    poster.saveComment(this.post.post_id, this.newComment, id)
+                    this.newComment = ''
+                }
             } else {
-                poster.saveComment(this.post.post_id, this.newComment)
-                this.newComment = ''
+                // Edited comment
+                if (this.$refs['comment' + id][0].innerHTML == '') {
+                    storage.commit('createModal', {
+                        'message': "Comment is empty.",
+                        'buttonText': 'OK',
+                        'buttonClass': 'is-primary'
+                    })
+                    this.$refs['comment' + id][0].innerHTML = this.commentText
+                } else {
+                    poster.saveComment(this.post.post_id, this.$refs['comment' + id][0].innerHTML, id)
+                    this.newComment = ''
+                }
             }
         },
 
         reply(id) {
-            this.commentText += this.cropIdProvider(id) + ", "
+            this.newComment += this.cropIdProvider(id) + ", "
+            this.$refs['textarea'].focus()
         },
         
         userTitle(comment) {
@@ -136,6 +157,7 @@ Vue.component('comments', {
 
         cancel(id) {
             if (this.isDeleteHover) {
+                this.$refs['comment' + id][0].innerHTML = this.commentText
                 this.del(id)
             } else if (this.isSaveHover) {
                 this.save(id)

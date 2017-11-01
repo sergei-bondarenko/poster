@@ -36,8 +36,10 @@ Vue.component('posts', {
     mounted() {
         window.addEventListener('scroll', this.scroll)
         storage.watch(storage.getters.getModalAffirmed, () => {
-            poster.delPost(this.deletePostId)
-            this.deletePostId = null
+            if (storage.getters.action == 'delPost') {
+                poster.delPost(this.deletePostId)
+                this.deletePostId = null
+            }
         })
     },
 

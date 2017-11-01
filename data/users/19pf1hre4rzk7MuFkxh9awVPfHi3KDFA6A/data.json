@@ -1,5 +1,5 @@
 {
-    "next_comment_id": 64,
+    "next_comment_id": 77,
     "comment": [
         {
             "comment_id": 1,
@@ -204,6 +204,30 @@
             "body": "polkl",
             "post_id": 165,
             "date_added": 1509542370955
+        },
+        {
+            "comment_id": 64,
+            "body": "dsfsd",
+            "post_id": 166,
+            "date_added": 1509542989119
+        },
+        {
+            "comment_id": 71,
+            "body": "1",
+            "post_id": 166,
+            "date_added": 1509544372106
+        },
+        {
+            "comment_id": 74,
+            "body": "2",
+            "post_id": 166,
+            "date_added": 1509544484294
+        },
+        {
+            "comment_id": 76,
+            "body": "4",
+            "post_id": 166,
+            "date_added": 1509544487916
         }
     ],
     "comment_vote": {},
