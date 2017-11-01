@@ -54,3 +54,8 @@ ul {
 .level-left {
     margin-right: 20px;
 }
+
+.wrapped {
+    /* Wrap comments with looooong words*/
+    word-break: break-all;
+}
