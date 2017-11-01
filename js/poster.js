@@ -108,7 +108,7 @@ class Poster extends ZeroFrame {
                 }
             }
 
-            if (comment_id == null) {
+            if (comment_id == undefined) {
                 // Append a new comment
                 data.comment.push({
                     'comment_id': data.next_comment_id,

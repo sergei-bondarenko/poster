@@ -5,15 +5,21 @@ Vue.component('comments', {
                 <div class="media-content">
                     <div class="content">
                         <p>
-                            <strong :title="userTitle(comment)" v-text="cropIdProvider(comment.cert_user_id)">Barbara Middleton</strong>
+                            <strong :title="userTitle(comment)" v-text="cropIdProvider(comment.cert_user_id)"></strong>
                             <br>
                             <div class="wrapped"
-                                @blur="cancel"
+                                @blur="cancel(comment.comment_id)"
                                 :contentEditable="comment_id == comment.comment_id"
                                 :ref="'comment' + comment.comment_id">{{ comment.body }}</div>
                             <br>
-                            <a class="button is-danger" v-if="comment_id == comment.comment_id" @click="del(comment.comment_id)">Delete</a>
-                            <a class="button" v-if="comment_id == comment.comment_id">Save</a>
+                            <a class="button is-danger"
+                                @mouseenter="deleteHover(true)"
+                                @mouseout="deleteHover(false)"
+                                v-if="comment_id == comment.comment_id">Delete</a>
+                            <a class="button" 
+                                @mouseenter="saveHover(true)"
+                                @mouseout="saveHover(false)"
+                                v-if="comment_id == comment.comment_id">Save</a>
                             <br v-if="comment_id == comment.comment_id">
                             <br v-if="comment_id == comment.comment_id">
                             <small><a @click="reply(comment.cert_user_id)">Reply</a> · {{ comment.date_added | fromNow }}</small>
@@ -28,12 +34,12 @@ Vue.component('comments', {
                 <div class="media-content">
                     <div class="field">
                         <p class="control">
-                            <textarea class="textarea" placeholder="Add a comment..." v-model="commentText"></textarea>
+                            <textarea class="textarea" placeholder="Add a comment..." v-model="newComment"></textarea>
                         </p>
                     </div>
                     <div class="field">
                         <p class="control">
-                            <button class="button" @click="save">Post comment</button>
+                            <button class="button" @click="save()">Post comment</button>
                         </p>
                     </div>
                 </div>
@@ -41,32 +47,15 @@ Vue.component('comments', {
         </div>
     `,
 
-
-/*
-        <div>
-            <div v-for="comment in comments" class="comment">
-                <div class="comment-info">
-                    <span class="comment-username" :title="userTitle(comment)" v-text="cropIdProvider(comment.cert_user_id)"></span>
-                    ━
-                    <span class="comment-date">{{ comment.date_added | fromNow }}</span>
-                    <span class="pointer" @click="reply(comment.cert_user_id)"><i class="fa fa-reply" aria-hidden="true"></i>reply</span>
-                    <span class="pointer" v-if="own(comment.cert_user_id)" @click="edit(comment)"><i class="fa pointer fa-pencil"></i></span>
-                    <span class="pointer" v-if="own(comment.cert_user_id)" @click="del(comment.comment_id)"><i class="fa pointer fa-trash-o"></i></span>
-                </div>
-                <div class="comment-body">
-                    {{ comment.body }}
-                </div>
-            </div>
-            <textarea class="comment-textarea" v-model="commentText"></textarea>
-            <button type="button" @click="save">Save</button>
-        </div>
-*/
     props: ['post'],
 
     data() {
         return {
             commentText: '',
-            comment_id: null,
+            comment_id: undefined,
+            isDeleteHover: false,
+            isSaveHover: false,
+            newComment: ''
         }
     },
 
@@ -85,10 +74,13 @@ Vue.component('comments', {
     },
 
     methods: {
-        save() {
-            poster.saveComment(this.post.post_id, this.commentText, this.comment_id)
-            this.commentText = ''
-            this.comment_id = null
+        save(id) {
+            if (id != undefined) {
+                poster.saveComment(this.post.post_id, this.$refs['comment' + id][0].innerHTML, id)
+            } else {
+                poster.saveComment(this.post.post_id, this.newComment)
+                this.newComment = ''
+            }
         },
 
         reply(id) {
@@ -108,7 +100,6 @@ Vue.component('comments', {
         },
 
         del(id) {
-            console.log(1)
             poster.delComment(id)
         },
 
@@ -120,10 +111,26 @@ Vue.component('comments', {
             })
         },
 
-        cancel() {
+        deleteHover(state) {
+            this.isDeleteHover = state
+        },
+
+        saveHover(state) {
+            this.isSaveHover = state
+        },
+
+        cancel(id) {
+            if (this.isDeleteHover) {
+                this.del(id)
+            } else if (this.isSaveHover) {
+                this.save(id)
+            } else {
+                this.$refs['comment' + id][0].innerHTML = this.commentText
+            }
+            this.isDeleteHover = false
+            this.isSaveHover = false
             this.commentText = ''
-            this.comment_id = null
-            // MAKE POSTS RELOAD BECAUSE CHANGED CONTENT WILL PERSIST
+            this.comment_id = undefined
         }
     }
 })

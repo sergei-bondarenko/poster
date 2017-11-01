@@ -1,5 +1,5 @@
 {
-    "next_comment_id": 45,
+    "next_comment_id": 56,
     "comment": [
         {
             "comment_id": 1,
@@ -194,40 +194,10 @@
             "date_added": 1509445290487
         },
         {
-            "comment_id": 38,
-            "body": "hjjkhgk76 7j5",
-            "post_id": 170,
-            "date_added": 1509460663866
-        },
-        {
-            "comment_id": 39,
-            "body": "cxvcxb55",
-            "post_id": 170,
-            "date_added": 1509460904769
-        },
-        {
-            "comment_id": 40,
-            "body": "fdvf",
-            "post_id": 170,
-            "date_added": 1509461678267
-        },
-        {
-            "comment_id": 42,
-            "body": "e",
+            "comment_id": 54,
+            "body": "fdg797",
             "post_id": 171,
-            "date_added": 1509461690325
-        },
-        {
-            "comment_id": 43,
-            "body": "Add a comment...Add a comment...Add a comment...Add a comment...",
-            "post_id": 170,
-            "date_added": 1509516006147
-        },
-        {
-            "comment_id": 44,
-            "body": "reereeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeegreg",
-            "post_id": 170,
-            "date_added": 1509516013525
+            "date_added": 1509536334326
         }
     ],
     "comment_vote": {},
