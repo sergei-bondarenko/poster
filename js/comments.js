@@ -55,7 +55,8 @@ Vue.component('comments', {
             comment_id: undefined,
             isDeleteHover: false,
             isSaveHover: false,
-            newComment: ''
+            newComment: '',
+            deleteCommentId: null
         }
     },
 
@@ -71,6 +72,15 @@ Vue.component('comments', {
         fromNow: (value) => {
             return moment(value, 'x').fromNow()
         }
+    },
+
+    mounted() {
+        storage.watch(storage.getters.getModalAffirmed, () => {
+            if (this.deleteCommentId != null) {
+                poster.delComment(this.deleteCommentId)
+                this.deleteCommentId = null
+            }
+        })
     },
 
     methods: {
@@ -100,7 +110,12 @@ Vue.component('comments', {
         },
 
         del(id) {
-            poster.delComment(id)
+            this.deleteCommentId = id
+            storage.commit('createModal', {
+                'message': "Are you sure to delete this comment?",
+                'buttonText': 'Delete',
+                'buttonClass': 'is-danger'
+            })
         },
 
         edit(comment) {

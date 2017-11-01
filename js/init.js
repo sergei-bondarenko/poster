@@ -4,6 +4,7 @@ new Vue({
     el: '#root',
     template: `
         <div>
+            <modal></modal>
             <top></top>
             <div class="container">
                 <posteditor v-if="mainPageView && own"></posteditor>

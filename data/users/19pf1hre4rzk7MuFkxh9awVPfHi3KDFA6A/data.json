@@ -1,5 +1,5 @@
 {
-    "next_comment_id": 56,
+    "next_comment_id": 64,
     "comment": [
         {
             "comment_id": 1,
@@ -198,6 +198,12 @@
             "body": "fdg797",
             "post_id": 171,
             "date_added": 1509536334326
+        },
+        {
+            "comment_id": 61,
+            "body": "polkl",
+            "post_id": 165,
+            "date_added": 1509542370955
         }
     ],
     "comment_vote": {},
@@ -216,6 +222,7 @@
         "148": 1,
         "149": 1,
         "154": 1,
-        "159": 1
+        "159": 1,
+        "171": 1
     }
 }

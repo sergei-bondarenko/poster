@@ -10,6 +10,5 @@
 - nothing to show label when there is no posts
 - alert when extension not recognized
 - alert when post/comment is empty
-- alert before post deletion
 - comments https://bulma.io/documentation/layout/media-object/
 - ol and ul goes beyond post border

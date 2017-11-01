@@ -8,10 +8,38 @@ const storage = new Vuex.Store({
         posteditor: {
             post_id: null,
             body: ''
+        },
+        modal: {
+            show: false,
+            message: '',
+            buttonText: '',
+            buttonClass: '',
+            modalAffirmed: false
         }
     },
 
+    getters: {
+        getModalAffirmed: state => () => state.modal.modalAffirmed
+    },
+
     mutations: {
+        createModal(state, payload) {
+            state.modal.show = true
+            state.modal.message = payload.message
+            state.modal.buttonText = payload.buttonText
+            state.modal.buttonClass = payload.buttonClass
+            state.modal.modalAffirmed = false
+        },
+
+        closeModal(state) {
+            state.modal.show = false
+        },
+
+        modalAffirmed(state) {
+            state.modal.modalAffirmed = true
+            state.modal.show = false
+        },
+        
         setPosteditor(state, payload) {
             if (payload.post_id !== undefined) {
                 state.posteditor.post_id = payload.post_id
