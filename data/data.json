@@ -1,7 +1,7 @@
 {
     "title": "Poster",
     "description": "Simple blog for zeronet",
-    "next_post_id": 174,
+    "next_post_id": 176,
     "modified": 1432515194,
     "post": [
         {
@@ -783,6 +783,11 @@
             "post_id": 172,
             "date_published": 1509695028261,
             "body": "wd"
+        },
+        {
+            "post_id": 174,
+            "date_published": 1509720377048,
+            "body": "w"
         }
     ]
 }

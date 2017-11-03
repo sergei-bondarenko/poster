@@ -5,5 +5,4 @@
 - add 'use strict'
 - configurable via data/data.json
 - nothing to show label when there is no posts
-- alert when extension not recognized
 - ol and ul goes beyond post border
