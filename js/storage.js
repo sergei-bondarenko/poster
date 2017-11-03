@@ -14,13 +14,14 @@ const storage = new Vuex.Store({
             message: '',
             buttonText: '',
             buttonClass: '',
-            action: '',    // One of: 'delPost', 'delComment', 'info'
-            modalAffirmed: false
+            action: '',    // One of: 'delPost', 'delComment' and 'info'
+            id: null,
+            affirmed: false
         }
     },
 
     getters: {
-        getModalAffirmed: state => () => state.modal.modalAffirmed
+        getModal: state => () => state.modal
     },
 
     mutations: {
@@ -30,15 +31,22 @@ const storage = new Vuex.Store({
             state.modal.buttonText = payload.buttonText
             state.modal.buttonClass = payload.buttonClass
             state.modal.action = payload.action
-            state.modal.modalAffirmed = false
+            state.modal.id = payload.id
+            state.modal.affirmed = false
         },
-
-        closeModal(state) {
+        
+        destroyModal(state) {
             state.modal.show = false
+            state.modal.message = ''
+            state.modal.buttonText = ''
+            state.modal.buttonClass = ''
+            state.modal.action = ''
+            state.modal.affirmed = ''
+            state.modal.id = null
         },
 
         modalAffirmed(state) {
-            state.modal.modalAffirmed = true
+            state.modal.affirmed = true
             state.modal.show = false
         },
         

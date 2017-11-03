@@ -8,7 +8,7 @@ Vue.component('comments', {
                             <strong :title="userTitle(comment)" v-text="cropIdProvider(comment.cert_user_id)"></strong>
                             <br>
                             <div class="wrapped"
-                                @blur="cancel(comment.comment_id)"
+                                @blur="blur(comment.comment_id)"
                                 :contentEditable="comment_id == comment.comment_id"
                                 :ref="'comment' + comment.comment_id">{{ comment.body }}</div>
                             <br>
@@ -55,8 +55,7 @@ Vue.component('comments', {
             comment_id: undefined,
             isDeleteHover: false,
             isSaveHover: false,
-            newComment: '',
-            deleteCommentId: null
+            newComment: ''
         }
     },
 
@@ -75,12 +74,18 @@ Vue.component('comments', {
     },
 
     mounted() {
-        storage.watch(storage.getters.getModalAffirmed, () => {
-            if (this.deleteCommentId != null) {
-                poster.delComment(this.deleteCommentId)
-                this.deleteCommentId = null
+        storage.watch(storage.getters.getModal, () => {
+            if (storage.getters.getModal().affirmed == true) {
+                if (storage.getters.getModal().action == 'delComment') {
+                    if (storage.getters.getModal().id != null) {
+                        poster.delComment(storage.getters.getModal().id)
+                        storage.commit('destroyModal')
+                    }
+                } else if (storage.getters.getModal().action == 'info') {
+                    storage.commit('destroyModal')
+                }
             }
-        })
+        }, { deep: true })
     },
 
     methods: {
@@ -89,8 +94,9 @@ Vue.component('comments', {
                 // A new comment
                 if (this.newComment == '') {
                     storage.commit('createModal', {
-                        'message': "Comment is empty.",
+                        'message': "The comment is empty.",
                         'buttonText': 'OK',
+                        'action': 'info',
                         'buttonClass': 'is-primary'
                     })
                 } else {
@@ -101,7 +107,8 @@ Vue.component('comments', {
                 // Edited comment
                 if (this.$refs['comment' + id][0].innerHTML == '') {
                     storage.commit('createModal', {
-                        'message': "Comment is empty.",
+                        'message': "The comment is empty.",
+                        'action': 'info',
                         'buttonText': 'OK',
                         'buttonClass': 'is-primary'
                     })
@@ -131,11 +138,12 @@ Vue.component('comments', {
         },
 
         del(id) {
-            this.deleteCommentId = id
             storage.commit('createModal', {
                 'message': "Are you sure to delete this comment?",
                 'buttonText': 'Delete',
-                'buttonClass': 'is-danger'
+                'action': 'delComment',
+                'buttonClass': 'is-danger',
+                'id': id
             })
         },
 
@@ -155,9 +163,23 @@ Vue.component('comments', {
             this.isSaveHover = state
         },
 
-        cancel(id) {
+        blur(id) {
             if (this.isDeleteHover) {
-                this.$refs['comment' + id][0].innerHTML = this.commentText
+                // A known bug here. Steps to reproduce:
+                // 1. Edit comment
+                // 2. Click 'Delete'
+                // 3. Close window
+                // ...
+                // Comment looks like changed
+                // You can uncomment the next line:
+                //this.$refs['comment' + id][0].innerHTML = this.commentText
+                // And this problem will gone
+                // But if you:
+                // 1. Edit comment
+                // 2. Click 'Delete'
+                // 3. Click 'Delete' again
+                // ...
+                // The previous comment will be replaced with current
                 this.del(id)
             } else if (this.isSaveHover) {
                 this.save(id)

@@ -51,7 +51,7 @@ class Poster extends ZeroFrame {
             } else {
                 return this.cmdp('sitePublish', [undefined, inner_path])
             }
-        }).catch((err) => { console.log('error' + err) })
+        }).catch((err) => { console.log('Error: ' + err) })
     }
 
     async getUserDataJson() {

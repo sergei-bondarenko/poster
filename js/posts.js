@@ -22,8 +22,7 @@ Vue.component('posts', {
 
     data: () => {
         return {
-            post_count: 15,
-            deletePostId: null
+            post_count: 15
         }
     },
 
@@ -35,12 +34,13 @@ Vue.component('posts', {
 
     mounted() {
         window.addEventListener('scroll', this.scroll)
-        storage.watch(storage.getters.getModalAffirmed, () => {
-            if (storage.getters.action == 'delPost') {
-                poster.delPost(this.deletePostId)
-                this.deletePostId = null
+        storage.watch(storage.getters.getModal, () => {
+            if (storage.getters.getModal().action == 'delPost'
+                && storage.getters.getModal().affirmed == true) {
+                poster.delPost(storage.getters.getModal().id)
+                storage.commit('destroyModal')
             }
-        })
+        }, { deep: true })
     },
 
     methods: {
@@ -55,11 +55,12 @@ Vue.component('posts', {
         },
 
         del(id) {
-            this.deletePostId = id
             storage.commit('createModal', {
                 'message': "Are you sure to delete this post?",
                 'buttonText': 'Delete',
-                'buttonClass': 'is-danger'
+                'buttonClass': 'is-danger',
+                'action': 'delPost',
+                'id': id
             })
         },
 

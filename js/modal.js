@@ -19,25 +19,25 @@ Vue.component('modal', {
     
     computed: {
         show() {
-            return storage.state.modal.show
+            return storage.getters.getModal().show
         },
 
         message() {
-            return storage.state.modal.message
+            return storage.getters.getModal().message
         },
 
         buttonText() {
-            return storage.state.modal.buttonText
+            return storage.getters.getModal().buttonText
         },
 
         buttonClass() {
-            return storage.state.modal.buttonClass
+            return storage.getters.getModal().buttonClass
         }
     },
 
     methods: {
         close() {
-            storage.commit('closeModal')
+            storage.commit('destroyModal')
         },
 
         modalAffirmed() {

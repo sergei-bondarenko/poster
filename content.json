@@ -23,8 +23,8 @@
    "size": 824
   },
   "data/data.json": {
-   "sha512": "fad859c679c1a8062221b15b21355cd152ae2466bbafb25965acbd1eca61aadf",
-   "size": 19379
+   "sha512": "e95688bb78f28cbd3ff5a08d26bec6be5bab25929d0c382a22300138ebcfec78",
+   "size": 19007
   },
   "dbschema.json": {
    "sha512": "6783974752aab3143e7f30e53a55ddd0fac19ccc350eb41e5560c151c84c4daa",
@@ -59,8 +59,8 @@
    "size": 1335
   },
   "js/comments.js": {
-   "sha512": "44939c311966a80c8d5bff667954bfbbfac1f907211d24fd91337d21a5de198e",
-   "size": 6299
+   "sha512": "e9baba3c6d497a8490fabff8a0968e206d1ad42749888f604afbf1d1dc045221",
+   "size": 6567
   },
   "js/init.js": {
    "sha512": "bf5e07d91a3e2cefe47639f49cb8e4088fcfe07ab7b4539f506658722e22cc79",
@@ -71,28 +71,28 @@
    "size": 1040
   },
   "js/modal.js": {
-   "sha512": "9e908c39276fb4da2c89d5ff17a7d08627d38429f67f3bdf507ff1b4e7e0086e",
-   "size": 1288
+   "sha512": "5d8087c41d2b39848167469247e1798db796d15fc8cc3863064217c931f54f7d",
+   "size": 1318
   },
   "js/moment.min.js": {
    "sha512": "0f3e333bba7a32b17e55c383e8f51b034f212b5aefd210efff01aec525232266",
    "size": 51265
   },
   "js/posteditor.js": {
-   "sha512": "14120ce81e3108c830f64118586eb386e91143770b01678f8ea0b67039859caf",
-   "size": 5091
+   "sha512": "80af31bcd8069d4031e343cba3250c8fd613fcb617b6cb50fdba41332d7db1e2",
+   "size": 5717
   },
   "js/poster.js": {
    "sha512": "5bfa894ae3363ae58d8ee845d3ff10b49d048ba10a01ca28ac44379de52311f8",
    "size": 5360
   },
   "js/posts.js": {
-   "sha512": "9e11f92bfd3229e7fb07d39eee7d333b20b8f3e8e229aa5a022e6293b36d0ffc",
-   "size": 2179
+   "sha512": "ced437ab8ddef01b76d23c4947cff27e3e83ecea69264b50432a60fb97f44745",
+   "size": 2352
   },
   "js/storage.js": {
-   "sha512": "093eb22360ea9f5cd9c2106f106f5bd2f4b682a6ce624d9fa6ffb46aea33e0d5",
-   "size": 5164
+   "sha512": "2ef2ef6081652de815ac38f2ec5dabeb721b767590e01b1e1a27767fcbd07e2e",
+   "size": 5546
   },
   "js/top.js": {
    "sha512": "e53930805b6b3a17feb7e40573a9d280ba663601382d3cb990379ece03b7fb70",
@@ -127,8 +127,8 @@
    "size": 41755
   },
   "temp/todo.txt": {
-   "sha512": "386dd9af4ceb671ea80c3d2353a84055cb81c753674a209140978a8a446c7856",
-   "size": 473
+   "sha512": "0ff608daac18617b4c45209d170ff60aae1cb1d24906452bc0f63222d20c033e",
+   "size": 304
   }
  },
  "files_optional": {
@@ -179,12 +179,12 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1509545466,
+ "modified": 1509695589,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HIxki4FaMGyHl5oTXax4dkBp6VXrQqpQdtGl4UXe9ySveK+n2O/SyU7y2B6EY32wzITu7JVVkVorE2KHDAYuS5c="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HKITDp22EviSYRVk7E9GaLUkq2KyXMzgCUb23qVA8fcTQHIwXlPxcrsJzfYTtOKixNpImRsZXxjhTLLjVJ4n9Cg="
  },
  "signs_required": 1,
  "title": "my new site",

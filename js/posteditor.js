@@ -40,6 +40,15 @@ Vue.component('posteditor', {
         }
     },
 
+    mounted() {
+        storage.watch(storage.getters.getModal, () => {
+            if (storage.getters.getModal().affirmed == true
+                && storage.getters.getModal().action == 'info') {
+                storage.commit('destroyModal')
+            }
+        }, { deep: true })
+    },
+
     data() {
         return {
             filename: null,
@@ -99,7 +108,16 @@ Vue.component('posteditor', {
         },
 
         save() {
-            poster.savePost(this.$refs.text.value)
+            if (this.$refs.text.value == '') {
+                storage.commit('createModal', {
+                    'message': "The post is empty.",
+                    'buttonText': 'OK',
+                    'action': 'info',
+                    'buttonClass': 'is-primary'
+                })
+            } else {
+                poster.savePost(this.$refs.text.value)
+            }
         }
     }
 })
