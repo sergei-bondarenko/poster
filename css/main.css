@@ -15,6 +15,10 @@ ul {
     list-style-type: circle;
 }
 
+ul, ol {
+    list-style-position: inside;
+}
+
 #new-post {
     padding-bottom: 20px;
     padding-top: 20px;

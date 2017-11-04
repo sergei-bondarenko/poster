@@ -2,4 +2,3 @@
 - remove cloned from
 - add 'use strict'
 - configurable via data/data.json
-- ol and ul goes beyond post border
