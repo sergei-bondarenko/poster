@@ -18,7 +18,6 @@ Vue.component('posteditor', {
                         <i class="level-item is-size-6 fa pointer fa-list-ul" @click="insertTags('ul')"></i>
                         <i class="level-item is-size-6 fa pointer fa-external-link" @click="insertTags('a')"></i>
                         <i class="level-item is-size-6 fa pointer fa-code" @click="insertTags('<code></code>')"></i>
-                        <i class="level-item is-size-6 fa pointer" @click="insertTags('<br>')">↵</i>
                     </div>
                     <div class="level-right">
                         <button class="level-item button is-shadowless" type="button" @click="save">Save</button>

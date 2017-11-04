@@ -127,6 +127,7 @@ class Poster extends ZeroFrame {
     }
 
     async savePost(text) {
+        text = text.replace(/(?:\r\n|\r|\n)/g, '<br>')
         let data = await this.getRootDataJson()
         let id = storage.state.posteditor.post_id
         data = JSON.parse(data)
