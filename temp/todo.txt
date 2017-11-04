@@ -2,5 +2,4 @@
 - remove cloned from
 - add 'use strict'
 - configurable via data/data.json
-- nothing to show label when there is no posts
 - ol and ul goes beyond post border

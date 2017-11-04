@@ -1,6 +1,7 @@
 Vue.component('posts', {
     template: `
         <div>
+            <div v-if="posts.length == 0">No posts.</div>
             <div v-for="(post, index) in posts" class="post" :ref="'post'+index">
                 <div class="columns">
                     <div>
