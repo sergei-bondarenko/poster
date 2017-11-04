@@ -172,7 +172,9 @@ Vue.component('comments', {
                 // ...
                 // Comment looks like changed
                 // You can uncomment the next line:
+                //
                 //this.$refs['comment' + id][0].innerHTML = this.commentText
+                //
                 // And this problem will gone
                 // But if you:
                 // 1. Edit comment
@@ -180,6 +182,9 @@ Vue.component('comments', {
                 // 3. Click 'Delete' again
                 // ...
                 // The previous comment will be replaced with current
+                //
+                // Probably the best solution is to move a comment body editor
+                // to a separate component
                 this.del(id)
             } else if (this.isSaveHover) {
                 this.save(id)

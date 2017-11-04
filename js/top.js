@@ -14,7 +14,7 @@ Vue.component('top', {
                 </div>
             </section>
             <div class="container" v-if="mainPageView">
-                <div id="top-posts">
+                <div>
                     <button class="button is-shadowless"
                     :class="{'is-success': commentsSelected}"
                     @mouseenter="comments(true)"

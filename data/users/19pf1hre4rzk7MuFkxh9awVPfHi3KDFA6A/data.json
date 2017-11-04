@@ -1,5 +1,5 @@
 {
-    "next_comment_id": 132,
+    "next_comment_id": 133,
     "comment": [
         {
             "comment_id": 1,
@@ -228,6 +228,12 @@
             "body": "1",
             "post_id": 172,
             "date_added": 1509719664542
+        },
+        {
+            "comment_id": 132,
+            "body": "df",
+            "post_id": 174,
+            "date_added": 1509793592512
         }
     ],
     "comment_vote": {},
