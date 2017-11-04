@@ -145,7 +145,9 @@ class Poster extends ZeroFrame {
 
         await this.writePublish('data/data.json', data)
         storage.commit('setPosteditor', {'post_id': null, 'body': ''})
-        storage.commit('loadPosts')
+        await storage.commit('loadPosts')
+        let files = await this.cmdp('fileList', ['uploads/'])
+        console.log(files)
     }
 
     async delPost(id) {
