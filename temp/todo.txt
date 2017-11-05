@@ -1,2 +1,1 @@
 - add 'use strict'
-- configurable via data/data.json

@@ -1,5 +1,7 @@
 const storage = new Vuex.Store({
     state: {
+        site_title: '',
+        site_description: '',
         posts: [],
         likes: {},
         comments: {},
@@ -66,6 +68,8 @@ const storage = new Vuex.Store({
 
         async loadSiteInfo(state) {
             state.site_info = await poster.getSiteInfo()
+            state.site_title = (await poster.sqlQuery("SELECT value FROM keyvalue WHERE key='title';"))[0].value
+            state.site_description = (await poster.sqlQuery("SELECT value FROM keyvalue WHERE key='description';"))[0].value
         },
 
         async loadPosts(state, payload) {

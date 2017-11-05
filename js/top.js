@@ -5,11 +5,9 @@ Vue.component('top', {
                 <div class="hero-body">
                     <div class="container">
                         <p class="title">
-                            <a :href="mainPageLink">Poster</a>
+                            <a :href="mainPageLink">{{ title }}</a>
                         </p>
-                        <p class="subtitle">
-                            Simple blog for zeronet
-                        </p>
+                        <p class="subtitle">{{ description }}</p>
                     </div>
                 </div>
             </section>
@@ -63,6 +61,14 @@ Vue.component('top', {
            } else {
                return "Top " + this.likesSelected
            }
+        },
+
+        title() {
+            return storage.state.site_title
+        },
+
+        description() {
+            return storage.state.site_description
         }
     },
 
