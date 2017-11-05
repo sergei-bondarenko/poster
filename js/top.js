@@ -1,3 +1,5 @@
+'use strict'
+
 Vue.component('top', {
     template: `
         <div>

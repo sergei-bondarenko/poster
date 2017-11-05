@@ -1,3 +1,5 @@
+'use strict'
+
 Vue.component('modal', {
     template: `
         <div class="modal" v-bind:class="{ 'is-active': show }">

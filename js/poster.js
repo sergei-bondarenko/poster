@@ -1,3 +1,5 @@
+'use strict'
+
 class Poster extends ZeroFrame {
     constructor(url) {
         super(url)

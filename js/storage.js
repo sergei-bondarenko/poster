@@ -1,3 +1,5 @@
+'use strict'
+
 const storage = new Vuex.Store({
     state: {
         site_title: '',

@@ -1,3 +1,5 @@
+'use strict'
+
 Vue.component('posts', {
     template: `
         <div>

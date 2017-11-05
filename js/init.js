@@ -1,3 +1,5 @@
+'use strict'
+
 const poster = new Poster()
 const bus = new Vue()
 new Vue({

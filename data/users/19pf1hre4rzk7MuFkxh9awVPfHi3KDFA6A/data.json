@@ -1,5 +1,5 @@
 {
-    "next_comment_id": 134,
+    "next_comment_id": 137,
     "comment": [
         {
             "comment_id": 1,
@@ -240,6 +240,18 @@
             "body": "d",
             "post_id": 182,
             "date_added": 1509896103900
+        },
+        {
+            "comment_id": 135,
+            "body": "tr",
+            "post_id": 182,
+            "date_added": 1509901016095
+        },
+        {
+            "comment_id": 136,
+            "body": "а",
+            "post_id": 183,
+            "date_added": 1509901209546
         }
     ],
     "comment_vote": {},
@@ -259,7 +271,6 @@
         "149": 1,
         "154": 1,
         "159": 1,
-        "171": 1,
-        "182": 1
+        "171": 1
     }
 }

@@ -1,3 +1,5 @@
+'use strict'
+
 Vue.component('posteditor', {
     template: `
         <div class="columns is-centered">
