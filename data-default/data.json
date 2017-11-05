@@ -1,0 +1,13 @@
+{
+    "title": "Poster",
+    "description": "A simple blog for zeronet",
+    "next_post_id": 1,
+    "modified": 1432515194,
+    "post": [
+        {
+            "post_id": 1,
+            "date_published": 1433033779604,
+            "body": "Your first post."
+        }
+    ]
+}

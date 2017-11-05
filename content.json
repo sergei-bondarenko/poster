@@ -2,9 +2,8 @@
  "address": "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ",
  "address_index": 99714629,
  "background-color": "#FFF",
- "clone_root": "template-new",
- "cloned_from": "1HeLLo4uzjaLetFx6NH3PMwFP3qbRbTf3D",
- "description": "",
+ "cloneable": true,
+ "description": "A simple blog for zeronet",
  "files": {
   "README.md": {
    "sha512": "ac1ee4ddf51dbbd1026fd0274e5a0b7b22923f3641c43f5d0e05fd382b90cb84",
@@ -23,8 +22,8 @@
    "size": 869
   },
   "data/data.json": {
-   "sha512": "830b91da88e2b3d1e02c51b80b31cd9daf6e7d873b03b5a07bb38e43a329f480",
-   "size": 19176
+   "sha512": "436555c89737c8411397b92f7c64848ccea871be6100edcdd2171dfba8beb5b1",
+   "size": 19532
   },
   "dbschema.json": {
    "sha512": "6783974752aab3143e7f30e53a55ddd0fac19ccc350eb41e5560c151c84c4daa",
@@ -83,8 +82,8 @@
    "size": 6651
   },
   "js/poster.js": {
-   "sha512": "2e55ce8832949c32d9492ad5aef410a6833b1216d4dabc346ac2284be366ae26",
-   "size": 5512
+   "sha512": "6850918aad27b2480b85117069c255afdf1d9558d60bb216f7d96bad1fce6111",
+   "size": 5423
   },
   "js/posts.js": {
    "sha512": "6e71bdf9509a18235d697c97d8b17146b80e13fd978a1eb6dd0882004e20b45b",
@@ -183,15 +182,15 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1509804464,
+ "modified": 1509894869,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HCK4vWEWhepH2ZqqQGJ/cn0kmnTsklme1GqCizVO1LGuA9ZF29UE5ElskUIwcW9muN9ss96DMhWal7sDQq76ZGI="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HG1ErSgnuY+UqH7tLD10UQX2+jzX0Vk6N2U/Z8gJacqHPeL2XKNLEMhsm8TOgu3hyvoHI+gPkGxfMniqypMCdD0="
  },
  "signs_required": 1,
- "title": "my new site",
+ "title": "Poster",
  "translate": ["js/all.js"],
  "zeronet_version": "0.6.0"
 }
