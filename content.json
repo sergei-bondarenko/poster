@@ -150,15 +150,16 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1509979250,
+ "modified": 1509980361,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HIk8Y3qmT+Ryjq6HpJcGZG3x88/7y72173CLZNEtDFv8C/cJ8pUpRGv/+54JztPEDv0xn8pCjE2hssG6P7TBIK4="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G1GY107jgCAQQpTq4a5iYPmnm4ejizZVIa16RScplKs8f7Q7WKKgQlgfU0x/iGkzEK2hzZMSNauX/CGuDqYBhr4="
  },
  "signs_required": 1,
  "title": "Poster",
  "translate": ["js/all.js"],
+ "viewport": "width=device-width, initial-scale=1.0",
  "zeronet_version": "0.6.0"
 }
