@@ -18,8 +18,8 @@
    "size": 70328
   },
   "css/font-awesome.min.css": {
-   "sha512": "49f4e24e55fa924faa8ad7debe5ffb2e26d439e25696df6b6f20e7f766b50ea5",
-   "size": 31000
+   "sha512": "d37c12bb3f45626f479b5ecdbb4b644cd664ff93c8c8485112d1b07e2977367a",
+   "size": 133364
   },
   "css/main.css": {
    "sha512": "b17a74d15c782bf7bec0f75d5bbfe75fff2217a73dd047ad62c1045f5ebc4d7c",
@@ -40,30 +40,6 @@
   "dbschema.json": {
    "sha512": "6783974752aab3143e7f30e53a55ddd0fac19ccc350eb41e5560c151c84c4daa",
    "size": 1881
-  },
-  "fonts/FontAwesome.otf": {
-   "sha512": "a3acaaac3a9861ac7a4ba23e52b9115d39b674cb685b45454fb4b80329a4f737",
-   "size": 134808
-  },
-  "fonts/fontawesome-webfont.eot": {
-   "sha512": "c160d3d77e67eff986043461693b2a831e1175f579490d7f0b411005ea81bd4f",
-   "size": 165742
-  },
-  "fonts/fontawesome-webfont.svg": {
-   "sha512": "4f575d52331de91a2e32cc3408dd0eaf0cf25b7244d34b226314e3647e85ce28",
-   "size": 444379
-  },
-  "fonts/fontawesome-webfont.ttf": {
-   "sha512": "9ffb91e68c975172848b4bba25284678cc2c6eb4fb2d42000aa871c36656c4ce",
-   "size": 165548
-  },
-  "fonts/fontawesome-webfont.woff": {
-   "sha512": "9c776dea55a01fd854ea23b3463d9ac716077d406ecbe8ed0c9b6120ff7e6035",
-   "size": 98024
-  },
-  "fonts/fontawesome-webfont.woff2": {
-   "sha512": "838fefdbc14901f41edf995a78fdac55764cd4912ccb734b8bea490919458290",
-   "size": 77160
   },
   "index.html": {
    "sha512": "e5565ef6dcba94b197b4fdd98f3132726eec5fcb3e0a70a525f8731639132698",
@@ -174,12 +150,12 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1509901666,
+ "modified": 1509979250,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G9dtUk5EcyrmrokbYehDQ3V61YKLg5TFh28KQetOz2L5Py32nWx5rLgodsUngbgLy2DV3mvIEfkRM85b8+NiZ/Y="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HIk8Y3qmT+Ryjq6HpJcGZG3x88/7y72173CLZNEtDFv8C/cJ8pUpRGv/+54JztPEDv0xn8pCjE2hssG6P7TBIK4="
  },
  "signs_required": 1,
  "title": "Poster",
