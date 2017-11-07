@@ -10,7 +10,7 @@ new Vue({
             <top></top>
             <div class="container">
                 <posteditor v-if="mainPageView && own"></posteditor>
-                <hr v-if="mainPageView && own">
+                <hr class="zigzag" v-if="mainPageView && own">
                 <posts :ownAndMainPage="mainPageView && own"></posts>
             </div>
         </div>

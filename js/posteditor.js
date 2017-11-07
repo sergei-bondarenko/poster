@@ -5,7 +5,7 @@ Vue.component('posteditor', {
         <div class="columns is-centered">
             <div id="column new-post is-half">
                 <input type="file" id="input-file" @change="upload" ref="inputFile">
-                <nav class="level is-marginless">
+                <nav class="level is-marginless is-mobile">
                     <div class="level-left">
                         <i class="level-item is-size-6 fa pointer fa-file-image-o" @click="initiateUpload('img')"></i>
                         <i class="level-item is-size-6 fa pointer fa-file-video-o" @click="initiateUpload('video')"></i>
