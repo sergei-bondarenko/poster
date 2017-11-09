@@ -65,8 +65,11 @@ Vue.component('posteditor', {
 
         upload(event) {
             let file = this.$refs.inputFile.files[0]
+            poster.uploadFile(file)
+            if ( !poster.isValidName(file.name) ) {
+                return
+            }
             if ( this.getMediaType(file.name, this.filetype) ) {
-                poster.uploadFile(file)
                 this.filename = file.name
                 this.createLink()
             } else {
@@ -129,6 +132,7 @@ Vue.component('posteditor', {
                 })
             } else {
                 poster.savePost(this.$refs.text.value)
+                this.$refs.text.value = ''
             }
         },
 

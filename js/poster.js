@@ -56,6 +56,14 @@ class Poster extends ZeroFrame {
         }).catch((err) => { console.log('Error: ' + err) })
     }
 
+    isValidName(filename) {
+        if (filename.length > 255) {
+            return false
+        } else {
+            return filename.match(/^[a-z\[\]\(\) A-Z0-9_@=\.\+-]+$/) != null
+        }
+    }
+
     async getUserDataJSON() {
         return await this.cmdp('fileGet', ['data/users/' + storage.state.site_info.auth_address + '/data.json'])
     }
@@ -175,7 +183,17 @@ class Poster extends ZeroFrame {
         fr.readAsDataURL(file)
         fr.onload = () => {
             let base64 = fr.result.split(',')[1]
-            poster.cmdp('fileWrite', ['uploads/' + file.name, base64])
+            if ( !this.isValidName(file.name) ) {
+                storage.commit('createModal', {
+                    'message': "Filename should be shorter than 256 characters and contain only english "
+                        + "letters, digits, spaces and the following characters: []()_@=.+-",
+                    'buttonText': 'OK',
+                    'action': 'info',
+                    'buttonClass': 'is-primary'
+                })
+            } else {
+                poster.cmdp('fileWrite', ['uploads/' + file.name, base64])
+            }
         }
     }
 }
