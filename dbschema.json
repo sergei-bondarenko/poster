@@ -15,7 +15,7 @@
 		},
 		"data.json": {
 			"to_table": [ "post" ],
-			"to_keyvalue": [ "title", "description", "next_post_id", "modified" ]
+			"to_keyvalue": [ "next_post_id", "modified" ]
 		}
 
 	},

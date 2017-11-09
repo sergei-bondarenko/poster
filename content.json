@@ -22,8 +22,8 @@
    "size": 133364
   },
   "css/main.css": {
-   "sha512": "b17a74d15c782bf7bec0f75d5bbfe75fff2217a73dd047ad62c1045f5ebc4d7c",
-   "size": 869
+   "sha512": "f91d58981fe50f84cb4a302fa4fd7f978de2880bdd0ddcc9450b2ddb34be9896",
+   "size": 4746
   },
   "data-default/data.json": {
    "sha512": "781493e443910576a5fd4761be9aedccae8f5c1d19127b9470d731587564d496",
@@ -38,8 +38,8 @@
    "size": 19652
   },
   "dbschema.json": {
-   "sha512": "6783974752aab3143e7f30e53a55ddd0fac19ccc350eb41e5560c151c84c4daa",
-   "size": 1881
+   "sha512": "c91d602e10ccc6693ef241679d28d5ed459ec2d9a815506d00018d448242c210",
+   "size": 1857
   },
   "index.html": {
    "sha512": "e5565ef6dcba94b197b4fdd98f3132726eec5fcb3e0a70a525f8731639132698",
@@ -50,8 +50,8 @@
    "size": 7903
   },
   "js/init.js": {
-   "sha512": "8851287f6c7784a4eb96ec3018ba33caaa9a10f4559a0545c8824f2654b6f19f",
-   "size": 908
+   "sha512": "30aaffda3cf669cd1725d171750f6f3fdd2b3d3538ddf456093e00139d430fff",
+   "size": 923
   },
   "js/likes.js": {
    "sha512": "e5ffae2ae0b22a593f09501e595b87c9c64770b73ffa1f94e1dcc62e1d3eec41",
@@ -66,20 +66,20 @@
    "size": 51265
   },
   "js/posteditor.js": {
-   "sha512": "4ab0c0316203e38dafac08029fa3954b1c57caf9a4739a5adf0a5dd2a4021e8a",
-   "size": 6675
+   "sha512": "7f31c2719a65972cb7233f15464c6227becb4acc1de17ff69ce49bdbaf398e80",
+   "size": 6664
   },
   "js/poster.js": {
-   "sha512": "1eee05c7894a83f3ede9776cc9f27cc0f471048d16e5005043b1c09e7981d8d6",
-   "size": 5437
+   "sha512": "54c3c99f3ca610313ac6362d35f1ebc8800ce8ce4b1031eb888b5da5e138d766",
+   "size": 5533
   },
   "js/posts.js": {
-   "sha512": "c7b211e72137f6a0c071d1bff8be8201ecb5b6cc7b023146f4191c087a1c423e",
-   "size": 2424
+   "sha512": "e9978a4a8631f803065757d122307417a8f5ff723255c4cfafb5fc4207047850",
+   "size": 2439
   },
   "js/storage.js": {
-   "sha512": "9dc054e34d410f8f290cd787b3b92efb56c5b01045889c1204c33bd4ae83014b",
-   "size": 5852
+   "sha512": "13f8402dc284f058a6141fae07a026484ca98da0e002ebde50871482f76bc2e0",
+   "size": 5796
   },
   "js/top.js": {
    "sha512": "58ef4c2473a91d3b05ee116d54e9a191f2330ca4feb7c305a1f8c375962a363e",
@@ -150,12 +150,12 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1510049183,
+ "modified": 1510210905,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G9YWH5rgwRLYtF7aXXLXHJAdvaf+4KpjsO/+jSVpIBg0TnILyOKGkmZbpz7Wce25uUFh4+HQTSVnxBFafuJrBRI="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HEX74t/K7fyW0hzaQetT7ylwCvAtIg0OkmLbQGVRw4Vkffdq8WaSLmMcsvpH9es/HoBUpHzCu0OX5X6JGHHI2qI="
  },
  "signs_required": 1,
  "title": "Poster",

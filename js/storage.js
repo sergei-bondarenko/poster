@@ -70,8 +70,9 @@ const storage = new Vuex.Store({
 
         async loadSiteInfo(state) {
             state.site_info = await poster.getSiteInfo()
-            state.site_title = (await poster.sqlQuery("SELECT value FROM keyvalue WHERE key='title';"))[0].value
-            state.site_description = (await poster.sqlQuery("SELECT value FROM keyvalue WHERE key='description';"))[0].value
+            let contentJSON = JSON.parse(await poster.getContentJSON())
+            state.site_title = contentJSON.title
+            state.site_description = contentJSON.description
         },
 
         async loadPosts(state, payload) {

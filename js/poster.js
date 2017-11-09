@@ -56,12 +56,16 @@ class Poster extends ZeroFrame {
         }).catch((err) => { console.log('Error: ' + err) })
     }
 
-    async getUserDataJson() {
+    async getUserDataJSON() {
         return await this.cmdp('fileGet', ['data/users/' + storage.state.site_info.auth_address + '/data.json'])
     }
 
-    async getRootDataJson() {
+    async getRootDataJSON() {
         return await this.cmdp('fileGet', ['data/data.json'])
+    }
+
+    async getContentJSON() {
+        return await this.cmdp('fileGet', ['content.json'])
     }
 
     async sqlQuery(query) {
@@ -74,7 +78,7 @@ class Poster extends ZeroFrame {
 
     async like(post_id) {
         if (this.isCertSelected) {
-            let data = await this.getUserDataJson()
+            let data = await this.getUserDataJSON()
             if (data) {
                 data = JSON.parse(data)
             } else {
@@ -98,7 +102,7 @@ class Poster extends ZeroFrame {
 
     async saveComment(post_id, text, comment_id) {
         if (this.isCertSelected) {
-            let data = await this.getUserDataJson()
+            let data = await this.getUserDataJSON()
             if (data) {
                 data = JSON.parse(data)
             } else {
@@ -130,7 +134,7 @@ class Poster extends ZeroFrame {
 
     async savePost(text) {
         text = text.replace(/(?:\r\n|\r|\n)/g, '<br>')
-        let data = await this.getRootDataJson()
+        let data = await this.getRootDataJSON()
         let id = storage.state.posteditor.post_id
         data = JSON.parse(data)
         if (id == null) {
@@ -151,7 +155,7 @@ class Poster extends ZeroFrame {
     }
 
     async delPost(id) {
-        let data = await this.getRootDataJson()
+        let data = await this.getRootDataJSON()
         data = JSON.parse(data)
         data.post.splice(this.findPostById(data.post, id), 1)
         await this.writePublish('data/data.json', data)
@@ -159,7 +163,7 @@ class Poster extends ZeroFrame {
     }
 
     async delComment(id) {
-        let data = await this.getUserDataJson()
+        let data = await this.getUserDataJSON()
         data = JSON.parse(data)
         data.comment.splice(this.findCommentById(data.comment, id), 1)
         await this.writePublish('data/users/' + storage.state.site_info.auth_address + '/data.json', data)
