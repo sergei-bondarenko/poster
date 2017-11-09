@@ -7,10 +7,7 @@ Vue.component('posteditor', {
                 <input type="file" id="input-file" @change="upload" ref="inputFile">
                 <nav class="level is-marginless is-mobile">
                     <div class="level-left">
-                        <i class="level-item is-size-6 fa pointer fa-file-image-o" @click="initiateUpload('img')"></i>
-                        <i class="level-item is-size-6 fa pointer fa-file-video-o" @click="initiateUpload('video')"></i>
-                        <i class="level-item is-size-6 fa pointer fa-file-audio-o" @click="initiateUpload('audio')"></i>
-                        <i class="level-item is-size-6 fa pointer fa-file-o" @click="initiateUpload('file')"></i>
+                        <i class="level-item is-size-6 fa pointer fa-file-o" @click="initiateUpload()"></i>
                         <i class="level-item is-size-6 fa pointer fa-header" @click="insertTags('<h1></h1>')"></i>
                         <i class="level-item is-size-6 fa pointer fa-paragraph" @click="insertTags('<p></p>')"></i>
                         <i class="level-item is-size-6 fa pointer fa-italic" @click="insertTags('<i></i>')"></i>
@@ -50,64 +47,16 @@ Vue.component('posteditor', {
         }, { deep: true })
     },
 
-    data() {
-        return {
-            filename: null,
-            filetype: null
-        }
-    },
-
     methods: {
         initiateUpload(type) {
-            this.filetype = type
             this.$refs.inputFile.click()
         },
 
         upload(event) {
             let file = this.$refs.inputFile.files[0]
-            poster.uploadFile(file)
-            if ( !poster.isValidName(file.name) ) {
-                return
+            if ( poster.uploadFile(file) ) {
+                this.$refs.text.value += this.createLink(file)
             }
-            if ( this.getMediaType(file.name, this.filetype) ) {
-                this.filename = file.name
-                this.createLink()
-            } else {
-                if ( this.filetype == 'video' ) {
-                    storage.commit('createModal', {
-                        'message': "Legitimate video extensions are .mp4, .ogg and .webm",
-                        'buttonText': 'OK',
-                        'action': 'info',
-                        'buttonClass': 'is-primary'
-                    })
-                } else if ( this.filetype == 'audio' ) {
-                    storage.commit('createModal', {
-                        'message': "Legitimate audio extensions are .mp3, .ogg and .wav",
-                        'buttonText': 'OK',
-                        'action': 'info',
-                        'buttonClass': 'is-primary'
-                    })
-                }
-            }
-        },
-
-        createLink() {
-            let type = this.getMediaType(this.filename, this.filetype)
-            if (this.filetype == 'img') {
-                this.$refs.text.value += '<img src="uploads/' + this.filename + '">'
-            } else if (this.filetype == 'video') {
-                this.$refs.text.value += '<video width="320" height="240" controls>\n'
-                this.$refs.text.value += '<source src="uploads/' + this.filename + '" type="' + type + '">\n'
-                this.$refs.text.value += '</video>'
-            } else if (this.filetype == 'audio') {
-                this.$refs.text.value += '<audio controls>\n'
-                this.$refs.text.value += '<source src="uploads/' + this.filename + '" type="' + type + '">\n'
-                this.$refs.text.value += '</audio>'
-            } else if (this.filetype == 'file') {
-                this.$refs.text.value += '<a href="uploads/' + this.filename + '" target="_blanc">' + this.filename + '</a>'
-            }
-            this.filename = null
-            this.filetype = null
         },
 
         insertTags(tags) {
@@ -122,6 +71,28 @@ Vue.component('posteditor', {
             }
         },
 
+        createLink(file) {
+            let type = ''
+            let result = ''
+            try {
+                type = file.type
+            } catch(e) {}
+            if (type.indexOf('video') != -1) {
+                result += '<video controls>\n'
+                result += '<source src="uploads/' + file.name + '" type="' + type + '">\n'
+                result += '</video>'
+            } else if (type.indexOf('audio') != -1) {
+                result += '<audio controls>\n'
+                result += '<source src="uploads/' + file.name + '" type="' + type + '">\n'
+                result += '</audio>'
+            } else if (type.indexOf('image') != -1) {
+                result += '<img src="uploads/' + file.name + '">'
+            } else {
+                result += '<a href="uploads/' + file.name + '" target="_blanc">' + file.name + '</a>'
+            }
+            return result
+        },
+
         save() {
             if (this.$refs.text.value == '') {
                 storage.commit('createModal', {
@@ -134,18 +105,6 @@ Vue.component('posteditor', {
                 poster.savePost(this.$refs.text.value)
                 this.$refs.text.value = ''
             }
-        },
-
-        getMediaType(filename, filetype) {
-            if (filetype == 'video') {
-                if (filename.toLowerCase().endsWith('mp4')) return 'video/mp4'
-                if (filename.toLowerCase().endsWith('webm')) return 'video/webm'
-                if (filename.toLowerCase().endsWith('ogg')) return 'video/ogg'
-            } else if (filetype == 'audio') {
-                if (filename.toLowerCase().endsWith('mp3')) return 'audio/mpeg'
-                if (filename.toLowerCase().endsWith('ogg')) return 'audio/ogg'
-                if (filename.toLowerCase().endsWith('wav')) return 'audio/wav'
-            } else if (filetype == 'img' || filetype == 'file') return true
         }
     }
 })

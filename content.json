@@ -34,8 +34,8 @@
    "size": 601
   },
   "data/data.json": {
-   "sha512": "8ad6377b9ff54f9677d3168c89b0562be289c35775e503e721e8c7dab07cc9d1",
-   "size": 20067
+   "sha512": "389f2ac355343676260305d106243567efdb6b4faf5cafa46daf557e33dcbe03",
+   "size": 20315
   },
   "dbschema.json": {
    "sha512": "c91d602e10ccc6693ef241679d28d5ed459ec2d9a815506d00018d448242c210",
@@ -66,12 +66,12 @@
    "size": 51265
   },
   "js/posteditor.js": {
-   "sha512": "0424a9d52081c215c07743cb7fe81b8a97fb4df12fb9c5e0a9e64f63d30e0231",
-   "size": 6792
+   "sha512": "c837e32c6919a0f75b71fad07049689f2d5562defea65b388279016574754075",
+   "size": 4526
   },
   "js/poster.js": {
-   "sha512": "151acd74fe6478fbb0ac8d8933ec8f17bea665171d385f2f68d47cb5dd55f1ae",
-   "size": 6216
+   "sha512": "77e7126ff7e8e23824e9ecc3a56ea55e68ea9a4dbabde7e20ed517216f969a42",
+   "size": 6353
   },
   "js/posts.js": {
    "sha512": "e9978a4a8631f803065757d122307417a8f5ff723255c4cfafb5fc4207047850",
@@ -115,6 +115,16 @@
    "sha512": "0b6c13ec04f153bcbd2b02a89aa54a77c873eb1cfea3a28ec046b458c4c06e5b",
    "size": 4250464
   },
+  "uploads/Motivational short video - How to succeed - cartoon.mp4": {
+   "piece_size": 1048576,
+   "piecemap": "uploads/Motivational short video - How to succeed - cartoon.mp4.piecemap.msgpack",
+   "sha512": "a5b39022894710dd646b8216d7bb5066e44c45b692e4c82dede674a71c16bb00",
+   "size": 6465997
+  },
+  "uploads/Motivational short video - How to succeed - cartoon.mp4.piecemap.msgpack": {
+   "sha512": "61e3ece14878cb16c64557c2374588f5b914393f5e0fecf806447d419079df23",
+   "size": 320
+  },
   "uploads/Rina4.jpg": {
    "sha512": "f242080895ecbc242aeb716a9538e4fde32a2d154e36becf000062035c88570f",
    "size": 77094
@@ -140,6 +150,10 @@
   "uploads/test.png": {
    "sha512": "f968e0ac3b91bd36e4e131fed671f29474432ebdaa28cdf13a3769fd2cb9e08a",
    "size": 1045
+  },
+  "uploads/test.txt": {
+   "sha512": "ea2fe56bb8c1fb5ada84963b42ed71b764a74b092d75755173ade06f2f4aada9",
+   "size": 4
   }
  },
  "ignore": "(data/.*db|data/users/.*/.*|.git/.*)",
@@ -150,12 +164,12 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1510219342,
+ "modified": 1510236397,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HGMxFFZ6B11W1mnCONt38tO5bMshV39NAOsPyF0fK4frIHFTYHswIJzugQCl/lS6a+z2w6kIqMslZwec+4xtOWs="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HEgEactNKReekAhQlXQ/VPbh266IpJTG0j6C5XXmSNfYQDvfn+rgH8SQUMVYpmYa+A6Wtr9kHKFLhGpibGzmL7c="
  },
  "signs_required": 1,
  "title": "Poster",

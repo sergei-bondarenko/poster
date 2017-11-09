@@ -1,7 +1,7 @@
 {
     "title": "Poster",
     "description": "A simple blog for zeronet",
-    "next_post_id": 188,
+    "next_post_id": 189,
     "modified": 1432515194,
     "post": [
         {
@@ -823,6 +823,11 @@
             "post_id": 187,
             "date_published": 1510219329377,
             "body": "<img src=\"uploads/test.png\">"
+        },
+        {
+            "post_id": 188,
+            "date_published": 1510236270630,
+            "body": "<video controls><br><source src=\"uploads/Motivational short video - How to succeed - cartoon.mp4\" type=\"video/mp4\"><br></video>"
         }
     ]
 }

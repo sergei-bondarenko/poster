@@ -56,14 +56,6 @@ class Poster extends ZeroFrame {
         }).catch((err) => { console.log('Error: ' + err) })
     }
 
-    isValidName(filename) {
-        if (filename.length > 255) {
-            return false
-        } else {
-            return filename.match(/^[a-z\[\]\(\) A-Z0-9_@=\.\+-]+$/) != null
-        }
-    }
-
     async getUserDataJSON() {
         return await this.cmdp('fileGet', ['data/users/' + storage.state.site_info.auth_address + '/data.json'])
     }
@@ -178,22 +170,37 @@ class Poster extends ZeroFrame {
         storage.commit('loadComments')
     }
 
-    async uploadFile(file) {
-        let fr = new FileReader()
-        fr.readAsDataURL(file)
-        fr.onload = () => {
-            let base64 = fr.result.split(',')[1]
-            if ( !this.isValidName(file.name) ) {
-                storage.commit('createModal', {
-                    'message': "Filename should be shorter than 256 characters and contain only english "
-                        + "letters, digits, spaces and the following characters: []()_@=.+-",
-                    'buttonText': 'OK',
-                    'action': 'info',
-                    'buttonClass': 'is-primary'
-                })
-            } else {
-                poster.cmdp('fileWrite', ['uploads/' + file.name, base64])
-            }
+    isValidName(filename) {
+        if (filename.length > 255) {
+            return false
+        } else {
+            return filename.match(/^[a-z\[\]\(\) A-Z0-9_@=\.\+-]+$/) != null
         }
+    }
+
+    pFileReader(file){
+        return new Promise((resolve, reject) => {
+            let fr = new FileReader()  
+            fr.onload = () => {
+                resolve(fr.result.split(',')[1])
+            }
+            fr.readAsDataURL(file)
+        })
+    }
+
+    async uploadFile(file) {
+        if ( !this.isValidName(file.name) ) {
+            storage.commit('createModal', {
+                'message': "Filename should be shorter than 256 characters and contain only english "
+                    + "letters, digits, spaces and the following characters: []()_@=.+-",
+                'buttonText': 'OK',
+                'action': 'info',
+                'buttonClass': 'is-primary'
+            })
+            return false
+        }
+        let base64 = await this.pFileReader(file)
+        this.cmdp('fileWrite', ['uploads/' + file.name, base64])
+        return true
     }
 }
