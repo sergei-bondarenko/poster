@@ -3,14 +3,6 @@ body {
     backface-visibility: hidden; 
 }
 
-button::-moz-focus-inner {
-    border: 0;
-}
-
-button {
-    border-color: #dbdbdb !important;
-}
-
 ul {
     list-style-type: circle;
 }

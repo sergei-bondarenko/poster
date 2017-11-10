@@ -22,8 +22,8 @@
    "size": 133364
   },
   "css/main.css": {
-   "sha512": "f91d58981fe50f84cb4a302fa4fd7f978de2880bdd0ddcc9450b2ddb34be9896",
-   "size": 4746
+   "sha512": "985392054d8e4b7c7d57a2cefc31a56781cb42d87b72eb532ad8b0d712d27afd",
+   "size": 4651
   },
   "data-default/data.json": {
    "sha512": "781493e443910576a5fd4761be9aedccae8f5c1d19127b9470d731587564d496",
@@ -34,8 +34,8 @@
    "size": 601
   },
   "data/data.json": {
-   "sha512": "c0ca76d5e9587970eab915c1ed2023c0abaf74fc0281c8151ae6de784b3c8474",
-   "size": 23018
+   "sha512": "922b947bd2931602ca726d6ac5d5e088b73b62aa9151df625055d8b1647c7fe6",
+   "size": 23927
   },
   "dbschema.json": {
    "sha512": "c91d602e10ccc6693ef241679d28d5ed459ec2d9a815506d00018d448242c210",
@@ -46,8 +46,8 @@
    "size": 1335
   },
   "js/comments.js": {
-   "sha512": "b356cf1149a6fcb4d1844cf054ca3e04cb77392d9f1acf4baa98a8d4fac8b294",
-   "size": 7903
+   "sha512": "2bd1aa991c32b7b0296e13af985808808733a6dc4cc0caa0f39322beb2d8bec5",
+   "size": 7893
   },
   "js/init.js": {
    "sha512": "30aaffda3cf669cd1725d171750f6f3fdd2b3d3538ddf456093e00139d430fff",
@@ -66,8 +66,8 @@
    "size": 51265
   },
   "js/posteditor.js": {
-   "sha512": "a257c798a9547da03a9e8782e5c2cd5d855f541b4cbbf02627710e06ca774d7c",
-   "size": 4732
+   "sha512": "81729fbd929d4d5c5769385a2dabfe054ca9c6e93f0f2ad7daae1e525c14184c",
+   "size": 4778
   },
   "js/poster.js": {
    "sha512": "8cbc335c25cc9b4b3661491826509193764e5ad704ac96ff2c07d449f656dfef",
@@ -82,8 +82,8 @@
    "size": 5796
   },
   "js/top.js": {
-   "sha512": "58ef4c2473a91d3b05ee116d54e9a191f2330ca4feb7c305a1f8c375962a363e",
-   "size": 4598
+   "sha512": "e4d45b77040d22d3f497ca1b95c751a34ec724c9d3b880df99778764494a63a6",
+   "size": 4550
   },
   "js/vue.js": {
    "sha512": "45280ccb97b0ccc1e8039c8a21311a7abda6d766017db16ff3ee62a2b42eb00b",
@@ -154,6 +154,10 @@
   "uploads/test.txt": {
    "sha512": "ea2fe56bb8c1fb5ada84963b42ed71b764a74b092d75755173ade06f2f4aada9",
    "size": 4
+  },
+  "uploads/test1.jpg": {
+   "sha512": "8beb9a1b314bbf2e5c0cb745a3a410fce9168cdd88b002f043c132399c72c28b",
+   "size": 1800
   }
  },
  "ignore": "(data/.*db|data/users/.*/.*|.git/.*)",
@@ -164,12 +168,12 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1510300409,
+ "modified": 1510303793,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G1sx2mA8kf/smTpV9xn0IRxsqmM1yOAf1bTRPi0B/y//PP9GE523XFe+DRN3uTZGrliEeyCl3M+tgUrJezGXd+8="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G+UFxcm/UIARCGzOyJWv5Ct7n1L3t8Xm/MuWE9d8HSZnfuUny1PY9NwXfALVCZ5v7jlfxU/QnyXePpyrXEGPfu8="
  },
  "signs_required": 1,
  "title": "Poster",

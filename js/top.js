@@ -15,15 +15,15 @@ Vue.component('top', {
             </section>
             <div class="container" v-if="mainPageView">
                 <div>
-                    <button class="button is-shadowless"
+                    <a class="button"
                     :class="{'is-success': commentsSelected}"
                     @mouseenter="comments(true)"
                     @mouseout="comments(false)">
                         Last commented
-                    </button>
+                    </a>
                     <div class="dropdown" :class="{'is-active': showDropdown}">
                         <div class="dropdown-trigger">
-                        <button class="button is-shadowless" :class="{'is-success': likesSelected}" aria-haspopup="true"
+                        <a class="button" :class="{'is-success': likesSelected}" aria-haspopup="true"
                         aria-controls="dropdown-menu" ref="dropdown_likes"
                         @mouseover="likes(true)"
                         @mouseout="likes(false)">
@@ -31,7 +31,7 @@ Vue.component('top', {
                             <span class="icon is-small">
                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                             </span>
-                        </button>
+                        </a>
                         </div>
                         <div class="dropdown-menu" id="dropdown-menu" role="menu">
                             <div class="dropdown-content">

@@ -19,7 +19,7 @@ Vue.component('posteditor', {
                         <i class="level-item is-size-6 fa pointer fa-code" @click="insertTags('<code></code>')"></i>
                     </div>
                     <div class="level-right">
-                        <button class="button is-shadowless" type="button" @click="save">Save</button>
+                        <a class="button" type="button" @click="save">Save</a>
                     </div>
                 </nav>
                 <textarea class="post-textarea is-size-6" ref="text" v-model="posteditorBody"></textarea>

@@ -43,7 +43,7 @@ Vue.component('comments', {
                         </div>
                         <div class="field">
                             <p class="control">
-                                <button class="button" @click="save()">Post comment</button>
+                                <a class="button" @click="save()">Post comment</a>
                             </p>
                         </div>
                     </div>
