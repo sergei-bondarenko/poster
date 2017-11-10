@@ -8,14 +8,14 @@ Vue.component('posteditor', {
                 <nav class="level is-marginless is-mobile">
                     <div class="level-left">
                         <i class="level-item is-size-6 fa pointer fa-file-o" @click="initiateUpload()"></i>
-                        <i class="level-item is-size-6 fa pointer fa-header" @click="insertTags('<h1></h1>')"></i>
+                        <i class="level-item is-size-6 fa pointer fa-header" @click="insertTags('h')"></i>
                         <i class="level-item is-size-6 fa pointer fa-paragraph" @click="insertTags('<p></p>')"></i>
                         <i class="level-item is-size-6 fa pointer fa-italic" @click="insertTags('<i></i>')"></i>
                         <i class="level-item is-size-6 fa pointer fa-bold" @click="insertTags('<b></b>')"></i>
                         <i class="level-item is-size-6 fa pointer fa-strikethrough" @click="insertTags('<strike></strike>')"></i>
                         <i class="level-item is-size-6 fa pointer fa-list-ol" @click="insertTags('ol')"></i>
                         <i class="level-item is-size-6 fa pointer fa-list-ul" @click="insertTags('ul')"></i>
-                        <i class="level-item is-size-6 fa pointer fa-external-link" @click="insertTags('a')"></i>
+                        <i class="level-item is-size-6 fa pointer fa-link" @click="insertTags('a')"></i>
                         <i class="level-item is-size-6 fa pointer fa-code" @click="insertTags('<code></code>')"></i>
                     </div>
                     <div class="level-right">
@@ -64,8 +64,10 @@ Vue.component('posteditor', {
                 this.$refs.text.value += "<ol>\n<li></li>\n<li></li>\n</ol>"
             } else if (tags == 'ul') {
                 this.$refs.text.value += "<ul>\n<li></li>\n<li></li>\n</ul>"
+            } else if (tags == 'h') {
+                this.$refs.text.value += '<h1 class="title"></h1>'
             } else if (tags == 'a') {
-                this.$refs.text.value += '<a href=""></a>'
+                this.$refs.text.value += '<a href="" target="' + Math.floor(Math.random() * 1000000) + '"></a>'
             } else {
                 this.$refs.text.value += tags
             }
@@ -86,9 +88,9 @@ Vue.component('posteditor', {
                 result += '<source src="uploads/' + file.name + '" type="' + type + '">\n'
                 result += '</audio>'
             } else if (type.indexOf('image') != -1) {
-                result += '<img src="uploads/' + file.name + '">'
+                result += '<a href="uploads/' + file.name + '" target="' + file.name + '"><img src="uploads/' + file.name + '"></a>'
             } else {
-                result += '<a href="uploads/' + file.name + '" target="_blanc">' + file.name + '</a>'
+                result += '<a href="uploads/' + file.name + '" target="' + file.name + '">' + file.name + '</a>'
             }
             return result
         },

@@ -189,7 +189,9 @@ class Poster extends ZeroFrame {
     }
 
     async uploadFile(file) {
-        if ( !this.isValidName(file.name) ) {
+        if (file == undefined) {
+            return false
+        } else if ( !this.isValidName(file.name) ) {
             storage.commit('createModal', {
                 'message': "Filename should be shorter than 256 characters and contain only english "
                     + "letters, digits, spaces and the following characters: []()_@=.+-",

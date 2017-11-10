@@ -1,7 +1,7 @@
 {
     "title": "Poster",
     "description": "A simple blog for zeronet",
-    "next_post_id": 189,
+    "next_post_id": 205,
     "modified": 1432515194,
     "post": [
         {
@@ -828,6 +828,76 @@
             "post_id": 188,
             "date_published": 1510236270630,
             "body": "<video controls><br><source src=\"uploads/Motivational short video - How to succeed - cartoon.mp4\" type=\"video/mp4\"><br></video>"
+        },
+        {
+            "post_id": 189,
+            "date_published": 1510298835952,
+            "body": "цуук"
+        },
+        {
+            "post_id": 191,
+            "date_published": 1510299428127,
+            "body": "<h1 class=\"title\">vvb</h1>"
+        },
+        {
+            "post_id": 193,
+            "date_published": 1510299613271,
+            "body": "<img src=\"uploads/test.jpg\">"
+        },
+        {
+            "post_id": 194,
+            "date_published": 1510299728281,
+            "body": "<img src=\"uploads/test.jpg\">"
+        },
+        {
+            "post_id": 195,
+            "date_published": 1510299760237,
+            "body": "<img src=\"uploads/test.jpg\">"
+        },
+        {
+            "post_id": 196,
+            "date_published": 1510299833648,
+            "body": "<img src=\"uploads/test.jpg\">"
+        },
+        {
+            "post_id": 197,
+            "date_published": 1510299841719,
+            "body": "<img src=\"uploads/test.png\">"
+        },
+        {
+            "post_id": 198,
+            "date_published": 1510299938954,
+            "body": "<a href=\"uploads/test.jpg\"><img src=\"uploads/test.jpg\"></a>"
+        },
+        {
+            "post_id": 199,
+            "date_published": 1510299963711,
+            "body": "<a href=\"uploads/test.jpg\" target=\"_blanc\"><img src=\"uploads/test.jpg\"></a>"
+        },
+        {
+            "post_id": 200,
+            "date_published": 1510299991622,
+            "body": "<a href=\"uploads/test.jpg\" target=\"_blanc\"><img src=\"uploads/test.jpg\"></a>vvv"
+        },
+        {
+            "post_id": 201,
+            "date_published": 1510300134298,
+            "body": "<a href=\"uploads/test.jpg\" target=\"_blanc\"><img src=\"uploads/test.jpg\"></a><a href=\"uploads/test.png\" target=\"_blanc\"><img src=\"uploads/test.png\"></a>"
+        },
+        {
+            "post_id": 202,
+            "date_published": 1510300290035,
+            "body": "<a href=\"uploads/test.jpg\" target=\"test.jpg\"><img src=\"uploads/test.jpg\"></a><a href=\"uploads/test.png\" target=\"test.png\"><img src=\"uploads/test.png\"></a>"
+        },
+        {
+            "post_id": 203,
+            "date_published": 1510300325554,
+            "body": "<a href=\"https://stackoverflow.com/questions/7952847/blank-links-opens-in-the-same-window-why-and-how-to-fix-it\" target=\"_blanc\">ee</a><br><a href=\"https://bulma.io/documentation/layout/hero/\" target=\"_blanc\">fgg</a>"
+        },
+        {
+            "post_id": 204,
+            "date_published": 1510300408937,
+            "body": "<a href=\"https://www.w3schools.com/jsref/jsref_random.asp\" target=\"0.6115839484929209\">errr</a>"
         }
     ]
 }

@@ -1,5 +1,5 @@
 {
-    "next_comment_id": 137,
+    "next_comment_id": 138,
     "comment": [
         {
             "comment_id": 1,
@@ -252,6 +252,12 @@
             "body": "а",
             "post_id": 183,
             "date_added": 1509901209546
+        },
+        {
+            "comment_id": 137,
+            "body": "выпп",
+            "post_id": 188,
+            "date_added": 1510298831846
         }
     ],
     "comment_vote": {},
