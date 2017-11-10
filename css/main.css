@@ -22,7 +22,7 @@ ul, ol {
 
 .isCropped {
     height: 1000px;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 .columns {
