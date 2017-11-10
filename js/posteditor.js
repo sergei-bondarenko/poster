@@ -54,9 +54,11 @@ Vue.component('posteditor', {
 
         upload(event) {
             let file = this.$refs.inputFile.files[0]
-            if ( poster.uploadFile(file) ) {
-                this.$refs.text.value += this.createLink(file)
-            }
+            poster.uploadFile(file).then((res) => {
+                if (res) {
+                    this.$refs.text.value += this.createLink(file)
+                }
+            })
         },
 
         insertTags(tags) {
