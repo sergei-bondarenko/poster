@@ -5,7 +5,7 @@ Vue.component('posts', {
         <div>
             <div v-if="posts.length == 0">No posts.</div>
             <div v-for="(post, index) in posts" class="post" :ref="'post'+index">
-                <div class="columns">
+                <div class="columns is-marginless">
                     <div>
                         <i class="fa pointer fa-pencil" v-if="ownAndMainPage" @click="edit(post)"></i>
                         <i class="fa pointer fa-trash-o" v-if="ownAndMainPage" @click="del(post.post_id)"></i>
