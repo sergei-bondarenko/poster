@@ -20,6 +20,10 @@ ul, ol {
     display: none;
 }
 
+.columns {
+    margin: 0px;
+}
+
 .pointer {
     cursor: pointer;
     user-select: none;
