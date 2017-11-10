@@ -22,8 +22,8 @@
    "size": 133364
   },
   "css/main.css": {
-   "sha512": "985392054d8e4b7c7d57a2cefc31a56781cb42d87b72eb532ad8b0d712d27afd",
-   "size": 4651
+   "sha512": "0dc617cf146353040210de4480d5bcd0b3a03c091e990f3b16ff256fa814f724",
+   "size": 4711
   },
   "data-default/data.json": {
    "sha512": "781493e443910576a5fd4761be9aedccae8f5c1d19127b9470d731587564d496",
@@ -34,8 +34,8 @@
    "size": 601
   },
   "data/data.json": {
-   "sha512": "922b947bd2931602ca726d6ac5d5e088b73b62aa9151df625055d8b1647c7fe6",
-   "size": 23927
+   "sha512": "4f82a878c61bf8437d760dd82aa85e66cfc830ae5055d3ea9524eba3ab43a561",
+   "size": 23573
   },
   "dbschema.json": {
    "sha512": "c91d602e10ccc6693ef241679d28d5ed459ec2d9a815506d00018d448242c210",
@@ -46,8 +46,8 @@
    "size": 1335
   },
   "js/comments.js": {
-   "sha512": "2bd1aa991c32b7b0296e13af985808808733a6dc4cc0caa0f39322beb2d8bec5",
-   "size": 7893
+   "sha512": "fd95daa8f55df29c26596079af7f4b91393169342c999b117df4bc948cc1507f",
+   "size": 7895
   },
   "js/init.js": {
    "sha512": "30aaffda3cf669cd1725d171750f6f3fdd2b3d3538ddf456093e00139d430fff",
@@ -74,8 +74,8 @@
    "size": 6418
   },
   "js/posts.js": {
-   "sha512": "e9978a4a8631f803065757d122307417a8f5ff723255c4cfafb5fc4207047850",
-   "size": 2439
+   "sha512": "7296a813e7ae1de34deb731655ab0aa7cede37ae1b882822f3a48c177e78c315",
+   "size": 2691
   },
   "js/storage.js": {
    "sha512": "13f8402dc284f058a6141fae07a026484ca98da0e002ebde50871482f76bc2e0",
@@ -168,12 +168,12 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1510303793,
+ "modified": 1510307876,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G+UFxcm/UIARCGzOyJWv5Ct7n1L3t8Xm/MuWE9d8HSZnfuUny1PY9NwXfALVCZ5v7jlfxU/QnyXePpyrXEGPfu8="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G429E28gDO3WatSZsY1VnZaPFzvElGrU0W4gUsw7V5//EZ3XB1/ouV3FyBSTcNw79W4ZZWWbt5zCgzNDqXAubWg="
  },
  "signs_required": 1,
  "title": "Poster",

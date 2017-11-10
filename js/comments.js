@@ -11,7 +11,7 @@ Vue.component('comments', {
                             <p>
                                 <strong :title="userTitle(comment)" v-text="cropIdProvider(comment.cert_user_id)"></strong>
                                 <br>
-                                <div class="wrapped"
+                                <div class="isWrapped"
                                     @blur="blur(comment.comment_id)"
                                     :contentEditable="comment_id == comment.comment_id"
                                     :ref="'comment' + comment.comment_id">{{ comment.body }}</div>

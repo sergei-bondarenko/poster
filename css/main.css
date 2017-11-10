@@ -20,6 +20,11 @@ ul, ol {
     display: none;
 }
 
+.isCropped {
+    height: 1000px;
+    overflow: hidden;
+}
+
 .columns {
     margin: 0px;
 }
@@ -51,7 +56,7 @@ ul, ol {
     margin-right: 20px;
 }
 
-.wrapped {
+.isWrapped {
     /* Wrap comments with looooong words*/
     word-break: break-all;
 }
