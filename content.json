@@ -22,8 +22,8 @@
    "size": 133364
   },
   "css/main.css": {
-   "sha512": "0dc617cf146353040210de4480d5bcd0b3a03c091e990f3b16ff256fa814f724",
-   "size": 4711
+   "sha512": "835de52630a048987876adef4cd7f1aba25faa606c86c6a7a30890e5ce87d890",
+   "size": 4713
   },
   "data-default/data.json": {
    "sha512": "781493e443910576a5fd4761be9aedccae8f5c1d19127b9470d731587564d496",
@@ -42,8 +42,8 @@
    "size": 1857
   },
   "index.html": {
-   "sha512": "e5565ef6dcba94b197b4fdd98f3132726eec5fcb3e0a70a525f8731639132698",
-   "size": 1335
+   "sha512": "b301c3fb962bb837c94f014139685e880c8931f33be0022f80337e1d1b51e218",
+   "size": 1397
   },
   "js/comments.js": {
    "sha512": "fd95daa8f55df29c26596079af7f4b91393169342c999b117df4bc948cc1507f",
@@ -65,6 +65,10 @@
    "sha512": "0f3e333bba7a32b17e55c383e8f51b034f212b5aefd210efff01aec525232266",
    "size": 51265
   },
+  "js/post.js": {
+   "sha512": "6d24d0bbe94eac8112b55a867f7c498ce73d356b685fb9306d2777d093df0236",
+   "size": 1812
+  },
   "js/posteditor.js": {
    "sha512": "81729fbd929d4d5c5769385a2dabfe054ca9c6e93f0f2ad7daae1e525c14184c",
    "size": 4778
@@ -74,8 +78,8 @@
    "size": 6418
   },
   "js/posts.js": {
-   "sha512": "7296a813e7ae1de34deb731655ab0aa7cede37ae1b882822f3a48c177e78c315",
-   "size": 2691
+   "sha512": "14f29b4125f1ab2f5e8a9b39d0b910ed5d90d8d83e3f8739d4b9e7429ede2408",
+   "size": 1459
   },
   "js/storage.js": {
    "sha512": "13f8402dc284f058a6141fae07a026484ca98da0e002ebde50871482f76bc2e0",
@@ -168,12 +172,12 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1510307876,
+ "modified": 1510328851,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G429E28gDO3WatSZsY1VnZaPFzvElGrU0W4gUsw7V5//EZ3XB1/ouV3FyBSTcNw79W4ZZWWbt5zCgzNDqXAubWg="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G0U9sI1iDKWoV66PzsO3LJmoDCaAcHv7QYLaeRYQSC8wVSoF0NEzlGcT1LVf2tqXXl3Ewrpzz4D7L38hAlptMnc="
  },
  "signs_required": 1,
  "title": "Poster",

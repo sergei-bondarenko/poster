@@ -2,18 +2,23 @@
 
 Vue.component('post', {
     template: `
-        <div class="columns" :class="{'isCropped': !isFullPost}" ref="post">
-            <div class="column is-narrow" v-if="ownAndMainPage">
-                <i class="fa pointer fa-pencil" @click="edit(post)"></i>
-                <i class="fa pointer fa-trash-o" @click="del(post.post_id)"></i>
+        <div>
+            <div class="columns">
+                <div class="column is-narrow" v-if="ownAndMainPage">
+                    <i class="fa pointer fa-pencil" @click="edit(post)"></i>
+                    <i class="fa pointer fa-trash-o" @click="del(post.post_id)"></i>
+                </div>
+                <div class="column" :class="{'isCropped': !isFullPost}" v-html="post.body" ref="postbody"></div>
+                <div class="column has-text-centered is-hidden-tablet" v-if="!isFullPost">
+                    <a @click="showFullPost">Show full post...</a>
+                </div>
+                <div class="column is-3">
+                    <likes :post="post" ></likes>
+                    <comments :post="post"></comments>
+                </div>
             </div>
-            <div class="column post-body" v-html="post.body"></div>
-            <div class="column has-text-centered is-hidden-tablet" v-if="!isFullPost">
+            <div class="has-text-centered is-hidden-mobile" v-if="!isFullPost">
                 <a @click="showFullPost">Show full post...</a>
-            </div>
-            <div class="column is-3 post-comments">
-                <likes :post="post" ></likes>
-                <comments :post="post"></comments>
             </div>
         </div>
     `,
@@ -27,13 +32,14 @@ Vue.component('post', {
     },
 
     mounted() {
-        if (this.$refs.post.clientHeight > 1000) {
+        if (this.$refs.postbody.clientHeight > 1000) {
             this.isFullPost = false
         }
     },
 
     methods: {
         showFullPost() {
+            this.isFullPost = true
         },
 
         del(id) {
