@@ -46,6 +46,11 @@ ul, ol {
     border-top-style: solid;
 }
 
+.comments {
+    max-height: 1000px;
+    overflow-y: scroll;
+}
+
 .comment-textarea {
     margin-top: 10px;
     width: 100%;
