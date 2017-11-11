@@ -6,10 +6,12 @@ Vue.component('top', {
             <section class="hero is-warning">
                 <div class="hero-body">
                     <div class="container">
-                        <p class="title">
-                            <a :href="mainPageLink">{{ title }}</a>
-                        </p>
-                        <p class="subtitle">{{ description }}</p>
+                        <a :href="mainPageLink">
+                            <p class="title">
+                                {{ title }}
+                            </p>
+                            <p class="subtitle">{{ description }}</p>
+                        </a>
                     </div>
                 </div>
             </section>

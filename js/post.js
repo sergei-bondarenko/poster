@@ -53,7 +53,7 @@ Vue.component('post', {
         },
 
         edit(post) {
-            storage.commit('setPosteditor', {'post_id': post.post_id, 'body': post.body})
+            storage.commit('setPosteditor', {'post_id': post.post_id, 'body': post.body.replace(/<br>/g, '&#13;&#10;')})
             scroll(0, 0)
         }
     }

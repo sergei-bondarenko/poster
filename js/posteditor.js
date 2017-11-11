@@ -22,7 +22,7 @@ Vue.component('posteditor', {
                         <a class="button" type="button" @click="save">Save</a>
                     </div>
                 </nav>
-                <textarea class="post-textarea is-size-6" ref="text" v-model="posteditorBody"></textarea>
+                <textarea class="post-textarea is-size-6" ref="text" v-html="posteditorBody"></textarea>
             </div>
         </div>
     `,
