@@ -1,6 +1,7 @@
 'use strict'
 
 const storage = new Vuex.Store({
+    strict: true,
     state: {
         site_title: '',
         site_description: '',
@@ -53,6 +54,12 @@ const storage = new Vuex.Store({
             state.modal.affirmed = true
             state.modal.show = false
         },
+
+        updateState(state, payload) {
+            for (let i in payload) {
+                state[i] = payload[i]
+            }
+        },
         
         setPosteditor(state, payload) {
             if (payload.post_id !== undefined) {
@@ -69,10 +76,12 @@ const storage = new Vuex.Store({
         },
 
         async loadSiteInfo(state) {
-            state.site_info = await poster.getSiteInfo()
             let contentJSON = JSON.parse(await poster.getContentJSON())
-            state.site_title = contentJSON.title
-            state.site_description = contentJSON.description
+            this.commit('updateState', {
+                'site_info': await poster.getSiteInfo(),
+                'site_title': contentJSON.title,
+                'site_description': contentJSON.description
+            })
         },
 
         async loadPosts(state, payload) {
@@ -114,7 +123,7 @@ const storage = new Vuex.Store({
                         + "ORDER BY " + order + " DESC"
                 }
             }
-            state.posts = await poster.sqlQuery(query)
+            this.commit('updateState', {'posts': await poster.sqlQuery(query)})
         },
 
         async loadLikes(state) {
@@ -123,7 +132,7 @@ const storage = new Vuex.Store({
                 + "WHERE file_name='data.json' "
                 + "AND directory != ''"
             let likes_arr = await poster.sqlQuery(query)
-            state.likes = {}
+            this.commit('updateState', {'likes': {}})
             likes_arr.forEach((like) => {
                 if ( !(like.post_id in state.likes) ) {
                     state.likes[like.post_id] = []
@@ -141,7 +150,7 @@ const storage = new Vuex.Store({
               + "LEFT JOIN keyvalue ON (keyvalue.json_id = json_content.json_id AND key = 'cert_user_id') "
               + "ORDER BY date_added DESC"
             let comments_arr = await poster.sqlQuery(query)
-            state.comments = {}
+            this.commit('updateState', {'comments': {}})
             comments_arr.forEach((comment) => {
                 if ( !(comment.post_id in state.comments) ) {
                     state.comments[comment.post_id] = []
