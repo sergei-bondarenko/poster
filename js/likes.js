@@ -4,9 +4,13 @@ Vue.component('likes', {
     template: `
         <div>
             <div class="is-hidden-mobile">
-                <p class="is-size-7"><a :href="url">{{ date_published }}</a></p>
+                <p class="is-size-7">
+                    <a :href="url">{{ date_published }}</a>
+                </p>
                 <span class="pointer" @click="like()">
-                    <i class="fa" :class="{'fa-heart': liked, 'fa-heart-o': !liked}" aria-hidden="true"></i>
+                    <i class="fa"
+                        :class="{'fa-heart': liked, 'fa-heart-o': !liked}"
+                        aria-hidden="true"></i>
                     <span>{{ likes }}</span>
                 </span>
             </div>
@@ -14,13 +18,18 @@ Vue.component('likes', {
                 <nav class="level is-mobile">
                     <div class="level-left">
                         <div class="level-item">
-                            <p class="is-size-7"><a :href="url">{{ date_published }}</a></p>
+                            <p class="is-size-7">
+                                <a :href="url">{{ date_published }}</a>
+                            </p>
                         </div>
                     </div>
                     <div class="level-right">
                         <div class="level-item">
                             <span class="pointer" @click="like()">
-                                <i class="fa" :class="{'fa-heart': liked, 'fa-heart-o': !liked}" aria-hidden="true"></i>
+                                <i class="fa"
+                                    :class="{'fa-heart': liked}"
+                                    + "{'fa-heart-o': !liked}"
+                                    aria-hidden="true"></i>
                                 <span>{{ likes }}</span>
                             </span>
                         </div>

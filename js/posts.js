@@ -4,7 +4,9 @@ Vue.component('posts', {
     template: `
         <div>
             <div v-if="posts.length == 0">No posts.</div>
-            <div v-for="(post, index) in posts" class="post" :ref="'post'+index">
+            <div v-for="(post, index) in posts"
+                class="post"
+                :ref="'post'+index">
                 <post :ownAndMainPage="ownAndMainPage" :post="post"></post>
                 <hr class="zigzag" v-if="index != posts.length-1">
             </div>
@@ -38,9 +40,11 @@ Vue.component('posts', {
 
     methods: {
         scroll() {
-            if (this.post_count > 10 && this.post_count < storage.state.posts.length) {
+            if (this.post_count > 10
+                && this.post_count < storage.state.posts.length) {
                 let current_position = window.scrollY
-                let trigger_position = this.$refs['post' + (this.post_count-10)][0].offsetTop
+                let trigger_post = 'post' + (this.post_count - 10)
+                let trigger_position = this.$refs[trigger_post][0].offsetTop
                 if (current_position > trigger_position) {
                     this.post_count += 15
                 }

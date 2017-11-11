@@ -34,8 +34,8 @@
    "size": 601
   },
   "data/data.json": {
-   "sha512": "0beffc9503e0e85ae1463ef5ba2bc730c26d0b7b5ab1b2ae723c7edb28adf8ff",
-   "size": 23694
+   "sha512": "82263c924f04a8231cebfb4409eb2273ec74b834909ac6b53f3bda5e3a308a96",
+   "size": 23695
   },
   "dbschema.json": {
    "sha512": "c91d602e10ccc6693ef241679d28d5ed459ec2d9a815506d00018d448242c210",
@@ -46,48 +46,48 @@
    "size": 1397
   },
   "js/comments.js": {
-   "sha512": "6a5f4083e53ce9b45ee0fbf7d56310e0a84cbaebfc91e83559e6882b13265d00",
-   "size": 8110
+   "sha512": "dc76950ba91e9bd972593bef3ef5a223f1e493b27b542b06d61c63b2344ae2de",
+   "size": 9185
   },
   "js/init.js": {
    "sha512": "30aaffda3cf669cd1725d171750f6f3fdd2b3d3538ddf456093e00139d430fff",
    "size": 923
   },
   "js/likes.js": {
-   "sha512": "e5ffae2ae0b22a593f09501e595b87c9c64770b73ffa1f94e1dcc62e1d3eec41",
-   "size": 2015
+   "sha512": "464e12597c3fed190cfbfba7b90b76c03e481b5675af3df20762ea9982906318",
+   "size": 2276
   },
   "js/modal.js": {
-   "sha512": "8755946bb255b3634f2d34b4e9057f0b802cfdfe6d9d189343f67d66295294ed",
-   "size": 1332
+   "sha512": "0d00f9ce9599de26314dc088f8d9336b0175835d713b90f26e64a6c76aa99f92",
+   "size": 1518
   },
   "js/moment.min.js": {
    "sha512": "0f3e333bba7a32b17e55c383e8f51b034f212b5aefd210efff01aec525232266",
    "size": 51265
   },
   "js/post.js": {
-   "sha512": "36890778f838e4f89c6e3bc27c97c111e249630e190ccdc807666ade539dbb2c",
-   "size": 1843
+   "sha512": "10d80eed8d58f3935b01c45de0b2fbce6b66c8f16df7b1c72ebd9375912ec62e",
+   "size": 2034
   },
   "js/posteditor.js": {
-   "sha512": "9660c8a05239ad179de7fa5327cb4b92761d318182a6e489d7af29ff9f98308c",
-   "size": 4777
+   "sha512": "a206b01de8d7728e2f1e843d9eb8de81accb9c73d9f3d019e0f534163f3c3d8d",
+   "size": 5147
   },
   "js/poster.js": {
-   "sha512": "8cbc335c25cc9b4b3661491826509193764e5ad704ac96ff2c07d449f656dfef",
-   "size": 6418
+   "sha512": "6e457cd7f34f44453fa56f938bdf2a26939edc37e0fb09adb1c87b20ef2db040",
+   "size": 6550
   },
   "js/posts.js": {
-   "sha512": "14f29b4125f1ab2f5e8a9b39d0b910ed5d90d8d83e3f8739d4b9e7429ede2408",
-   "size": 1459
+   "sha512": "b86a0d8b03212215f00ee5dd4dbbbe21f50bb18eca4e78515630faf5b45b7a84",
+   "size": 1557
   },
   "js/storage.js": {
-   "sha512": "e8864ef53b8ace890dacf0b5a7169b30dadf6a673bd624fe1d6d9f13f50f33da",
-   "size": 6083
+   "sha512": "25605869f81a8e05afc9ce7cfc19b5d3bac001b65b2409364d7510ea5fc76b92",
+   "size": 6291
   },
   "js/top.js": {
-   "sha512": "d809b5dddea751da5c9c492a5e32cc34329d53d4e12d0d5fb132a20e7e95079d",
-   "size": 4616
+   "sha512": "db18f04373382483acbcf4d0954545f6f680b65811dc705abe5832d7367ac81f",
+   "size": 5262
   },
   "js/vue.js": {
    "sha512": "45280ccb97b0ccc1e8039c8a21311a7abda6d766017db16ff3ee62a2b42eb00b",
@@ -172,12 +172,12 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1510405997,
+ "modified": 1510412209,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HFIe8tK/EeyZLqgZuJd3LX0uJKnmalXhLAwKusthEtNCG2/VHQK+4Ubk6DXIVZEpjOGDXuZBCGpsnvNmYy0yOFM="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "Gzd2otoc0/O7O43eRT9PngKQJuMpi2kUUdGipCXwlZvpdCmCq5zLwxxmPW7rKLKCF+HPBI9yW3ipjJ0h+tAOcYs="
  },
  "signs_required": 1,
  "title": "Poster",

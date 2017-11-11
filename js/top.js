@@ -25,23 +25,50 @@ Vue.component('top', {
                     </a>
                     <div class="dropdown" :class="{'is-active': showDropdown}">
                         <div class="dropdown-trigger">
-                        <a class="button" :class="{'is-success': likesSelected}" aria-haspopup="true"
-                        aria-controls="dropdown-menu" ref="dropdown_likes"
-                        @mouseover="likes(true)"
-                        @mouseout="likes(false)">
+
+                        <a class="button"
+                            :class="{'is-success': likesSel}"
+                            aria-haspopup="true"
+                            aria-controls="dropdown-menu" ref="dropdown_likes"
+                            @mouseover="likes(true)"
+                            @mouseout="likes(false)">
+
                             <span>{{ likesText }}</span>
                             <span class="icon is-small">
                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                             </span>
                         </a>
                         </div>
-                        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+
+                        <div class="dropdown-menu"
+                            id="dropdown-menu"
+                            role="menu">
+
                             <div class="dropdown-content">
-                                <a class="dropdown-item" @click="select('day')" :class="{'is-active': likesSelected == 'day'}">Past day</a>
-                                <a class="dropdown-item" @click="select('week')" :class="{'is-active': likesSelected == 'week'}">Past week</a>
-                                <a class="dropdown-item" @click="select('month')" :class="{'is-active': likesSelected == 'month'}">Past month</a>
-                                <a class="dropdown-item" @click="select('year')" :class="{'is-active': likesSelected == 'year'}">Past year</a>
-                                <a class="dropdown-item" @click="select('all')" :class="{'is-active': likesSelected == 'all'}">All time</a>
+                                <a class="dropdown-item"
+                                    @click="select('day')"
+                                    :class="{'is-active': likesSel == 'day'}"
+                                >Past day</a>
+
+                                <a class="dropdown-item"
+                                    @click="select('week')"
+                                    :class="{'is-active': likesSel == 'week'}"
+                                >Past week</a>
+
+                                <a class="dropdown-item"
+                                    @click="select('month')"
+                                    :class="{'is-active': likesSel == 'month'}"
+                                >Past month</a>
+
+                                <a class="dropdown-item"
+                                    @click="select('year')"
+                                    :class="{'is-active': likesSel == 'year'}"
+                                >Past year</a>
+
+                                <a class="dropdown-item"
+                                    @click="select('all')"
+                                    :class="{'is-active': likesSel == 'all'}"
+                                >All time</a>
                             </div>
                         </div>
                     </div>
@@ -60,10 +87,10 @@ Vue.component('top', {
         },
 
         likesText() {
-           if (this.likesSelected == null) {
+           if (this.likesSel == null) {
                return "Most liked"
            } else {
-               return "Top " + this.likesSelected
+               return "Top " + this.likesSel
            }
         },
 
@@ -81,7 +108,7 @@ Vue.component('top', {
             showDropdown: false,
             commentsSelected: false,
             commentsHover: false,
-            likesSelected: null,
+            likesSel: null,  // Selected filter: day, week, month, year, all
             likesHover: false
         }
     },
@@ -94,14 +121,14 @@ Vue.component('top', {
                     storage.commit('loadPosts')
                 } else {
                     this.commentsSelected = true
-                    this.likesSelected = null
+                    this.likesSel = null
                     storage.commit('loadPosts', {order: 'comments'})
                 }
             }
             if (this.likesHover == true) {
                 if (this.showDropdown) {
                     this.showDropdown = false
-                    this.likesSelected = null
+                    this.likesSel = null
                     storage.commit('loadPosts')
                 } else {
                     this.showDropdown = true
@@ -122,7 +149,7 @@ Vue.component('top', {
         },
 
         select(elem) {
-            this.likesSelected = elem
+            this.likesSel = elem
             this.commentsSelected = false
             storage.commit('loadPosts', {order: 'likes', timespan: elem})
         }

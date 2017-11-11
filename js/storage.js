@@ -117,9 +117,11 @@ const storage = new Vuex.Store({
                     }
                     query = "SELECT post.*, COUNT(comment_id) AS comments, "
                         + "MAX(comment.date_added) AS last_comment, "
-                        + "(SELECT COUNT(*) FROM post_vote WHERE post_vote.post_id = post.post_id) "
+                        + "(SELECT COUNT(*) FROM post_vote "
+                        + "WHERE post_vote.post_id = post.post_id) "
                         + "AS votes FROM post LEFT JOIN comment "
-                        + "USING (post_id) WHERE date_published > " + date + " GROUP BY post_id "
+                        + "USING (post_id) WHERE date_published > "
+                        + date + " GROUP BY post_id "
                         + "ORDER BY " + order + " DESC"
                 }
             }
@@ -137,17 +139,25 @@ const storage = new Vuex.Store({
                 if ( !(like.post_id in state.likes) ) {
                     state.likes[like.post_id] = []
                 }
-                state.likes[like.post_id].push(like.directory.replace('users/', ''))
+                state.likes[like.post_id].push(
+                    like.directory.replace('users/', ''))
             })
         },
 
         async loadComments(state) {
-            let query = "SELECT comment.*, json_content.json_id AS content_json_id, keyvalue.value AS cert_user_id, json.directory,"
-              + "(SELECT COUNT(*) FROM comment_vote WHERE comment_vote.comment_uri = comment.comment_id || '@' || json.directory)+1 AS votes "
+            let query = "SELECT comment.*, json_content.json_id "
+              + "AS content_json_id, keyvalue.value AS cert_user_id, "
+              + "json.directory, (SELECT COUNT(*) FROM comment_vote "
+              + "WHERE comment_vote.comment_uri = comment.comment_id || "
+              + "'@' || json.directory)+1 AS votes "
               + "FROM comment "
               + "LEFT JOIN json USING (json_id) "
-              + "LEFT JOIN json AS json_content ON (json_content.directory = json.directory AND json_content.file_name='content.json') "
-              + "LEFT JOIN keyvalue ON (keyvalue.json_id = json_content.json_id AND key = 'cert_user_id') "
+              + "LEFT JOIN json AS json_content ON "
+              + "(json_content.directory = json.directory "
+              + "AND json_content.file_name='content.json') "
+              + "LEFT JOIN keyvalue ON "
+              + "(keyvalue.json_id = json_content.json_id "
+              + "AND key = 'cert_user_id') "
               + "ORDER BY date_added DESC"
             let comments_arr = await poster.sqlQuery(query)
             this.commit('updateState', {'comments': {}})

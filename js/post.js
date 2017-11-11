@@ -5,11 +5,18 @@ Vue.component('post', {
         <div>
             <div class="columns">
                 <div class="column is-narrow" v-if="ownAndMainPage">
-                    <i class="fa pointer fa-pencil" @click="edit(post)"></i>
-                    <i class="fa pointer fa-trash-o" @click="del(post.post_id)"></i>
+                    <i class="fa pointer fa-pencil"
+                        @click="edit(post)"></i>
+                    <i class="fa pointer fa-trash-o"
+                        @click="del(post.post_id)"></i>
                 </div>
-                <div class="column" :class="{'isCropped': !isFullPost}" v-html="post.body" ref="postbody"></div>
-                <div class="column has-text-centered is-hidden-tablet" v-if="!isFullPost">
+                <div class="column"
+                    :class="{'isCropped': !isFullPost}"
+                    v-html="post.body"
+                    ref="postbody"
+                ></div>
+                <div class="column has-text-centered is-hidden-tablet"
+                    v-if="!isFullPost">
                     <a @click="showFullPost">Show full post...</a>
                 </div>
                 <div class="column is-3">
@@ -53,7 +60,10 @@ Vue.component('post', {
         },
 
         edit(post) {
-            storage.commit('setPosteditor', {'post_id': post.post_id, 'body': post.body.replace(/<br>/g, '&#13;&#10;')})
+            storage.commit('setPosteditor', {
+                'post_id': post.post_id,
+                'body': post.body.replace(/<br>/g, '&#13;&#10;')
+            })
             scroll(0, 0)
         }
     }

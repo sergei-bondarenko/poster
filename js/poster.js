@@ -46,7 +46,8 @@ class Poster extends ZeroFrame {
     }
 
     writePublish(inner_path, data) {
-        let json_raw = unescape(encodeURIComponent(JSON.stringify(data, undefined, '    ')))
+        let json_raw = unescape(encodeURIComponent(
+            JSON.stringify(data, undefined, '    ')))
         this.cmdp('fileWrite', [inner_path, btoa(json_raw)]).then(() => {
             if (inner_path == 'data/data.json') {
                 return this.cmdp('sitePublish', ['stored'])
@@ -57,7 +58,8 @@ class Poster extends ZeroFrame {
     }
 
     async getUserDataJSON() {
-        return await this.cmdp('fileGet', ['data/users/' + storage.state.site_info.auth_address + '/data.json'])
+        return await this.cmdp('fileGet', ['data/users/'
+            + storage.state.site_info.auth_address + '/data.json'])
     }
 
     async getRootDataJSON() {
@@ -95,7 +97,8 @@ class Poster extends ZeroFrame {
             } else {
                 data.post_vote[post_id] = 1
             }
-            await this.writePublish('data/users/' + storage.state.site_info.auth_address + '/data.json', data)
+            await this.writePublish('data/users/'
+                + storage.state.site_info.auth_address + '/data.json', data)
             storage.commit('loadLikes')
         }
     }
@@ -124,10 +127,12 @@ class Poster extends ZeroFrame {
                 })
                 data.next_comment_id += 1
             } else {
-                data.comment[this.findCommentById(data.comment, comment_id)].body = text
+                let index = this.findCommentById(data.comment, comment_id)
+                data.comment[index].body = text
             } 
 
-            await this.writePublish('data/users/' + storage.state.site_info.auth_address + '/data.json', data)
+            await this.writePublish('data/users/'
+                + storage.state.site_info.auth_address + '/data.json', data)
             storage.commit('loadComments')
         }
     }
@@ -166,7 +171,8 @@ class Poster extends ZeroFrame {
         let data = await this.getUserDataJSON()
         data = JSON.parse(data)
         data.comment.splice(this.findCommentById(data.comment, id), 1)
-        await this.writePublish('data/users/' + storage.state.site_info.auth_address + '/data.json', data)
+        await this.writePublish('data/users/'
+            + storage.state.site_info.auth_address + '/data.json', data)
         storage.commit('loadComments')
     }
 
@@ -193,8 +199,9 @@ class Poster extends ZeroFrame {
             return false
         } else if ( !this.isValidName(file.name) ) {
             storage.commit('createModal', {
-                'message': "Filename should be shorter than 256 characters and contain only english "
-                    + "letters, digits, spaces and the following characters: []()_@=.+-",
+                'message': "Filename should be shorter than 256 characters " +
+                    + "and contain only english letters, digits, spaces " +
+                    + "and the following characters: []()_@=.+-",
                 'buttonText': 'OK',
                 'action': 'info',
                 'buttonClass': 'is-primary'
