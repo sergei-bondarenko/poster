@@ -235,7 +235,8 @@ Vue.component('comments', {
                 // The previous comment will be replaced with current
                 //
                 // Probably the best solution is to move a comment body editor
-                // to a separate component
+                // to a separate component or use a textarea instead of
+                // contenteditable div
                 this.del(id)
             } else if (this.isSaveHover) {
                 this.save(id)
