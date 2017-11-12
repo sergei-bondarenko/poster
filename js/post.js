@@ -39,14 +39,24 @@ Vue.component('post', {
     },
 
     mounted() {
-        if (storage.state.url == ''
-            && this.$refs.postbody.clientHeight > 1000) {
-            // Crop long posts only on a multipost view
-            this.isFullPost = false
-        }
+        this.hideLongPost()
+        storage.watch(storage.getters.getPosts, () => {
+            // When posts are reloaded, (e.g. clicked 'last comments' button)
+            this.hideLongPost()
+        })
     },
 
     methods: {
+        hideLongPost() {
+            if (storage.state.url == ''
+                && this.$refs.postbody.clientHeight > 1000) {
+                // Crop long posts only on a multipost view
+                this.isFullPost = false
+            } else {
+                isFullPost = true
+            }
+        },
+
         showFullPost() {
             this.isFullPost = true
         },

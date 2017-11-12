@@ -1,7 +1,7 @@
 {
     "title": "Poster",
     "description": "A simple blog for zeronet",
-    "next_post_id": 211,
+    "next_post_id": 212,
     "modified": 1432515194,
     "post": [
         {
@@ -908,6 +908,11 @@
             "post_id": 210,
             "date_published": 1510405956732,
             "body": "fef"
+        },
+        {
+            "post_id": 211,
+            "date_published": 1510490907700,
+            "body": "rr"
         }
     ]
 }

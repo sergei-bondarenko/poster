@@ -26,7 +26,8 @@ const storage = new Vuex.Store({
     },
 
     getters: {
-        getModal: state => () => state.modal
+        getModal: state => () => state.modal,
+        getPosts: state => () => state.posts
     },
 
     mutations: {
