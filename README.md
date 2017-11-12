@@ -1,4 +1,4 @@
-# poster
+# Poster
 
 ## Description
 
