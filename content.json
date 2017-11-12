@@ -34,8 +34,8 @@
    "size": 601
   },
   "data/data.json": {
-   "sha512": "3be34e8a28674ef93f4ba98e713eeb4c614662e77756f3ecadd670ba1425a099",
-   "size": 1450
+   "sha512": "ce1ea4458ea1c46bf08a5d5044ff384bcae873f87809d6e691fd0afff63643ae",
+   "size": 1449
   },
   "dbschema.json": {
    "sha512": "c91d602e10ccc6693ef241679d28d5ed459ec2d9a815506d00018d448242c210",
@@ -122,12 +122,12 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1510497383,
+ "modified": 1510497602,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G3rhPPkrWs6C+1ChthZ/868OUVo82Gzoiax9Dnhezao8W0a69PjOJ0MQdAbwR0XLEWI4gdt9hXvQxqWS7u1Cjmw="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G2qvnREhkF5haelTdMdspx9udXHs85o983D6SYDSbLm+NW5W72uXrUSWjRre/qzviHXVbuo4J70/F8rIVjoCyzc="
  },
  "signs_required": 1,
  "title": "Poster",
