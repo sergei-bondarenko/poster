@@ -8,8 +8,7 @@ Vue.component('likes', {
                     <a :href="url">{{ date_published }}</a>
                 </p>
                 <span class="pointer" @click="like()">
-                    <i class="fa"
-                        :class="{'fa-heart': liked, 'fa-heart-o': !liked}"
+                    <i class="fa" :class="likedClass"
                         aria-hidden="true"></i>
                     <span>{{ likes }}</span>
                 </span>
@@ -26,9 +25,7 @@ Vue.component('likes', {
                     <div class="level-right">
                         <div class="level-item">
                             <span class="pointer" @click="like()">
-                                <i class="fa"
-                                    :class="{'fa-heart': liked}"
-                                    + "{'fa-heart-o': !liked}"
+                                <i class="fa" :class="likedClass"
                                     aria-hidden="true"></i>
                                 <span>{{ likes }}</span>
                             </span>
@@ -48,13 +45,6 @@ Vue.component('likes', {
             }
         },
 
-        liked() {
-            if (this.post.post_id in storage.state.likes) {
-                return storage.state.likes[this.post.post_id]
-                    .indexOf(storage.state.site_info.auth_address) != -1
-            }
-        },
-
         date_published() {
             return moment(this.post.date_published, 'x').fromNow()
         },
@@ -62,6 +52,19 @@ Vue.component('likes', {
         url() {
             return '?post=' + this.post.post_id
         },
+
+        likedClass() {
+            let liked = false
+            if (this.post.post_id in storage.state.likes) {
+                liked = storage.state.likes[this.post.post_id]
+                    .indexOf(storage.state.site_info.auth_address) != -1
+            }
+            if (liked) {
+                return 'fa-heart'
+            } else {
+                return 'fa-heart-o'
+            }
+        }
     },
 
     methods: {
