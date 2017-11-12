@@ -7,12 +7,12 @@ A simple blog platform for [ZeroNet](https://github.com/HelloZeroNet/ZeroNet) wr
 ## Key features
 
 - Mobile friendly
+- Endless newsfeed (no pages) with dynamic post appending when the page bottom has been reached
 - Editable posts and comments
-- Rich post editor: you can use images, videos and audio files in your posts
+- Post editor supports uploading of images, videos and audio files
 - Filtering by last comments and most liked posts by day, week, month, year or all the time
 - Direct links to posts are available (click on the post date to get it)
 - Vertical wrapping of long posts
-- Reactive: no page reloadings
 - Easily clonable
 - Site title and description configurable via content.json file (or via the sidebar)
 
