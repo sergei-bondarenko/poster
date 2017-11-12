@@ -6,8 +6,8 @@
  "description": "A simple blog for zeronet",
  "files": {
   "README.md": {
-   "sha512": "ac1ee4ddf51dbbd1026fd0274e5a0b7b22923f3641c43f5d0e05fd382b90cb84",
-   "size": 27
+   "sha512": "ce91bddf201a0d658caa7861102fccc891ef7d9903a5bb05692ee42493da5d8d",
+   "size": 660
   },
   "css/bulma.min.css": {
    "sha512": "12d784da19ac69d5a8fa86c881444f9b5f2d39feca0e5477b961f68e545fc31c",
@@ -22,7 +22,7 @@
    "size": 133364
   },
   "css/main.css": {
-   "sha512": "ffc54e770e7dfa20f4915b226bf589ce1172550fbafe54c18b724df81ccf637f",
+   "sha512": "8c9ea26e008b2ec1a67be4ceb3e4492c30a5367c4108f44ae85d60cb2d2c5737",
    "size": 4773
   },
   "data-default/data.json": {
@@ -34,8 +34,8 @@
    "size": 601
   },
   "data/data.json": {
-   "sha512": "090e45dce4882acca68dd24ba5a0a7fb3fe09bf91ad640ee870e63623a9b53cc",
-   "size": 23814
+   "sha512": "ec1fbba9d0ac4c7ffa0159070cacc0af24accdb5e74ee1b6fe72a0ad62b6267c",
+   "size": 378
   },
   "dbschema.json": {
    "sha512": "c91d602e10ccc6693ef241679d28d5ed459ec2d9a815506d00018d448242c210",
@@ -66,8 +66,8 @@
    "size": 51265
   },
   "js/post.js": {
-   "sha512": "fee3e6c75df87d5d30a93067fee156ee506dff37513cc6219025a8d235353e59",
-   "size": 2446
+   "sha512": "46d601db2eeaf152341cdbc4c8f6d74db91eaed93fd9f3a3b58402ce709fb45f",
+   "size": 2451
   },
   "js/posteditor.js": {
    "sha512": "a206b01de8d7728e2f1e843d9eb8de81accb9c73d9f3d019e0f534163f3c3d8d",
@@ -100,6 +100,18 @@
   "js/zeroframe.js": {
    "sha512": "9e08432de4399d65511bcfa2e1e8aa67e375ee2b2245232cee7602c686aa03a4",
    "size": 3823
+  },
+  "screenshots/0.png": {
+   "sha512": "6c6d8e9053ee0da7b7070587243d6934be6cf85e25606cd558416f44f4edb850",
+   "size": 186986
+  },
+  "screenshots/1.png": {
+   "sha512": "a47767fa25a8a396a2f446f209d51ccbe044b5e4c850c5a190c4dfa614a21903",
+   "size": 367125
+  },
+  "screenshots/2.png": {
+   "sha512": "10fac8f4aa188387877550bad49fae5e140aa7c71944269001e83f7c09ce77b5",
+   "size": 126461
   }
  },
  "files_optional": {
@@ -137,6 +149,10 @@
    "sha512": "de52c417433116e84a5db97547aea95da757ff900f323d8dd1f449294c32ad1b",
    "size": 48063
   },
+  "uploads/animg-2Fimages-2F21-2F67229-book-patchouli_knowled.jpg": {
+   "sha512": "770deae499f1b8544e0c9d38698e96648205cbc6faab8287a0c005d6cde549b2",
+   "size": 470277
+  },
   "uploads/black-cat-south-z_(mp3CC.com).mp3": {
    "piece_size": 1048576,
    "piecemap": "uploads/black-cat-south-z_(mp3CC.com).mp3.piecemap.msgpack",
@@ -172,12 +188,12 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1510490951,
+ "modified": 1510495479,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HHgpLZo5pIXWE0yWszeMCDuPEWMLUhkqh36KKRWuB6qIMr0o4Ce46XNVxpsDMSaHDEIuMUEbzuvLqtsOsMsIU7Y="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G3z/aWf3IivjEaSB9AQg6n4mTQgP8pty5+rW7VAcEWRIbA+Fb6n0hcoElYt0HZTvfp26qzyB2EGAz11bigxDX54="
  },
  "signs_required": 1,
  "title": "Poster",

@@ -53,7 +53,7 @@ Vue.component('post', {
                 // Crop long posts only on a multipost view
                 this.isFullPost = false
             } else {
-                isFullPost = true
+                this.isFullPost = true
             }
         },
 
