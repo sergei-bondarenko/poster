@@ -12,9 +12,9 @@ A simple blog platform for [ZeroNet](https://github.com/HelloZeroNet/ZeroNet) wr
 - Filtering by last comments and most liked posts by day, week, month, year or all the time
 - Direct links to posts are available (click on the post date to get it)
 - Vertical wrapping of long posts
-- Reactive: no page reloading
+- Reactive: no page reloadings
 - Easily clonable
-- Site title and description configurable via content.json file
+- Site title and description configurable via content.json file (or via the sidebar)
 
 ## Screenshots
 
