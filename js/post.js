@@ -39,7 +39,9 @@ Vue.component('post', {
     },
 
     mounted() {
-        if (this.$refs.postbody.clientHeight > 1000) {
+        if (storage.state.url == ''
+            && this.$refs.postbody.clientHeight > 1000) {
+            // Crop long posts only on a multipost view
             this.isFullPost = false
         }
     },

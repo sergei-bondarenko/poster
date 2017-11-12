@@ -100,7 +100,8 @@ Vue.component('comments', {
             isDeleteHover: false,
             isSaveHover: false,
             newComment: '',
-            isHideCommentsMobile: true
+            // Hide comments only on a multipost view
+            isHideCommentsMobile: storage.state.url == ''
         }
     },
 
