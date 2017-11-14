@@ -11,6 +11,10 @@ ul, ol {
     list-style-position: inside;
 }
 
+a {
+    outline: 0;
+}
+
 #new-post {
     padding-bottom: 20px;
     padding-top: 20px;
