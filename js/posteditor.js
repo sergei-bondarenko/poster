@@ -34,7 +34,7 @@ Vue.component('posteditor', {
                     </div>
                 </nav>
                 <textarea class="post-textarea is-size-6"
-                    ref="text" v-html="posteditorBody"></textarea>
+                    ref="text" v-model="posteditorBody"></textarea>
             </div>
         </div>
     `,
@@ -68,23 +68,23 @@ Vue.component('posteditor', {
             let file = this.$refs.inputFile.files[0]
             poster.uploadFile(file).then((res) => {
                 if (res) {
-                    this.$refs.text.value += this.createLink(file)
+                    this.posteditorBody += this.createLink(file)
                 }
             })
         },
 
         insertTags(tags) {
             if (tags == 'ol') {
-                this.$refs.text.value += "<ol>\n<li></li>\n<li></li>\n</ol>"
+                this.posteditorBody += "<ol>\n<li></li>\n<li></li>\n</ol>"
             } else if (tags == 'ul') {
-                this.$refs.text.value += "<ul>\n<li></li>\n<li></li>\n</ul>"
+                this.posteditorBody += "<ul>\n<li></li>\n<li></li>\n</ul>"
             } else if (tags == 'h') {
-                this.$refs.text.value += '<h1 class="title"></h1>'
+                this.posteditorBody += '<h1 class="title"></h1>'
             } else if (tags == 'a') {
-                this.$refs.text.value += '<a href="" target="'
+                this.posteditorBody += '<a href="" target="'
                     + Math.floor(Math.random() * 1000000) + '"></a>'
             } else {
-                this.$refs.text.value += tags
+                this.posteditorBody += tags
             }
         },
 
@@ -117,7 +117,7 @@ Vue.component('posteditor', {
         },
 
         save() {
-            if (this.$refs.text.value == '') {
+            if (this.posteditorBody == '') {
                 storage.commit('createModal', {
                     'message': "The post is empty.",
                     'buttonText': 'OK',
@@ -125,8 +125,8 @@ Vue.component('posteditor', {
                     'buttonClass': 'is-primary'
                 })
             } else {
-                poster.savePost(this.$refs.text.value)
-                this.$refs.text.value = ''
+                poster.savePost(this.posteditorBody)
+                storage.commit('setPosteditor', {'body': ''})
             }
         }
     }
