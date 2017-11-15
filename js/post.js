@@ -51,7 +51,6 @@ Vue.component('post', {
 
     methods: {
         hideLongPost() {
-            console.log(this.$refs.postbody.clientHeight)
             if (storage.state.url == ''
                 && this.$refs.postbody.clientHeight > 1000) {
                 // Crop long posts only on a multipost view

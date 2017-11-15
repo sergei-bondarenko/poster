@@ -1,0 +1,27 @@
+{
+ "address": "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ",
+ "files": {},
+ "ignore": ".*",
+ "inner_path": "data/users/content.json",
+ "modified": 1509022165,
+ "signs": {
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HLciC9tOLC0VX95fBTCn2hBvOhjTIFG3XjGDLCWOwusGEeH41NMY0VNejlHaMK+5erDS3bXG6kXmn2h4ywKSqfI="
+ },
+ "user_contents": {
+  "cert_signers": {
+   "zeroid.bit": ["1iD5ZQJMNXu43w1qLB8sfdHVKppVMduGz"]
+  },
+  "permission_rules": {
+   ".*": {
+    "files_allowed": "data.json",
+    "max_size": 40000
+   },
+   "bitid/.*@zeroid.bit": {"max_size": 40000},
+   "bitmsg/.*@zeroid.bit": {"max_size": 35000}
+  },
+  "permissions": {
+   "bad@zeroid.bit": false,
+   "nofish@zeroid.bit": {"max_size": 200000}
+  }
+ }
+}

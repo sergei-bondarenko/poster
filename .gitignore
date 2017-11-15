@@ -2,3 +2,5 @@
 data/poster.db
 uploads/*
 !uploads/.gitkeep
+data/users/*
+!data/users/content.json
