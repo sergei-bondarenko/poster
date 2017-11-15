@@ -17,15 +17,18 @@ Vue.component('post', {
                 ></div>
                 <div class="column has-text-centered is-hidden-tablet"
                     v-if="!isFullPost">
-                    <a @click="showFullPost">Show full post...</a>
+                    <a class="isBottomPadded"
+                        @click="showFullPost">Show full post...</a>
                 </div>
                 <div class="column is-3">
                     <likes :post="post" ></likes>
                     <comments :post="post"></comments>
                 </div>
             </div>
-            <div class="has-text-centered is-hidden-mobile" v-if="!isFullPost">
-                <a @click="showFullPost">Show full post...</a>
+            <div class="has-text-centered is-hidden-mobile"
+                v-if="!isFullPost">
+                <a class="isBottomPadded"
+                    @click="showFullPost">Show full post...</a>
             </div>
         </div>
     `,
@@ -48,6 +51,7 @@ Vue.component('post', {
 
     methods: {
         hideLongPost() {
+            console.log(this.$refs.postbody.clientHeight)
             if (storage.state.url == ''
                 && this.$refs.postbody.clientHeight > 1000) {
                 // Crop long posts only on a multipost view

@@ -24,6 +24,10 @@ a {
     display: none;
 }
 
+.isBottomPadded {
+    padding-bottom: 1.5rem;
+}
+
 .isCropped {
     height: 1000px;
     overflow-y: hidden;
