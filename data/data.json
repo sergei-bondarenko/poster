@@ -1,18 +1,13 @@
 {
     "title": "Poster",
     "description": "A simple blog for zeronet",
-    "next_post_id": 9,
+    "next_post_id": 2,
     "modified": 1432515194,
     "post": [
         {
             "post_id": 1,
             "date_published": 1510496706392,
-            "body": "<h1 class=\"title\">Poster</h1><b>Description</b><br><br>A simple blog platform for ZeroNet written from scratch using <a href=\"https://vuejs.org/\" target=\"635801\">Vue.js</a> and <a href=\"https://bulma.io/\" target=\"635821\">Bulma</a>. The source code available on <a href=\"https://github.com/grez911/poster\" target=\"635401\">GitHub</a>.<br><br><b>Key features</b><ul><br><li>Mobile friendly</li><li>Endless newsfeed (no pages) with dynamic post appending when the page bottom has been reached</li><li>Editable posts and comments</li><li>Post editor supports uploading of images, videos and audio files</li><li>Filtering by last comments and most liked posts by day, week, month, year or all the time</li><li>Direct links to posts are available (click on the post date to get it)</li><li>Vertical wrapping of long posts</li><li>Easily clonable</li><li>Site title and description configurable via content.json file (or via the sidebar)</li><br></ul><b>Screenshots</b><br><br><a href=\"screenshots/0.png\" target=\"0.png\"><img src=\"screenshots/0.png\"></a><br><a href=\"screenshots/1.png\" target=\"1.png\"><img src=\"screenshots/1.png\"></a><br><a href=\"screenshots/2.png\" target=\"2.png\"><img src=\"screenshots/2.png\"></a>"
-        },
-        {
-            "post_id": 8,
-            "date_published": 1510749524765,
-            "body": "jmukm"
+            "body": "<h1 class=\"title\">Poster</h1><b>Description</b><br>A simple blog platform for ZeroNet written from scratch using <a href=\"https://vuejs.org/\" target=\"635801\">Vue.js</a> and <a href=\"https://bulma.io/\" target=\"635821\">Bulma</a>. The source code available on <a href=\"https://github.com/grez911/poster\" target=\"635401\">GitHub</a> and <a href=\"http://127.0.0.1:43110/173jgCe7oqQQAG8V4dNEDyHY4mFFWJKF1Q\" target=\"635487\">Git Center</a>.<br><br><b>Key features</b><ul><li>Mobile friendly</li><li>Endless newsfeed (no pages) with dynamic post appending when the page bottom has been reached</li><li>Editable posts and comments</li><li>Post editor supports uploading of images, videos and audio files</li><li>Filtering by last comments and most liked posts by day, week, month, year or all the time</li><li>Direct links to posts are available (click on the post date to get it)</li><li>Vertical wrapping of long posts</li><li>Easily clonable</li><li>Site title and description configurable via content.json file (or via the sidebar)</li><br></ul><b>Screenshots</b><br><br><a href=\"screenshots/0.png\" target=\"0.png\"><img src=\"screenshots/0.png\"></a><br><a href=\"screenshots/1.png\" target=\"1.png\"><img src=\"screenshots/1.png\"></a><br><a href=\"screenshots/2.png\" target=\"2.png\"><img src=\"screenshots/2.png\"></a>"
         }
     ]
 }
