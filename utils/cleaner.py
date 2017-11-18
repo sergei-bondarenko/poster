@@ -3,7 +3,7 @@ from os import listdir, remove
 
 '''
 Cleaner for the files in uploads/ directory: Deletes files which
-are not included in the data/data.json
+are not included in the data/data.json.
 '''
 
 def main():
@@ -15,9 +15,9 @@ def main():
             ans = ans.lower()
             if ans == 'yes' or ans == 'y' or ans == '':
                 remove('../uploads/' + file)
-                print('Deleted')
+                print('Deleted.')
             else:
-                print('Skipped')
+                print('Skipped.')
 
 if __name__ == "__main__":
     main()
