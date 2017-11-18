@@ -2,7 +2,7 @@
 
 from magic import Magic
 from argparse import ArgumentParser
-from os import listdir
+from os import listdir, path
 from json import load, dump
 from re import match
 from random import randint
@@ -56,6 +56,7 @@ def body(file):
     return result
 
 def main():
+    abs_path = path.dirname(path.realpath(__file__))
     parser = ArgumentParser(
         description="Creates multiple blog posts using files from a specified "
             "directory. One file per post. Reqires a python-magic installed.")
@@ -63,7 +64,7 @@ def main():
     args = parser.parse_args()
     dir = args.dir
 
-    with open('../data/data.json', 'r') as f:
+    with open(path.join(abs_path, '../data/data.json'), 'r') as f:
         data = load(f)
 
     files = listdir(dir)
@@ -71,7 +72,8 @@ def main():
 
     for name in files:
         file = File("{}{}".format(dir, name))
-        copyfile(file.filename, "../uploads/{}".format(file.new_name))
+        copyfile(file.filename,
+            path.join(abs_path, '../uploads/{}'.format(file.new_name)))
         if file.filename != file.new_name:
             print("Renamed '{}' to '{}'.".format(file.filename, file.new_name))
 
@@ -84,7 +86,7 @@ def main():
         data['post'].insert(0, post)
         data['next_post_id'] += 1
 
-    with open('../data/data_new.json', 'w') as f:
+    with open(path.join(abs_path, '../data/data_new.json', 'w')) as f:
         dump(data, f, indent=4)
 
     print("Done.")
