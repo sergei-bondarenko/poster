@@ -10,8 +10,8 @@ from shutil import copyfile
 from time import time
 
 '''
-Creates multiple blog posts from a specified directory.
-Reqires a python-magic installed.
+Creates multiple blog posts using files from a specified directory.
+One file per post. Reqires a python-magic installed.
 '''
 
 class File:
@@ -57,8 +57,8 @@ def body(file):
 
 def main():
     parser = ArgumentParser(
-        description="Creates multiple blog posts from a specified directory. "
-            "Reqires a python-magic installed.")
+        description="Creates multiple blog posts using files from a specified "
+            "directory. One file per post. Reqires a python-magic installed.")
     parser.add_argument('dir', help="Directory from which files are taken.")
     args = parser.parse_args()
     dir = args.dir

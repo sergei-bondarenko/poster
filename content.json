@@ -6,8 +6,8 @@
  "description": "A simple blog for zeronet",
  "files": {
   "README.md": {
-   "sha512": "d256812eea8a32bb8711fec1c26501ccaa49c6dbb46cbc40de1ed4b8c4cabbb7",
-   "size": 981
+   "sha512": "927884f7011aa0dac752e36aac70a9a6e01ecbaf8f33d14353f6cd08d80690da",
+   "size": 1358
   },
   "css/bulma.min.css": {
    "sha512": "12d784da19ac69d5a8fa86c881444f9b5f2d39feca0e5477b961f68e545fc31c",
@@ -34,8 +34,8 @@
    "size": 601
   },
   "data/data.json": {
-   "sha512": "0380adcae3b08da0c66cbb964b83d57ac846ac73b39254535e1fef0f56b374b9",
-   "size": 1596
+   "sha512": "b69a7c7afb65dae1524f99061d737ba0d06a25371f291f420365efecfba3e7c9",
+   "size": 2093
   },
   "dbschema.json": {
    "sha512": "c91d602e10ccc6693ef241679d28d5ed459ec2d9a815506d00018d448242c210",
@@ -118,8 +118,8 @@
    "size": 655
   },
   "utils/poster.py": {
-   "sha512": "d7b9171718561ad8ca899e8e8ed3753e2b3f269a9e204a498027d5ec8f87002e",
-   "size": 2865
+   "sha512": "f4db0923356989dee5c874408771b3bc58aa1f0f411c3a53d5a8f4aab79d7fbf",
+   "size": 2927
   }
  },
  "files_optional": {
@@ -136,12 +136,12 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1511030122,
+ "modified": 1511032013,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HDqt2JxUZnFsynYoRN8quyjb0SKRIzjF2JytSceQ9Ik+Nm6Ay9KnXtuOZqqUsbKzY7J7I4U1bvczu2H77aAz38Q="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HEjmDVsTQi0QS+IIlV6spbEqVIgLW05F5JpNq1gRXLSOXaxU3awMQDYTqD5dED2kW4VG7SmkGbRJnZNhHgUUL1Y="
  },
  "signs_required": 1,
  "title": "Poster",

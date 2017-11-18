@@ -14,7 +14,14 @@ A simple blog platform for [ZeroNet](https://github.com/HelloZeroNet/ZeroNet) wr
 - Direct links to posts are available (click on the post date to get it)
 - Vertical wrapping of long posts
 - Easily clonable
-- Site title and description configurable via content.json file (or via the sidebar)
+- Site title and description configurable via `content.json` file (or via the sidebar)
+
+## Utils
+
+There are currently two utils in the `utils/` folder:
+
+- `cleaner.py` - cleaner for the files in `uploads/` directory: Deletes files which are not included in the `data/data.json`.
+- `poster.py` - for creating multiple blog posts using files from a specified directory. One file per post. Reqires a [python-magic](https://github.com/ahupp/python-magic) installed.
 
 ## Screenshots
 
