@@ -71,8 +71,8 @@ def main():
     print("Total number of files: {}.".format(len(files)))
 
     for name in files:
-        file = File("{}{}".format(dir, name))
-        copyfile(file.filename,
+        file = File(path.join(dir, name))
+        copyfile(file.path,
             path.join(abs_path, '../uploads/{}'.format(file.new_name)))
         if file.filename != file.new_name:
             print("Renamed '{}' to '{}'.".format(file.filename, file.new_name))
