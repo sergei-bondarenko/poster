@@ -11,6 +11,8 @@ def main():
     with open(path.join(abs_path, '../data/data.json'), 'r') as f:
         data = f.read()
     for file in listdir(path.join(abs_path, '../uploads/')):
+        if file.endswith('.piecemap.msgpack'):
+            continue
         if file not in data:
             ans = input("{} is not in data.json. Delete? [Y/n] ".format(file))
             ans = ans.lower()

@@ -114,8 +114,8 @@
    "size": 126461
   },
   "utils/cleaner.py": {
-   "sha512": "6273e895832c0bd99c6b0a473388a8b8f7aa0aeb170831a0555eb6e2f4cccf1b",
-   "size": 777
+   "sha512": "d312a118b829175bce58dedd877a1bdebbbb6a5c333a7c3a729594f39cd519d0",
+   "size": 845
   },
   "utils/poster.py": {
    "sha512": "16d0691e384c1f124e60efff762a74fc9e48c6323b4569d6a4592939491f35e6",
@@ -136,12 +136,12 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1511034807,
+ "modified": 1511035536,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G1+oDfAlfpiFBp6tsafRb+xYUVPNevNFR8b7RLZ+eYGKE48r2A2GCys9jCBL7tscTFMBN4wG+FcgUzmSNEmtflE="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HIn1BCa7GDrZGt8iFf3XdcR8BZ6li9B7A2sEMdZHWfxodZTfgJN73qEPakzqTYBQLeN4rcRexhrxMlYroFv0iGc="
  },
  "signs_required": 1,
  "title": "Poster",
