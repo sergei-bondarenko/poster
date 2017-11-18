@@ -199,8 +199,8 @@ class Poster extends ZeroFrame {
             return false
         } else if ( !this.isValidName(file.name) ) {
             storage.commit('createModal', {
-                'message': "Filename should be shorter than 256 characters " +
-                    + "and contain only english letters, digits, spaces " +
+                'message': "Filename should be shorter than 256 characters "
+                    + "and contain only english letters, digits, spaces "
                     + "and the following characters: []()_@=.+-",
                 'buttonText': 'OK',
                 'action': 'info',

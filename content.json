@@ -22,8 +22,8 @@
    "size": 133364
   },
   "css/main.css": {
-   "sha512": "22d33e8f615172826a42c4075438788a896c2a9e2c54360c475532208ffb5def",
-   "size": 4845
+   "sha512": "c6ce074e63e4e65aae8b6f249452da3476c579a5534b6344d8de4005a568c1f2",
+   "size": 4844
   },
   "data-default/data.json": {
    "sha512": "a9abfd64e0f755390ac56f7f8441396b7ef962a348d19867551454fb0323f26e",
@@ -34,15 +34,15 @@
    "size": 601
   },
   "data/data.json": {
-   "sha512": "a7ee7fc90b6e34a76b01393631d6ab6402bcc1c47c545b4efbe0ca9254307e5d",
-   "size": 1595
+   "sha512": "0380adcae3b08da0c66cbb964b83d57ac846ac73b39254535e1fef0f56b374b9",
+   "size": 1596
   },
   "dbschema.json": {
    "sha512": "c91d602e10ccc6693ef241679d28d5ed459ec2d9a815506d00018d448242c210",
    "size": 1857
   },
   "index.html": {
-   "sha512": "9496624e1446bfeee17db77ddf03921722b477cc9970fb91ec0b1580f029c142",
+   "sha512": "dc165da4244086740f9603b3bf792d2ca86ea748a8b69062348a2a570eebe0ec",
    "size": 1463
   },
   "js/comments.js": {
@@ -74,8 +74,8 @@
    "size": 5151
   },
   "js/poster.js": {
-   "sha512": "6e457cd7f34f44453fa56f938bdf2a26939edc37e0fb09adb1c87b20ef2db040",
-   "size": 6550
+   "sha512": "fd077d0dda926ce32395e0488d6ca77031c4d93044be4e65cb24700b8dde4d79",
+   "size": 6546
   },
   "js/posts.js": {
    "sha512": "9bfd67e9dd7867982f73a2cfdbcefdfe3a67004be5c7d4f12945a588628293ff",
@@ -114,6 +114,12 @@
    "size": 126461
   }
  },
+ "files_optional": {
+  "uploads/science__.jpg": {
+   "sha512": "7d0ae629e6efeea576c6306632df32c7261644dc6cbc62ebfd711c22319e2e31",
+   "size": 109196
+  }
+ },
  "ignore": "(data/.*db|data/users/.*/.*|.git/.*)",
  "includes": {
   "data/users/content.json": {
@@ -122,12 +128,12 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1510993304,
+ "modified": 1511000659,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HEXptDYhRHYl7ZC4ImNivg0Ovttvj1iIdApNcncgy9YBN0egSGH3sEIYT7Ca0xhkOrOnu/t/J2g4uy33CGvTYjs="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HLWaaoqR1iOs1Lh749gtJhBIjJZnBzLf01cPTCKzOEogW2dRQKn6AgaAksOn/OCQg1ziCGSLoSras8U5kumkbwE="
  },
  "signs_required": 1,
  "title": "Poster",
