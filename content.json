@@ -122,16 +122,15 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1510822310,
+ "modified": 1510993304,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HEZomCCcWs3yHx8UCIPCY1pnnIbt3f6TXq7N4K1BxMzCWAhsqna/j8P9HEeTOX4W9ZWuuO3CKGbDMS8OHATPsUY="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HEXptDYhRHYl7ZC4ImNivg0Ovttvj1iIdApNcncgy9YBN0egSGH3sEIYT7Ca0xhkOrOnu/t/J2g4uy33CGvTYjs="
  },
  "signs_required": 1,
  "title": "Poster",
- "translate": ["js/all.js"],
  "viewport": "width=device-width, initial-scale=1.0",
  "zeronet_version": "0.6.0"
 }
