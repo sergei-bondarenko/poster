@@ -112,6 +112,10 @@
   "screenshots/2.png": {
    "sha512": "10fac8f4aa188387877550bad49fae5e140aa7c71944269001e83f7c09ce77b5",
    "size": 126461
+  },
+  "utils/cleaner.py": {
+   "sha512": "11c1fe1678ecc39992a0074b18bd872ad52eb21bff50137db80d8861b90533b6",
+   "size": 652
   }
  },
  "files_optional": {
@@ -128,12 +132,12 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1511000737,
+ "modified": 1511009415,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "GyHCa9OI/jgFKixKruyjtNA4KTliGNQ5W/+eMQEAozCaXdRPte4vc5L5TGpjWDGDLX0kt+CtgfR+q0lXUiOM2Ws="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HJ5/jGh56/HYCkemhm7lFQzZYEizimyyVT8bYLcA8R/JGdWXUYOSAxkWO6oizlZVD7aB5q5kaMKFKisghbhOAi0="
  },
  "signs_required": 1,
  "title": "Poster",
