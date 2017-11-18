@@ -42,7 +42,7 @@
    "size": 1857
   },
   "index.html": {
-   "sha512": "dc165da4244086740f9603b3bf792d2ca86ea748a8b69062348a2a570eebe0ec",
+   "sha512": "1a5ef0633c99e5da7a4b6c900e17509e237d93e0faf19f13a7c9e50fd4c93874",
    "size": 1463
   },
   "js/comments.js": {
@@ -128,12 +128,12 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1511000659,
+ "modified": 1511000737,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HLWaaoqR1iOs1Lh749gtJhBIjJZnBzLf01cPTCKzOEogW2dRQKn6AgaAksOn/OCQg1ziCGSLoSras8U5kumkbwE="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "GyHCa9OI/jgFKixKruyjtNA4KTliGNQ5W/+eMQEAozCaXdRPte4vc5L5TGpjWDGDLX0kt+CtgfR+q0lXUiOM2Ws="
  },
  "signs_required": 1,
  "title": "Poster",
