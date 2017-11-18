@@ -21,7 +21,7 @@ def main():
                 print('Deleted.')
             else:
                 print('Skipped.')
-    print("All is clean.")
+    print("All is clean. Don't forget to sign and publish.")
 
 if __name__ == "__main__":
     main()

@@ -86,10 +86,10 @@ def main():
         data['post'].insert(0, post)
         data['next_post_id'] += 1
 
-    with open(path.join(abs_path, '../data/data_new.json'), 'w') as f:
+    with open(path.join(abs_path, '../data/data.json'), 'w') as f:
         dump(data, f, indent=4)
 
-    print("Done.")
+    print("Done. Don't forget to sign and publish.")
 
 if __name__ == "__main__":
     main()
