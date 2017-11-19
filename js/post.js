@@ -51,13 +51,18 @@ Vue.component('post', {
 
     methods: {
         hideLongPost() {
-            if (storage.state.url == ''
-                && this.$refs.postbody.clientHeight > 1000) {
-                // Crop long posts only on a multipost view
-                this.isFullPost = false
-            } else {
-                this.isFullPost = true
-            }
+            setTimeout(() => {
+                // Hack! Hack! I don't know how to catch the event
+                // when images in post are loaded and it's height
+                // is known
+                if (storage.state.url == ''
+                    && this.$refs.postbody.clientHeight > 1000) {
+                    // Crop long posts only on a multipost view
+                    this.isFullPost = false
+                } else {
+                    this.isFullPost = true
+                }
+            }, 300)
         },
 
         showFullPost() {
