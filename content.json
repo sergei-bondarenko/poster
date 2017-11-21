@@ -122,12 +122,6 @@
    "size": 3083
   }
  },
- "files_optional": {
-  "uploads/science__.jpg": {
-   "sha512": "7d0ae629e6efeea576c6306632df32c7261644dc6cbc62ebfd711c22319e2e31",
-   "size": 109196
-  }
- },
  "ignore": "(data/.*db|data/users/.*/.*|.git/.*)",
  "includes": {
   "data/users/content.json": {
@@ -136,12 +130,12 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1511095868,
+ "modified": 1511297855,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HJwwdutQ9ihufQMLSeRIB7kumrysjXl57l1Di3Hv6u8ueVhr5dbN7vR/tI69wgcJf/ah50B6k0e7inPoFyB/W2E="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "HHpZIHvPGsyFwvgtrGe961YWrzdMmy1E6yL3+V8s67l/aOGweJ2O7M0phJC/nVbpfrC80ox6gMFOFAInBM9lqgE="
  },
  "signs_required": 1,
  "title": "Poster",
