@@ -56,7 +56,7 @@ Vue.component('post', {
                 // when images in post are loaded and it's height
                 // is known
                 if (storage.state.url == ''
-                    && this.$refs.postbody.clientHeight > 1000) {
+                    && this.$refs.postbody.clientHeight > 2000) {
                     // Crop long posts only on a multipost view
                     this.isFullPost = false
                 } else {
