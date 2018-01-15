@@ -77,6 +77,11 @@ def main():
         if file.filename != file.new_name:
             print("Renamed '{}' to '{}'.".format(file.filename, file.new_name))
 
+        body_text = body(file)
+        if body_text == None:
+            print(f"SKIPPED: Unrecognized MIME type of {file.filename}")
+            continue
+
         post = {
             'post_id': data['next_post_id'],
             'date_published': int(time() * 1000),
