@@ -32,7 +32,8 @@ class File:
     def is_good_name(self):
         '''Check if name is short and contains only good characters.'''
         if (len(self.filename) < 256
-            and match("^[a-z\[\]\(\) A-Z0-9_@=\.\+-/]+$", self.filename)):
+            and match("^[a-z\[\]\(\) A-Z0-9_@=\.\+-/]+$", self.filename)
+            and '..' not in self.filename):
             return True
         else:
             return False

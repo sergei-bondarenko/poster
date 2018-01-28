@@ -118,8 +118,8 @@
    "size": 906
   },
   "utils/poster.py": {
-   "sha512": "a51ba7ab51417e2f97e41786a3f086527358d3512cb1a36b2dffae1c95e7eda9",
-   "size": 3083
+   "sha512": "46ab2d2ce93f903d4dc2d4621f7208a9c3c84c4d75515e01fc0dc2be516b8468",
+   "size": 3239
   }
  },
  "ignore": "(data/.*db|data/users/.*/.*|.git/.*)",
@@ -130,12 +130,12 @@
   }
  },
  "inner_path": "content.json",
- "modified": 1514354274,
+ "modified": 1516075626,
  "optional": "(uploads/.*)",
  "postmessage_nonce_security": true,
  "signers_sign": "HE0ooQxexnK/fgBceq+SUBCo4dKIYG8tDRvJlVuEfdszfD8YGjyaAAQjmqK2yudcRYuHAs0EhnRyczppLOhtbgA=",
  "signs": {
-  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "Gx4I9zyidT/55geHrHJe4nJOofaf1RE1AQ8rw0M6W1WdYbMUsee9iKO8AZIyciK3deFItylXfJECWyHGxvQ+rXA="
+  "1J2ZJjs97wEcW36x5d9f1QnPVPVDv8wbJ": "G4Vxkdi3N0cICMgrEXlBZsXZv99gRPrvjyLO88VX718VPbWY/CDRN0KCkQKZqBiJM/UthubcTN165GnUHCKD6+E="
  },
  "signs_required": 1,
  "title": "Poster",
