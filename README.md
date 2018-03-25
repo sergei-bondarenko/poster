@@ -20,7 +20,7 @@ A simple blog platform for [ZeroNet](https://github.com/HelloZeroNet/ZeroNet) wr
 
 There are currently two utils in the `utils/` folder:
 
-- `cleaner.py` - cleaner for the files in `uploads/` directory: Deletes files which are not included in the `data/data.json`.
+- `cleaner.py` - cleaner for the files in `uploads/` directory: Deletes files which are not included in the `data/data.json`. Also finds duplicates.
 - `poster.py` - for creating multiple blog posts using files from a specified directory. One file per post. Reqires a [python-magic](https://github.com/ahupp/python-magic) installed.
 
 ## Screenshots
